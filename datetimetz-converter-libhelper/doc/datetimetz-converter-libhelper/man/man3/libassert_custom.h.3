@@ -1,0 +1,59 @@
+.TH "include/libassert_custom.h" 3 "Tue Jul 21 2015" "datetimetz-converter-libhelper-0.5" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/libassert_custom.h \- 
+.PP
+Provides some custom 'assert' routines\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBassert_pointer_is_not_null\fP (void *ptr, char *ptrname)"
+.br
+.ti -1c
+.RI "int \fBassert_string_is_not_null\fP (char *string, char *stringname)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides some custom 'assert' routines\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Laurent Cossin 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+July 2015 
+.RE
+.PP
+
+.PP
+Definition in file \fBlibassert_custom\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int assert_pointer_is_not_null (void *ptr, char *ptrname)"
+
+.PP
+Definition at line 28 of file libassert_custom\&.c\&.
+.PP
+References log_debug(), log_exit_critical(), and TRACE_MESSAGE_MAXLENGTH\&.
+.PP
+Referenced by initFmtStr()\&.
+.SS "int assert_string_is_not_null (char *string, char *stringname)"
+
+.PP
+Definition at line 47 of file libassert_custom\&.c\&.
+.PP
+References log_debug(), log_exit_critical(), and TRACE_MESSAGE_MAXLENGTH\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-libhelper-0\&.5 from the source code\&.

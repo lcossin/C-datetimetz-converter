@@ -1,0 +1,180 @@
+.TH "include/libdatetimetz_converter_datatypes.h" 3 "Tue Jul 21 2015" "datetimetz-converter-libhelper-0.5" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/libdatetimetz_converter_datatypes.h \- 
+.PP
+Provides the types for the data\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBtimezonestructdef\fP"
+.br
+.RI "\fIstructure definition for a timezone \fP"
+.ti -1c
+.RI "struct \fBtimestampstructdef\fP"
+.br
+.RI "\fIstructure definition for a timestamp \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTZ_ENV_VARNAME\fP"
+.br
+.ti -1c
+.RI "#define \fBDEFAULT_TIMEZONE\fP"
+.br
+.ti -1c
+.RI "#define \fBEPOCH_TIMEZONE\fP"
+.br
+.ti -1c
+.RI "#define \fBRAWTIMESTAMPMAXLENGTH\fP"
+.br
+.RI "\fImax length of a raw data (a row from a file) \fP"
+.ti -1c
+.RI "#define \fBTIMESTAMPMAXLENGTH\fP"
+.br
+.ti -1c
+.RI "#define \fBTIMESTAMPMAXLENGTHSTR\fP"
+.br
+.ti -1c
+.RI "#define \fBTIMEZONESTRUCTDEF\fP"
+.br
+.ti -1c
+.RI "#define \fBTIMESTAMPSTRUCTDEF\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBtimezonestructdef\fP \fBtimezonestructdef\fP"
+.br
+.RI "\fItype definition for timezonestructdef \fP"
+.ti -1c
+.RI "typedef \fBtimezonestructdef\fP * \fBtimezonestructptrdef\fP"
+.br
+.RI "\fItype definition for pointer to timezonestructdef \fP"
+.ti -1c
+.RI "typedef \fBtimezonestructptrdef\fP \fBtimezonestructarrdef\fP"
+.br
+.RI "\fItype definition for array of pointer to timezonestructdef \fP"
+.ti -1c
+.RI "typedef struct \fBtimestampstructdef\fP \fBtimestampstructdef\fP"
+.br
+.RI "\fItype definition for timestampstructdef \fP"
+.ti -1c
+.RI "typedef \fBtimestampstructdef\fP * \fBtimestampstructptrdef\fP"
+.br
+.RI "\fItype definition for pointer to timestampstructdef \fP"
+.ti -1c
+.RI "typedef \fBtimestampstructptrdef\fP \fBtimestampstructarrdef\fP"
+.br
+.RI "\fItype definition for array of pointer to timestampstructdef \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides the types for the data\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Laurent Cossin 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+July 2015 
+.RE
+.PP
+
+.PP
+Definition in file \fBlibdatetimetz_converter_datatypes\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define DEFAULT_TIMEZONE"
+
+.PP
+Definition at line 43 of file libdatetimetz_converter_datatypes\&.h\&.
+.SS "#define EPOCH_TIMEZONE"
+
+.PP
+Definition at line 44 of file libdatetimetz_converter_datatypes\&.h\&.
+.SS "#define RAWTIMESTAMPMAXLENGTH"
+
+.PP
+max length of a raw data (a row from a file) 
+.PP
+Definition at line 49 of file libdatetimetz_converter_datatypes\&.h\&.
+.PP
+Referenced by parseRawString()\&.
+.SS "#define TIMESTAMPMAXLENGTH"
+
+.PP
+Definition at line 53 of file libdatetimetz_converter_datatypes\&.h\&.
+.PP
+Referenced by formatted_now()\&.
+.SS "#define TIMESTAMPMAXLENGTHSTR"
+
+.PP
+Definition at line 54 of file libdatetimetz_converter_datatypes\&.h\&.
+.SS "#define TIMESTAMPSTRUCTDEF"
+
+.PP
+Definition at line 92 of file libdatetimetz_converter_datatypes\&.h\&.
+.SS "#define TIMEZONESTRUCTDEF"
+
+.PP
+Definition at line 60 of file libdatetimetz_converter_datatypes\&.h\&.
+.SS "#define TZ_ENV_VARNAME"
+
+.PP
+Definition at line 38 of file libdatetimetz_converter_datatypes\&.h\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBtimestampstructptrdef\fP \fBtimestampstructarrdef\fP"
+
+.PP
+type definition for array of pointer to timestampstructdef 
+.PP
+Definition at line 104 of file libdatetimetz_converter_datatypes\&.h\&.
+.SS "typedef struct \fBtimestampstructdef\fP \fBtimestampstructdef\fP"
+
+.PP
+type definition for timestampstructdef 
+.PP
+Definition at line 96 of file libdatetimetz_converter_datatypes\&.h\&.
+.SS "typedef \fBtimestampstructdef\fP* \fBtimestampstructptrdef\fP"
+
+.PP
+type definition for pointer to timestampstructdef 
+.PP
+Definition at line 100 of file libdatetimetz_converter_datatypes\&.h\&.
+.SS "typedef \fBtimezonestructptrdef\fP \fBtimezonestructarrdef\fP"
+
+.PP
+type definition for array of pointer to timezonestructdef 
+.PP
+Definition at line 72 of file libdatetimetz_converter_datatypes\&.h\&.
+.SS "typedef struct \fBtimezonestructdef\fP \fBtimezonestructdef\fP"
+
+.PP
+type definition for timezonestructdef 
+.PP
+Definition at line 64 of file libdatetimetz_converter_datatypes\&.h\&.
+.SS "typedef \fBtimezonestructdef\fP* \fBtimezonestructptrdef\fP"
+
+.PP
+type definition for pointer to timezonestructdef 
+.PP
+Definition at line 68 of file libdatetimetz_converter_datatypes\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-libhelper-0\&.5 from the source code\&.

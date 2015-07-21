@@ -1,0 +1,210 @@
+.TH "src/libdatetimetz_converter_timestamptzformat.c" 3 "Tue Jul 21 2015" "datetimetz-converter-libhelper-0.5" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/libdatetimetz_converter_timestamptzformat.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'config\&.h'\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'libtrace\&.h'\fP
+.br
+\fC#include 'libassert_custom\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_timestamptzformat\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBsetOlsonOpts\fP (int *flags)"
+.br
+.RI "\fIenables Olson timezone option \fP"
+.ti -1c
+.RI "int \fBsetISO8601Opts\fP (int *flags)"
+.br
+.RI "\fIenables the ISO8601 format \fP"
+.ti -1c
+.RI "int \fBsetISO8601OlsonOpts\fP (int *flags)"
+.br
+.RI "\fIenables ISO8601 format + Olson timezone \fP"
+.ti -1c
+.RI "int \fBsetOlsonInputFmtOpts\fP (int *flags)"
+.br
+.RI "\fIenables option Olson timezone - wrapper for setOlsonOpts \fP"
+.ti -1c
+.RI "int \fBsetOlsonOutputFmtOpts\fP (int *flags)"
+.br
+.RI "\fIenables option Olson timezone - wrapper for setOlsonOpts \fP"
+.ti -1c
+.RI "int \fBsetDefaultInputFmtOpts\fP (int *flags)"
+.br
+.RI "\fIset the default options for a timestamp as input \fP"
+.ti -1c
+.RI "int \fBsetDefaultOutputFmtOpts\fP (int *flags)"
+.br
+.RI "\fIset the default options for a timestamp as output \fP"
+.ti -1c
+.RI "int \fBisISO8601\fP (int FmtFlags)"
+.br
+.ti -1c
+.RI "int \fBisTZAbbrev\fP (int FmtFlags)"
+.br
+.ti -1c
+.RI "int \fBisTZOlson\fP (int FmtFlags)"
+.br
+.ti -1c
+.RI "int \fBappend2FmtStr\fP (char *FmtStr, const char *addStr)"
+.br
+.ti -1c
+.RI "int \fBappendISO8601noTZ\fP (char *FmtStr)"
+.br
+.ti -1c
+.RI "int \fBappendTZAbbrev\fP (char *FmtStr)"
+.br
+.ti -1c
+.RI "int \fBinitFmtStr\fP (char *FmtStr)"
+.br
+.RI "\fIinitializes an empty string \fP"
+.ti -1c
+.RI "int \fBbuildFmtStr\fP (int FmtFlags, char *FmtStr)"
+.br
+.RI "\fIbuilds the format string according to the options (FmtFlags) \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int append2FmtStr (char *FmtStr, const char *addStr)"
+
+.PP
+Definition at line 139 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+Referenced by appendISO8601noTZ(), and appendTZAbbrev()\&.
+.SS "int appendISO8601noTZ (char *FmtStr)"
+
+.PP
+Definition at line 180 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References append2FmtStr(), and iso8601noTZFmt\&.
+.PP
+Referenced by buildFmtStr()\&.
+.SS "int appendTZAbbrev (char *FmtStr)"
+
+.PP
+Definition at line 193 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References append2FmtStr(), and TZAbbrevFmt\&.
+.PP
+Referenced by buildFmtStr()\&.
+.SS "int buildFmtStr (intFmtFlags, char *FmtStr)"
+
+.PP
+builds the format string according to the options (FmtFlags) 
+.PP
+Definition at line 231 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References appendISO8601noTZ(), appendTZAbbrev(), initFmtStr(), isISO8601(), and isTZAbbrev()\&.
+.SS "int initFmtStr (char *FmtStr)"
+
+.PP
+initializes an empty string 
+.PP
+Definition at line 209 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References assert_pointer_is_not_null()\&.
+.PP
+Referenced by buildFmtStr()\&.
+.SS "int isISO8601 (intFmtFlags)"
+
+.PP
+Definition at line 105 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References iso8601Flag\&.
+.PP
+Referenced by buildFmtStr()\&.
+.SS "int isTZAbbrev (intFmtFlags)"
+
+.PP
+Definition at line 116 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References TZAbbrevFlag\&.
+.PP
+Referenced by buildFmtStr()\&.
+.SS "int isTZOlson (intFmtFlags)"
+
+.PP
+Definition at line 127 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References TZOlsonFlag\&.
+.SS "int setDefaultInputFmtOpts (int *flags)"
+
+.PP
+set the default options for a timestamp as input 
+.PP
+Definition at line 83 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References setISO8601Opts()\&.
+.SS "int setDefaultOutputFmtOpts (int *flags)"
+
+.PP
+set the default options for a timestamp as output 
+.PP
+Definition at line 94 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References iso8601Flag, and TZAbbrevFlag\&.
+.SS "int setISO8601OlsonOpts (int *flags)"
+
+.PP
+enables ISO8601 format + Olson timezone 
+.PP
+Definition at line 52 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References setISO8601Opts(), and setOlsonOpts()\&.
+.SS "int setISO8601Opts (int *flags)"
+
+.PP
+enables the ISO8601 format 
+.PP
+Definition at line 43 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References iso8601Flag\&.
+.PP
+Referenced by setDefaultInputFmtOpts(), and setISO8601OlsonOpts()\&.
+.SS "int setOlsonInputFmtOpts (int *flags)"
+
+.PP
+enables option Olson timezone - wrapper for setOlsonOpts 
+.PP
+Definition at line 63 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References setOlsonOpts()\&.
+.SS "int setOlsonOpts (int *flags)"
+
+.PP
+enables Olson timezone option 
+.PP
+Definition at line 33 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References TZOlsonFlag\&.
+.PP
+Referenced by setISO8601OlsonOpts(), setOlsonInputFmtOpts(), and setOlsonOutputFmtOpts()\&.
+.SS "int setOlsonOutputFmtOpts (int *flags)"
+
+.PP
+enables option Olson timezone - wrapper for setOlsonOpts 
+.PP
+Definition at line 73 of file libdatetimetz_converter_timestamptzformat\&.c\&.
+.PP
+References setOlsonOpts()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-libhelper-0\&.5 from the source code\&.

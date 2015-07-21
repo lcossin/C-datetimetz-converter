@@ -1,0 +1,65 @@
+.TH "src/libregex_custom.c" 3 "Tue Jul 21 2015" "datetimetz-converter-libhelper-0.5" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/libregex_custom.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <regex\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'libtrace\&.h'\fP
+.br
+\fC#include 'libregex_custom\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBregexp_verify\fP (char *string, char *regexpstr)"
+.br
+.RI "\fIVerifies if a string matches a regular expression\&. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int regexp_verify (char *string, char *regexpstr)"
+
+.PP
+Verifies if a string matches a regular expression\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP The string to evaluate 
+.br
+\fIregexpstr\fP The regular expression
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the size of the longest part matching the regular expression pattern 
+.RE
+.PP
+\fBReturn values:\fP
+.RS 4
+\fI0\fP if the string does not match the regular expression 
+.br
+\fI>0\fP if the string matches the regular expression 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file libregex_custom\&.c\&.
+.PP
+References log_debug(), log_finest(), REGEXPMAXLENGTH, STRINGMAXLENGTH, and TRACE_MESSAGE_MAXLENGTH\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-libhelper-0\&.5 from the source code\&.

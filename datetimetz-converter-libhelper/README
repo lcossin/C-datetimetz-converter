@@ -1,0 +1,114 @@
+    Copyright (c) 2015 Laurent Cossin 
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU Free Documentation License"
+
+Description
+===========
+
+The library libdatatimetz_converter_libhelper provides common functions
+
+Common shared libraries
+------------------------
+
+More details in the doc subfolder.
+
+Requirements
+============
+
+System requirements
+-------------------
+
+The source files do not use features that requires _GNU_SOURCE.
+
+Build requirements
+------------------
+
+* automake, autoconf, libtool, make
+* Doxygen 1.8 and later
+
+Verified on operating systems
+-----------------------------
+
+The shared libraries have been compiled, built and tested on :
+* RedHat based-Enterprise Linux v7 x86_64
+* Cygwin for Windows x64
+
+Use the libraries and the test program
+======================================
+
+Use the common shared library
+-----------------------------
+
+Link the program to shared library named 'libdatetimetz_converter_libhelper.so'.
+
+Full path : [install path]/lib/datetimetz-converter-libhelper/libdatetimetz_converter_libhelper.so
+
+Source code
+===========
+
+Directory structure for the conversion libraries
+------------------------------------------------
+
+doc/
+	documentation files (generated with Doxygen)
+
+include/
+	C header files of the libraries
+
+src/
+	C file of the libraries
+
+How to setup the libraries and the test program
+===============================================
+
+Build the libraries and the documentation
+-----------------------------------------
+
+$ ./configure --help
+
+$ ./configure
+
+$ make clean; make; 
+
+$ make doxygen-doc
+
+Build the distribution archives
+-------------------------------
+
+To rebuild the archive files.
+
+$ make dist
+
+Target directory
+----------------
+
+By default, the target root directory is '/usr/local/mytools/'.
+
+Refer 'INSTALL' file to change the target directory.
+
+$ make install
+
+The files are installed in the following folders :
+
+/usr/local/mytools/include/datetimetz-converter-libhelper
+
+/usr/local/mytools/lib/datetimetz-converter-libhelper
+	the shared libraries - a single .so file
+
+Documentation
+=============
+
+How to generate the documentation
+--------------------------
+
+$ rm -rf doc/*datetimetz-converter* ;
+$ make doxygen-doc;
+
+How to display the documentation
+--------------------------------
+
+$ lynx doc/*datetimetz-converter*/html/index.html
+

@@ -1,0 +1,42 @@
+.TH "src/libdatetimetz_converter_dataparsetimestamps.c" 3 "Tue Jul 21 2015" "datetimetz-converter-libhelper-0.5" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/libdatetimetz_converter_dataparsetimestamps.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <time\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'libtrace\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_dataparsetimestamps\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBparseRawString\fP (char *rawTimestampTZStr, char *outTimestampStrNoTZ, char *outOlsonTZ)"
+.br
+.RI "\fIparses a row from the input file \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int parseRawString (char *rawTimestampTZStr, char *outTimestampStrNoTZ, char *outOlsonTZ)"
+
+.PP
+parses a row from the input file 
+.PP
+Definition at line 30 of file libdatetimetz_converter_dataparsetimestamps\&.c\&.
+.PP
+References log_debug(), and RAWTIMESTAMPMAXLENGTH\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-libhelper-0\&.5 from the source code\&.

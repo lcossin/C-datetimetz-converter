@@ -1,0 +1,96 @@
+.TH "include/libregex_custom.h" 3 "Tue Jul 21 2015" "datetimetz-converter-libhelper-0.5" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/libregex_custom.h \- 
+.PP
+Provides some custom 'regex' routines\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBREGEXPMAXLENGTH\fP"
+.br
+.ti -1c
+.RI "#define \fBSTRINGMAXLENGTH\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBregexp_verify\fP (char *string, char *regexpstr)"
+.br
+.RI "\fIVerifies if a string matches a regular expression\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides some custom 'regex' routines\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Laurent Cossin 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+July 2015 
+.RE
+.PP
+
+.PP
+Definition in file \fBlibregex_custom\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define REGEXPMAXLENGTH"
+
+.PP
+Definition at line 36 of file libregex_custom\&.h\&.
+.PP
+Referenced by regexp_verify()\&.
+.SS "#define STRINGMAXLENGTH"
+
+.PP
+Definition at line 37 of file libregex_custom\&.h\&.
+.PP
+Referenced by regexp_verify()\&.
+.SH "Function Documentation"
+.PP 
+.SS "int regexp_verify (char *string, char *regexpstr)"
+
+.PP
+Verifies if a string matches a regular expression\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstring\fP The string to evaluate 
+.br
+\fIregexpstr\fP The regular expression
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the size of the longest part matching the regular expression pattern 
+.RE
+.PP
+\fBReturn values:\fP
+.RS 4
+\fI0\fP if the string does not match the regular expression 
+.br
+\fI>0\fP if the string matches the regular expression 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file libregex_custom\&.c\&.
+.PP
+References log_debug(), log_finest(), REGEXPMAXLENGTH, STRINGMAXLENGTH, and TRACE_MESSAGE_MAXLENGTH\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-libhelper-0\&.5 from the source code\&.

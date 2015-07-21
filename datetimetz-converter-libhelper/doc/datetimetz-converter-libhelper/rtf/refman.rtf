@@ -1,0 +1,4018 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033
+{\fonttbl {\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}
+{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}
+{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}
+}
+{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
+{\stylesheet
+{\widctlpar\adjustright \fs20\cgrid \snext0 Normal;}
+{\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid \sbasedon0 \snext0 heading 1;}
+{\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid \sbasedon0 \snext0 heading 2;}
+{\s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid \sbasedon0 \snext0 heading 3;}
+{\s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 4;}{\*\cs10 \additive Default Paragraph Font;}
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext0 heading 5;}{\*\cs10 \additive Default Paragraph Font;}
+{\s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid \sbasedon0 \snext15 Title;}
+{\s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid \sbasedon0 \snext16 Subtitle;}
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid \sbasedon0 \snext17 BodyText;}
+{\s18\widctlpar\fs22\cgrid \sbasedon0 \snext18 DenseText;}
+{\s28\widctlpar\tqc\tx4320\tqr\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext28 header;}
+{\s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid \sbasedon0 \snext29 footer;}
+{\s30\li360\sa60\sb120\keepn\widctlpar\adjustright \b\f1\fs20\cgrid \sbasedon0 \snext30 GroupHeader;}
+{\s40\li0\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext41 Code Example 0;}
+{\s41\li360\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext42 Code Example 1;}
+{\s42\li720\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext43 Code Example 2;}
+{\s43\li1080\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext44 Code Example 3;}
+{\s44\li1440\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext45 Code Example 4;}
+{\s45\li1800\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext46 Code Example 5;}
+{\s46\li2160\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext47 Code Example 6;}
+{\s47\li2520\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext48 Code Example 7;}
+{\s48\li2880\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 8;}
+{\s49\li3240\widctlpar\adjustright \shading1000\cbpat8 \f2\fs16\cgrid \sbasedon0 \snext49 Code Example 9;}
+{\s50\li0\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext51 List Continue 0;}
+{\s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext52 List Continue 1;}
+{\s52\li720\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext53 List Continue 2;}
+{\s53\li1080\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext54 List Continue 3;}
+{\s54\li1440\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext55 List Continue 4;}
+{\s55\li1800\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext56 List Continue 5;}
+{\s56\li2160\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext57 List Continue 6;}
+{\s57\li2520\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext58 List Continue 7;}
+{\s58\li2880\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 8;}
+{\s59\li3240\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid \sbasedon0 \snext59 List Continue 9;}
+{\s60\li0\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext61 DescContinue 0;}
+{\s61\li360\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext62 DescContinue 1;}
+{\s62\li720\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext63 DescContinue 2;}
+{\s63\li1080\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext64 DescContinue 3;}
+{\s64\li1440\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext65 DescContinue 4;}
+{\s65\li1800\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext66 DescContinue 5;}
+{\s66\li2160\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext67 DescContinue 6;}
+{\s67\li2520\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext68 DescContinue 7;}
+{\s68\li2880\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 8;}
+{\s69\li3240\widctlpar\ql\adjustright \fs20\cgrid \sbasedon0 \snext69 DescContinue 9;}
+{\s70\li0\sa30\sb30\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext81 LatexTOC 0;}
+{\s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext82 LatexTOC 1;}
+{\s72\li720\sa24\sb24\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext83 LatexTOC 2;}
+{\s73\li1080\sa21\sb21\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext84 LatexTOC 3;}
+{\s74\li1440\sa18\sb18\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext85 LatexTOC 4;}
+{\s75\li1800\sa15\sb15\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext86 LatexTOC 5;}
+{\s76\li2160\sa12\sb12\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext87 LatexTOC 6;}
+{\s77\li2520\sa9\sb9\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext88 LatexTOC 7;}
+{\s78\li2880\sa6\sb6\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 8;}
+{\s79\li3240\sa3\sb3\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid \sbasedon0 \snext89 LatexTOC 9;}
+{\s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid \sbasedon0 \snext81 \sautoupd List Bullet 0;}
+{\s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid \sbasedon0 \snext82 \sautoupd List Bullet 1;}
+{\s82\fi-360\li1080\widctlpar\jclisttab\tx1080{\*\pn \pnlvlbody\ilvl0\ls3\pnrnot0\pndec }\ls3\adjustright \fs20\cgrid \sbasedon0 \snext83 \sautoupd List Bullet 2;}
+{\s83\fi-360\li1440\widctlpar\jclisttab\tx1440{\*\pn \pnlvlbody\ilvl0\ls4\pnrnot0\pndec }\ls4\adjustright \fs20\cgrid \sbasedon0 \snext84 \sautoupd List Bullet 3;}
+{\s84\fi-360\li1800\widctlpar\jclisttab\tx1800{\*\pn \pnlvlbody\ilvl0\ls5\pnrnot0\pndec }\ls5\adjustright \fs20\cgrid \sbasedon0 \snext85 \sautoupd List Bullet 4;}
+{\s85\fi-360\li2160\widctlpar\jclisttab\tx2160{\*\pn \pnlvlbody\ilvl0\ls6\pnrnot0\pndec }\ls6\adjustright \fs20\cgrid \sbasedon0 \snext86 \sautoupd List Bullet 5;}
+{\s86\fi-360\li2520\widctlpar\jclisttab\tx2520{\*\pn \pnlvlbody\ilvl0\ls7\pnrnot0\pndec }\ls7\adjustright \fs20\cgrid \sbasedon0 \snext87 \sautoupd List Bullet 6;}
+{\s87\fi-360\li2880\widctlpar\jclisttab\tx2880{\*\pn \pnlvlbody\ilvl0\ls8\pnrnot0\pndec }\ls8\adjustright \fs20\cgrid \sbasedon0 \snext88 \sautoupd List Bullet 7;}
+{\s88\fi-360\li3240\widctlpar\jclisttab\tx3240{\*\pn \pnlvlbody\ilvl0\ls9\pnrnot0\pndec }\ls9\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 8;}
+{\s89\fi-360\li3600\widctlpar\jclisttab\tx3600{\*\pn \pnlvlbody\ilvl0\ls10\pnrnot0\pndec }\ls10\adjustright \fs20\cgrid \sbasedon0 \snext89 \sautoupd List Bullet 9;}
+{\s90\fi-360\li360\widctlpar\fs20\cgrid \sbasedon0 \snext91 \sautoupd List Enum 0;}
+{\s91\fi-360\li720\widctlpar\fs20\cgrid \sbasedon0 \snext92 \sautoupd List Enum 1;}
+{\s92\fi-360\li1080\widctlpar\fs20\cgrid \sbasedon0 \snext93 \sautoupd List Enum 2;}
+{\s93\fi-360\li1440\widctlpar\fs20\cgrid \sbasedon0 \snext94 \sautoupd List Enum 3;}
+{\s94\fi-360\li1800\widctlpar\fs20\cgrid \sbasedon0 \snext95 \sautoupd List Enum 4;}
+{\s95\fi-360\li2160\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s96\fi-360\li2520\widctlpar\fs20\cgrid \sbasedon0 \snext96 \sautoupd List Enum 5;}
+{\s97\fi-360\li2880\widctlpar\fs20\cgrid \sbasedon0 \snext98 \sautoupd List Enum 7;}
+{\s98\fi-360\li3240\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 8;}
+{\s99\fi-360\li3600\widctlpar\fs20\cgrid \sbasedon0 \snext99 \sautoupd List Enum 9;}
+}
+{\comment begin body}
+{\info 
+{\title {\comment datetimetz-converter-libhelper-0.5 }datetimetz-converter-libhelper-0.5}
+{\comment Generated byDoxgyen. }
+{\creatim \yr2015\mo7\dy21\hr20\min29\sec39}
+}\pard\plain 
+\sectd\pgnlcrm
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\vertalc\qc\par\par\par\par\par\par\par
+\pard\plain \s15\qc\sb240\sa60\widctlpar\outlinelevel0\adjustright \b\f1\fs32\kerning28\cgrid 
+{\field\fldedit {\*\fldinst TITLE \\*MERGEFORMAT}{\fldrslt TITLE}}\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+\par
+\par\par\par\par\par\par\par\par\par\par\par\par
+\pard\plain \s16\qc\sa60\widctlpar\outlinelevel1\adjustright \f1\cgrid 
+{\field\fldedit {\*\fldinst AUTHOR \\*MERGEFORMAT}{\fldrslt AUTHOR}}\par
+Version \par{\field\fldedit {\*\fldinst CREATEDATE \\*MERGEFORMAT}{\fldrslt CREATEDATE}}\par
+\page\page\vertalt
+\pard\plain 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Table of Contents\par
+\pard\plain \par
+{\field\fldedit {\*\fldinst TOC \\f \\*MERGEFORMAT}{\fldrslt Table of contents}}\par
+\pard\plain 
+\sect \sbkpage \pgndec \pgnrestart
+\sect \sectd \sbknone
+{\footer \s29\widctlpar\tqc\tx4320\tqr\tx8640\qr\adjustright \fs20\cgrid {\chpgn}}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Data Structure Index\par \pard\plain 
+{\tc \v Data Structure Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+Data Structures\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here are the data structures with brief descriptions:}
+{
+\par
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b {\b timestampstructdef} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Structure definition for a timestamp })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFW \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b {\b timezonestructdef} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Structure definition for a timezone })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAGC \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Index\par \pard\plain 
+{\tc \v File Index}
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+File List\par \pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid Here is a list of all files with brief descriptions:}
+{
+\par
+\pard\plain \s71\li360\sa27\sb27\widctlpar\tqr\tldot\tx8640\adjustright \fs20\cgrid 
+{\b include/{\b config.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAAA \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/{\b libassert_custom.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some custom 'assert' routines })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABL \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/{\b libdatetimetz_converter_dataparsetimestamps.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some functions to handle the data for tests })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABO \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/{\b libdatetimetz_converter_datatypes.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides the types for the data })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAABQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/{\b libdatetimetz_converter_libhelper.h} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACF \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/{\b libdatetimetz_converter_parameter.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some variables })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACG \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/{\b libdatetimetz_converter_timestamptzformat.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some constants and some functions to manage the timestamp formats })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAACN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/{\b libregex_custom.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some custom 'regex' routines })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b include/{\b libtrace.h} ({\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some helper functions to handle trace messages })} \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAADM \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b src/{\b libassert_custom.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEN \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b src/{\b libdatetimetz_converter_dataparsetimestamps.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAEQ \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b src/{\b libdatetimetz_converter_timestamptzformat.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAES \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b src/{\b libregex_custom.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFI \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+{\b src/{\b libtrace.c} } \tab {\field\fldedit {\*\fldinst PAGEREF AAAAAAAAFK \\*MERGEFORMAT}{\fldrslt pagenum}}
+\par
+\par}
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+Data Structure Documentation{\tc \v Data Structure Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+timestampstructdef Struct Reference\par \pard\plain 
+{\tc\tcl2 \v timestampstructdef}
+{\xe \v timestampstructdef}
+{\bkmkstart AAAAAAAAFW}
+{\bkmkend AAAAAAAAFW}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+structure definition for a timestamp }}\par
+{
+{\f2 #include <libdatetimetz_converter_datatypes.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b itemcount}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char * {\b rawstr}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char * {\b timestampnoTZstr}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char * {\b OlsonTZ}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b timestampstructptrdef} {\b next}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+structure definition for a timestamp \par
+}{
+Definition at line 108 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v itemcount\:timestampstructdef}
+{\xe \v timestampstructdef\:itemcount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int timestampstructdef::itemcount}}
+\par
+{\bkmkstart AAAAAAAAFX}
+{\bkmkend AAAAAAAAFX}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 110 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v next\:timestampstructdef}
+{\xe \v timestampstructdef\:next}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b timestampstructptrdef} timestampstructdef::next}}
+\par
+{\bkmkstart AAAAAAAAFY}
+{\bkmkend AAAAAAAAFY}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 116 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v OlsonTZ\:timestampstructdef}
+{\xe \v timestampstructdef\:OlsonTZ}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char* timestampstructdef::OlsonTZ}}
+\par
+{\bkmkstart AAAAAAAAFZ}
+{\bkmkend AAAAAAAAFZ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 114 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v rawstr\:timestampstructdef}
+{\xe \v timestampstructdef\:rawstr}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char* timestampstructdef::rawstr}}
+\par
+{\bkmkstart AAAAAAAAGA}
+{\bkmkend AAAAAAAAGA}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 112 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v timestampnoTZstr\:timestampstructdef}
+{\xe \v timestampstructdef\:timestampnoTZstr}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char* timestampstructdef::timestampnoTZstr}}
+\par
+{\bkmkstart AAAAAAAAGB}
+{\bkmkend AAAAAAAAGB}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 113 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+include/{\b libdatetimetz_converter_datatypes.h}\par
+}\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+timezonestructdef Struct Reference\par \pard\plain 
+{\tc\tcl2 \v timezonestructdef}
+{\xe \v timezonestructdef}
+{\bkmkstart AAAAAAAAGC}
+{\bkmkend AAAAAAAAGC}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+structure definition for a timezone }}\par
+{
+{\f2 #include <libdatetimetz_converter_datatypes.h>}}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Fields\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b itemcount}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+char * {\b tzname}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+{\b timezonestructptrdef} {\b next}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+structure definition for a timezone \par
+}{
+Definition at line 76 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Field Documentation\par
+\pard\plain 
+{\xe \v itemcount\:timezonestructdef}
+{\xe \v timezonestructdef\:itemcount}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int timezonestructdef::itemcount}}
+\par
+{\bkmkstart AAAAAAAAGD}
+{\bkmkend AAAAAAAAGD}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 78 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v next\:timezonestructdef}
+{\xe \v timezonestructdef\:next}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+{\b timezonestructptrdef} timezonestructdef::next}}
+\par
+{\bkmkstart AAAAAAAAGE}
+{\bkmkend AAAAAAAAGE}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 82 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v tzname\:timezonestructdef}
+{\xe \v timezonestructdef\:tzname}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+char* timezonestructdef::tzname}}
+\par
+{\bkmkstart AAAAAAAAGF}
+{\bkmkend AAAAAAAAGF}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 80 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+The documentation for this struct was generated from the following file:{\par
+\pard\plain \s81\fi-360\li720\widctlpar\jclisttab\tx720{\*\pn \pnlvlbody\ilvl0\ls2\pnrnot0\pndec }\ls2\adjustright \fs20\cgrid 
+include/{\b libdatetimetz_converter_datatypes.h}\par
+}
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+File Documentation{\tc \v File Documentation}
+\par \pard\plain 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+include/config.h File Reference\par \pard\plain 
+{\tc\tcl2 \v include/config.h}
+{\xe \v include/config.h}
+{\bkmkstart AAAAAAAAAA}
+{\bkmkend AAAAAAAAAA}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_ALARM}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_DLFCN_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_INTTYPES_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_MALLOC}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_MEMORY_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_REALLOC}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_REGCOMP}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_REGEX_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_SETENV}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_STDINT_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_STDIO_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_STDLIB_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_STRINGS_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_STRING_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_SYS_STAT_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_SYS_TIME_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_SYS_TYPES_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_TIME_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_UNAME}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b HAVE_UNISTD_H}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b LT_OBJDIR}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b PACKAGE}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b PACKAGE_BUGREPORT}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b PACKAGE_NAME}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b PACKAGE_STRING}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b PACKAGE_TARNAME}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b PACKAGE_URL}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b PACKAGE_VERSION}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b STDC_HEADERS}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TIME_WITH_SYS_TIME}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b _ALL_SOURCE}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b _GNU_SOURCE}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b _POSIX_PTHREAD_SEMANTICS}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b _TANDEM_SOURCE}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b __EXTENSIONS__}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b VERSION}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v __EXTENSIONS__\:config.h}
+{\xe \v config.h\:__EXTENSIONS__}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define __EXTENSIONS__}}
+\par
+{\bkmkstart AAAAAAAAAB}
+{\bkmkend AAAAAAAAAB}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 115 of file config.h.}\par
+}
+{\xe \v _ALL_SOURCE\:config.h}
+{\xe \v config.h\:_ALL_SOURCE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define _ALL_SOURCE}}
+\par
+{\bkmkstart AAAAAAAAAC}
+{\bkmkend AAAAAAAAAC}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 99 of file config.h.}\par
+}
+{\xe \v _GNU_SOURCE\:config.h}
+{\xe \v config.h\:_GNU_SOURCE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define _GNU_SOURCE}}
+\par
+{\bkmkstart AAAAAAAAAD}
+{\bkmkend AAAAAAAAAD}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 103 of file config.h.}\par
+}
+{\xe \v _POSIX_PTHREAD_SEMANTICS\:config.h}
+{\xe \v config.h\:_POSIX_PTHREAD_SEMANTICS}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define _POSIX_PTHREAD_SEMANTICS}}
+\par
+{\bkmkstart AAAAAAAAAE}
+{\bkmkend AAAAAAAAAE}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 107 of file config.h.}\par
+}
+{\xe \v _TANDEM_SOURCE\:config.h}
+{\xe \v config.h\:_TANDEM_SOURCE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define _TANDEM_SOURCE}}
+\par
+{\bkmkstart AAAAAAAAAF}
+{\bkmkend AAAAAAAAAF}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 111 of file config.h.}\par
+}
+{\xe \v HAVE_ALARM\:config.h}
+{\xe \v config.h\:HAVE_ALARM}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_ALARM}}
+\par
+{\bkmkstart AAAAAAAAAG}
+{\bkmkend AAAAAAAAAG}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 5 of file config.h.}\par
+}
+{\xe \v HAVE_DLFCN_H\:config.h}
+{\xe \v config.h\:HAVE_DLFCN_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_DLFCN_H}}
+\par
+{\bkmkstart AAAAAAAAAH}
+{\bkmkend AAAAAAAAAH}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 8 of file config.h.}\par
+}
+{\xe \v HAVE_INTTYPES_H\:config.h}
+{\xe \v config.h\:HAVE_INTTYPES_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_INTTYPES_H}}
+\par
+{\bkmkstart AAAAAAAAAI}
+{\bkmkend AAAAAAAAAI}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 11 of file config.h.}\par
+}
+{\xe \v HAVE_MALLOC\:config.h}
+{\xe \v config.h\:HAVE_MALLOC}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_MALLOC}}
+\par
+{\bkmkstart AAAAAAAAAJ}
+{\bkmkend AAAAAAAAAJ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 15 of file config.h.}\par
+}
+{\xe \v HAVE_MEMORY_H\:config.h}
+{\xe \v config.h\:HAVE_MEMORY_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_MEMORY_H}}
+\par
+{\bkmkstart AAAAAAAAAK}
+{\bkmkend AAAAAAAAAK}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 18 of file config.h.}\par
+}
+{\xe \v HAVE_REALLOC\:config.h}
+{\xe \v config.h\:HAVE_REALLOC}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_REALLOC}}
+\par
+{\bkmkstart AAAAAAAAAL}
+{\bkmkend AAAAAAAAAL}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 22 of file config.h.}\par
+}
+{\xe \v HAVE_REGCOMP\:config.h}
+{\xe \v config.h\:HAVE_REGCOMP}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_REGCOMP}}
+\par
+{\bkmkstart AAAAAAAAAM}
+{\bkmkend AAAAAAAAAM}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 25 of file config.h.}\par
+}
+{\xe \v HAVE_REGEX_H\:config.h}
+{\xe \v config.h\:HAVE_REGEX_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_REGEX_H}}
+\par
+{\bkmkstart AAAAAAAAAN}
+{\bkmkend AAAAAAAAAN}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 28 of file config.h.}\par
+}
+{\xe \v HAVE_SETENV\:config.h}
+{\xe \v config.h\:HAVE_SETENV}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_SETENV}}
+\par
+{\bkmkstart AAAAAAAAAO}
+{\bkmkend AAAAAAAAAO}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 31 of file config.h.}\par
+}
+{\xe \v HAVE_STDINT_H\:config.h}
+{\xe \v config.h\:HAVE_STDINT_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_STDINT_H}}
+\par
+{\bkmkstart AAAAAAAAAP}
+{\bkmkend AAAAAAAAAP}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 34 of file config.h.}\par
+}
+{\xe \v HAVE_STDIO_H\:config.h}
+{\xe \v config.h\:HAVE_STDIO_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_STDIO_H}}
+\par
+{\bkmkstart AAAAAAAAAQ}
+{\bkmkend AAAAAAAAAQ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 37 of file config.h.}\par
+}
+{\xe \v HAVE_STDLIB_H\:config.h}
+{\xe \v config.h\:HAVE_STDLIB_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_STDLIB_H}}
+\par
+{\bkmkstart AAAAAAAAAR}
+{\bkmkend AAAAAAAAAR}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 40 of file config.h.}\par
+}
+{\xe \v HAVE_STRING_H\:config.h}
+{\xe \v config.h\:HAVE_STRING_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_STRING_H}}
+\par
+{\bkmkstart AAAAAAAAAS}
+{\bkmkend AAAAAAAAAS}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 46 of file config.h.}\par
+}
+{\xe \v HAVE_STRINGS_H\:config.h}
+{\xe \v config.h\:HAVE_STRINGS_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_STRINGS_H}}
+\par
+{\bkmkstart AAAAAAAAAT}
+{\bkmkend AAAAAAAAAT}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 43 of file config.h.}\par
+}
+{\xe \v HAVE_SYS_STAT_H\:config.h}
+{\xe \v config.h\:HAVE_SYS_STAT_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_SYS_STAT_H}}
+\par
+{\bkmkstart AAAAAAAAAU}
+{\bkmkend AAAAAAAAAU}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 49 of file config.h.}\par
+}
+{\xe \v HAVE_SYS_TIME_H\:config.h}
+{\xe \v config.h\:HAVE_SYS_TIME_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_SYS_TIME_H}}
+\par
+{\bkmkstart AAAAAAAAAV}
+{\bkmkend AAAAAAAAAV}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 52 of file config.h.}\par
+}
+{\xe \v HAVE_SYS_TYPES_H\:config.h}
+{\xe \v config.h\:HAVE_SYS_TYPES_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_SYS_TYPES_H}}
+\par
+{\bkmkstart AAAAAAAAAW}
+{\bkmkend AAAAAAAAAW}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 55 of file config.h.}\par
+}
+{\xe \v HAVE_TIME_H\:config.h}
+{\xe \v config.h\:HAVE_TIME_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_TIME_H}}
+\par
+{\bkmkstart AAAAAAAAAX}
+{\bkmkend AAAAAAAAAX}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 58 of file config.h.}\par
+}
+{\xe \v HAVE_UNAME\:config.h}
+{\xe \v config.h\:HAVE_UNAME}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_UNAME}}
+\par
+{\bkmkstart AAAAAAAAAY}
+{\bkmkend AAAAAAAAAY}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 61 of file config.h.}\par
+}
+{\xe \v HAVE_UNISTD_H\:config.h}
+{\xe \v config.h\:HAVE_UNISTD_H}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define HAVE_UNISTD_H}}
+\par
+{\bkmkstart AAAAAAAAAZ}
+{\bkmkend AAAAAAAAAZ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 64 of file config.h.}\par
+}
+{\xe \v LT_OBJDIR\:config.h}
+{\xe \v config.h\:LT_OBJDIR}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define LT_OBJDIR}}
+\par
+{\bkmkstart AAAAAAAABA}
+{\bkmkend AAAAAAAABA}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 68 of file config.h.}\par
+}
+{\xe \v PACKAGE\:config.h}
+{\xe \v config.h\:PACKAGE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define PACKAGE}}
+\par
+{\bkmkstart AAAAAAAABB}
+{\bkmkend AAAAAAAABB}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 71 of file config.h.}\par
+}
+{\xe \v PACKAGE_BUGREPORT\:config.h}
+{\xe \v config.h\:PACKAGE_BUGREPORT}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define PACKAGE_BUGREPORT}}
+\par
+{\bkmkstart AAAAAAAABC}
+{\bkmkend AAAAAAAABC}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 74 of file config.h.}\par
+}
+{\xe \v PACKAGE_NAME\:config.h}
+{\xe \v config.h\:PACKAGE_NAME}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define PACKAGE_NAME}}
+\par
+{\bkmkstart AAAAAAAABD}
+{\bkmkend AAAAAAAABD}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 77 of file config.h.}\par
+}
+{\xe \v PACKAGE_STRING\:config.h}
+{\xe \v config.h\:PACKAGE_STRING}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define PACKAGE_STRING}}
+\par
+{\bkmkstart AAAAAAAABE}
+{\bkmkend AAAAAAAABE}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 80 of file config.h.}\par
+}
+{\xe \v PACKAGE_TARNAME\:config.h}
+{\xe \v config.h\:PACKAGE_TARNAME}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define PACKAGE_TARNAME}}
+\par
+{\bkmkstart AAAAAAAABF}
+{\bkmkend AAAAAAAABF}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 83 of file config.h.}\par
+}
+{\xe \v PACKAGE_URL\:config.h}
+{\xe \v config.h\:PACKAGE_URL}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define PACKAGE_URL}}
+\par
+{\bkmkstart AAAAAAAABG}
+{\bkmkend AAAAAAAABG}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 86 of file config.h.}\par
+}
+{\xe \v PACKAGE_VERSION\:config.h}
+{\xe \v config.h\:PACKAGE_VERSION}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define PACKAGE_VERSION}}
+\par
+{\bkmkstart AAAAAAAABH}
+{\bkmkend AAAAAAAABH}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 89 of file config.h.}\par
+}
+{\xe \v STDC_HEADERS\:config.h}
+{\xe \v config.h\:STDC_HEADERS}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define STDC_HEADERS}}
+\par
+{\bkmkstart AAAAAAAABI}
+{\bkmkend AAAAAAAABI}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 92 of file config.h.}\par
+}
+{\xe \v TIME_WITH_SYS_TIME\:config.h}
+{\xe \v config.h\:TIME_WITH_SYS_TIME}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TIME_WITH_SYS_TIME}}
+\par
+{\bkmkstart AAAAAAAABJ}
+{\bkmkend AAAAAAAABJ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 95 of file config.h.}\par
+}
+{\xe \v VERSION\:config.h}
+{\xe \v config.h\:VERSION}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define VERSION}}
+\par
+{\bkmkstart AAAAAAAABK}
+{\bkmkend AAAAAAAABK}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 120 of file config.h.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+include/libassert_custom.h File Reference\par \pard\plain 
+{\tc\tcl2 \v include/libassert_custom.h}
+{\xe \v include/libassert_custom.h}
+{\bkmkstart AAAAAAAABL}
+{\bkmkend AAAAAAAABL}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some custom 'assert' routines. }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b assert_pointer_is_not_null} (void *ptr, char *ptrname)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b assert_string_is_not_null} (char *string, char *stringname)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some custom 'assert' routines. \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Author:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid Laurent Cossin \par
+}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Date:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid July 2015 \par
+}}{
+Definition in file {\b libassert_custom.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v assert_pointer_is_not_null\:libassert_custom.h}
+{\xe \v libassert_custom.h\:assert_pointer_is_not_null}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int assert_pointer_is_not_null (void * {\i ptr}, char * {\i ptrname})}}
+\par
+{\bkmkstart AAAAAAAABM}
+{\bkmkend AAAAAAAABM}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 28 of file libassert_custom.c.}\par
+{
+References log_debug(), log_exit_critical(), and TRACE_MESSAGE_MAXLENGTH.}\par
+{
+Referenced by initFmtStr().}\par
+}
+{\xe \v assert_string_is_not_null\:libassert_custom.h}
+{\xe \v libassert_custom.h\:assert_string_is_not_null}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int assert_string_is_not_null (char * {\i string}, char * {\i stringname})}}
+\par
+{\bkmkstart AAAAAAAABN}
+{\bkmkend AAAAAAAABN}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 47 of file libassert_custom.c.}\par
+{
+References log_debug(), log_exit_critical(), and TRACE_MESSAGE_MAXLENGTH.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+include/libdatetimetz_converter_dataparsetimestamps.h File Reference\par \pard\plain 
+{\tc\tcl2 \v include/libdatetimetz_converter_dataparsetimestamps.h}
+{\xe \v include/libdatetimetz_converter_dataparsetimestamps.h}
+{\bkmkstart AAAAAAAABO}
+{\bkmkend AAAAAAAABO}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some functions to handle the data for tests. }}\par
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "libdatetimetz_converter_datatypes.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b parseRawString} (char *rawTimestampTZStr, char *outTimestampStrNoTZ, char *outOlsonTZ)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+parses a row from the input file }{
+}\par
+}}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some functions to handle the data for tests. \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Author:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid Laurent Cossin \par
+}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Date:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid July 2015 \par
+}}{
+Definition in file {\b libdatetimetz_converter_dataparsetimestamps.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v parseRawString\:libdatetimetz_converter_dataparsetimestamps.h}
+{\xe \v libdatetimetz_converter_dataparsetimestamps.h\:parseRawString}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int parseRawString (char * {\i rawTimestampTZStr}, char * {\i outTimestampStrNoTZ}, char * {\i outOlsonTZ})}}
+\par
+{\bkmkstart AAAAAAAABP}
+{\bkmkend AAAAAAAABP}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+parses a row from the input file }}\par
+{
+Definition at line 30 of file libdatetimetz_converter_dataparsetimestamps.c.}\par
+{
+References log_debug(), and RAWTIMESTAMPMAXLENGTH.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+include/libdatetimetz_converter_datatypes.h File Reference\par \pard\plain 
+{\tc\tcl2 \v include/libdatetimetz_converter_datatypes.h}
+{\xe \v include/libdatetimetz_converter_datatypes.h}
+{\bkmkstart AAAAAAAABQ}
+{\bkmkend AAAAAAAABQ}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides the types for the data. }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Data Structures\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b timezonestructdef}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+structure definition for a timezone }}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+struct {\b timestampstructdef}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+structure definition for a timestamp }}}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TZ_ENV_VARNAME}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b DEFAULT_TIMEZONE}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b EPOCH_TIMEZONE}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b RAWTIMESTAMPMAXLENGTH}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+max length of a raw data (a row from a file) }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TIMESTAMPMAXLENGTH}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TIMESTAMPMAXLENGTHSTR}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TIMEZONESTRUCTDEF}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TIMESTAMPSTRUCTDEF}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Typedefs\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b timezonestructdef} {\b timezonestructdef}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for timezonestructdef }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef {\b timezonestructdef} * {\b timezonestructptrdef}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for pointer to timezonestructdef }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef {\b timezonestructptrdef} {\b timezonestructarrdef}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for array of pointer to timezonestructdef }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef struct {\b timestampstructdef} {\b timestampstructdef}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for timestampstructdef }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef {\b timestampstructdef} * {\b timestampstructptrdef}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for pointer to timestampstructdef }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+typedef {\b timestampstructptrdef} {\b timestampstructarrdef}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for array of pointer to timestampstructdef }{
+}\par
+}}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides the types for the data. \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Author:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid Laurent Cossin \par
+}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Date:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid July 2015 \par
+}}{
+Definition in file {\b libdatetimetz_converter_datatypes.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v DEFAULT_TIMEZONE\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:DEFAULT_TIMEZONE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define DEFAULT_TIMEZONE}}
+\par
+{\bkmkstart AAAAAAAABR}
+{\bkmkend AAAAAAAABR}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 43 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v EPOCH_TIMEZONE\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:EPOCH_TIMEZONE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define EPOCH_TIMEZONE}}
+\par
+{\bkmkstart AAAAAAAABS}
+{\bkmkend AAAAAAAABS}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 44 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v RAWTIMESTAMPMAXLENGTH\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:RAWTIMESTAMPMAXLENGTH}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define RAWTIMESTAMPMAXLENGTH}}
+\par
+{\bkmkstart AAAAAAAABT}
+{\bkmkend AAAAAAAABT}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+max length of a raw data (a row from a file) }}\par
+{
+Definition at line 49 of file libdatetimetz_converter_datatypes.h.}\par
+{
+Referenced by parseRawString().}\par
+}
+{\xe \v TIMESTAMPMAXLENGTH\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:TIMESTAMPMAXLENGTH}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TIMESTAMPMAXLENGTH}}
+\par
+{\bkmkstart AAAAAAAABU}
+{\bkmkend AAAAAAAABU}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 53 of file libdatetimetz_converter_datatypes.h.}\par
+{
+Referenced by formatted_now().}\par
+}
+{\xe \v TIMESTAMPMAXLENGTHSTR\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:TIMESTAMPMAXLENGTHSTR}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TIMESTAMPMAXLENGTHSTR}}
+\par
+{\bkmkstart AAAAAAAABV}
+{\bkmkend AAAAAAAABV}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 54 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v TIMESTAMPSTRUCTDEF\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:TIMESTAMPSTRUCTDEF}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TIMESTAMPSTRUCTDEF}}
+\par
+{\bkmkstart AAAAAAAABW}
+{\bkmkend AAAAAAAABW}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 92 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v TIMEZONESTRUCTDEF\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:TIMEZONESTRUCTDEF}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TIMEZONESTRUCTDEF}}
+\par
+{\bkmkstart AAAAAAAABX}
+{\bkmkend AAAAAAAABX}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 60 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v TZ_ENV_VARNAME\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:TZ_ENV_VARNAME}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TZ_ENV_VARNAME}}
+\par
+{\bkmkstart AAAAAAAABY}
+{\bkmkend AAAAAAAABY}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 38 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Typedef Documentation\par
+\pard\plain 
+{\xe \v timestampstructarrdef\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:timestampstructarrdef}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef {\b timestampstructptrdef} {\b timestampstructarrdef}}}
+\par
+{\bkmkstart AAAAAAAABZ}
+{\bkmkend AAAAAAAABZ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for array of pointer to timestampstructdef }}\par
+{
+Definition at line 104 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v timestampstructdef\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:timestampstructdef}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b timestampstructdef} {\b timestampstructdef}}}
+\par
+{\bkmkstart AAAAAAAACA}
+{\bkmkend AAAAAAAACA}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for timestampstructdef }}\par
+{
+Definition at line 96 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v timestampstructptrdef\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:timestampstructptrdef}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef {\b timestampstructdef}* {\b timestampstructptrdef}}}
+\par
+{\bkmkstart AAAAAAAACB}
+{\bkmkend AAAAAAAACB}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for pointer to timestampstructdef }}\par
+{
+Definition at line 100 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v timezonestructarrdef\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:timezonestructarrdef}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef {\b timezonestructptrdef} {\b timezonestructarrdef}}}
+\par
+{\bkmkstart AAAAAAAACC}
+{\bkmkend AAAAAAAACC}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for array of pointer to timezonestructdef }}\par
+{
+Definition at line 72 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v timezonestructdef\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:timezonestructdef}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef struct {\b timezonestructdef} {\b timezonestructdef}}}
+\par
+{\bkmkstart AAAAAAAACD}
+{\bkmkend AAAAAAAACD}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for timezonestructdef }}\par
+{
+Definition at line 64 of file libdatetimetz_converter_datatypes.h.}\par
+}
+{\xe \v timezonestructptrdef\:libdatetimetz_converter_datatypes.h}
+{\xe \v libdatetimetz_converter_datatypes.h\:timezonestructptrdef}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+typedef {\b timezonestructdef}* {\b timezonestructptrdef}}}
+\par
+{\bkmkstart AAAAAAAACE}
+{\bkmkend AAAAAAAACE}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+type definition for pointer to timezonestructdef }}\par
+{
+Definition at line 68 of file libdatetimetz_converter_datatypes.h.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+include/libdatetimetz_converter_libhelper.h File Reference\par \pard\plain 
+{\tc\tcl2 \v include/libdatetimetz_converter_libhelper.h}
+{\xe \v include/libdatetimetz_converter_libhelper.h}
+{\bkmkstart AAAAAAAACF}
+{\bkmkend AAAAAAAACF}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+include/libdatetimetz_converter_parameter.h File Reference\par \pard\plain 
+{\tc\tcl2 \v include/libdatetimetz_converter_parameter.h}
+{\xe \v include/libdatetimetz_converter_parameter.h}
+{\bkmkstart AAAAAAAACG}
+{\bkmkend AAAAAAAACG}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some variables. }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b PARAMETERS_HEADERS}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b CONTINUEONFAILURE}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Continue after a failure. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ABORTONFAILURE}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Abort the program after a CRITICAL error. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ABORTONCRITICAL}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Abort the program after a CRITICAL error. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b ABORTONWARNING}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Abort the program after a WARNING error. }{
+}\par
+}}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b actionOnFailureOpts}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+The bit flags that define the actions be done in case of failure. }{
+}\par
+}}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some variables. \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Author:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid Laurent Cossin \par
+}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Date:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid July 2015 \par
+}}{
+Definition in file {\b libdatetimetz_converter_parameter.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v ABORTONCRITICAL\:libdatetimetz_converter_parameter.h}
+{\xe \v libdatetimetz_converter_parameter.h\:ABORTONCRITICAL}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ABORTONCRITICAL}}
+\par
+{\bkmkstart AAAAAAAACH}
+{\bkmkend AAAAAAAACH}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Abort the program after a CRITICAL error. }}\par
+{
+Definition at line 52 of file libdatetimetz_converter_parameter.h.}\par
+}
+{\xe \v ABORTONFAILURE\:libdatetimetz_converter_parameter.h}
+{\xe \v libdatetimetz_converter_parameter.h\:ABORTONFAILURE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ABORTONFAILURE}}
+\par
+{\bkmkstart AAAAAAAACI}
+{\bkmkend AAAAAAAACI}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Abort the program after a CRITICAL error. }}\par
+{
+Definition at line 49 of file libdatetimetz_converter_parameter.h.}\par
+}
+{\xe \v ABORTONWARNING\:libdatetimetz_converter_parameter.h}
+{\xe \v libdatetimetz_converter_parameter.h\:ABORTONWARNING}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define ABORTONWARNING}}
+\par
+{\bkmkstart AAAAAAAACJ}
+{\bkmkend AAAAAAAACJ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Abort the program after a WARNING error. }}\par
+{
+Definition at line 55 of file libdatetimetz_converter_parameter.h.}\par
+}
+{\xe \v CONTINUEONFAILURE\:libdatetimetz_converter_parameter.h}
+{\xe \v libdatetimetz_converter_parameter.h\:CONTINUEONFAILURE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define CONTINUEONFAILURE}}
+\par
+{\bkmkstart AAAAAAAACK}
+{\bkmkend AAAAAAAACK}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Continue after a failure. }}\par
+{
+Definition at line 46 of file libdatetimetz_converter_parameter.h.}\par
+}
+{\xe \v PARAMETERS_HEADERS\:libdatetimetz_converter_parameter.h}
+{\xe \v libdatetimetz_converter_parameter.h\:PARAMETERS_HEADERS}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define PARAMETERS_HEADERS}}
+\par
+{\bkmkstart AAAAAAAACL}
+{\bkmkend AAAAAAAACL}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 41 of file libdatetimetz_converter_parameter.h.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variable Documentation\par
+\pard\plain 
+{\xe \v actionOnFailureOpts\:libdatetimetz_converter_parameter.h}
+{\xe \v libdatetimetz_converter_parameter.h\:actionOnFailureOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int actionOnFailureOpts}}
+\par
+{\bkmkstart AAAAAAAACM}
+{\bkmkend AAAAAAAACM}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+The bit flags that define the actions be done in case of failure. }}\par
+{
+Definition at line 58 of file libdatetimetz_converter_parameter.h.}\par
+{
+Referenced by log_exit_critical().}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+include/libdatetimetz_converter_timestamptzformat.h File Reference\par \pard\plain 
+{\tc\tcl2 \v include/libdatetimetz_converter_timestamptzformat.h}
+{\xe \v include/libdatetimetz_converter_timestamptzformat.h}
+{\bkmkstart AAAAAAAACN}
+{\bkmkend AAAAAAAACN}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some constants and some functions to manage the timestamp formats. }}\par
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "libdatetimetz_converter_datatypes.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TIMESTAMPFORMATMAXLENGTH}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b buildFmtStr} (int FmtFlags, char *FmtStr)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+builds the format string according to the options (FmtFlags) }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setDefaultInputFmtOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+set the default options for a timestamp as input }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setDefaultOutputFmtOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+set the default options for a timestamp as output }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setOlsonOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables Olson timezone option }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setISO8601Opts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables the ISO8601 format }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setISO8601OlsonOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables ISO8601 format + Olson timezone }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setOlsonInputFmtOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables option Olson timezone - wrapper for setOlsonOpts }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setOlsonOutputFmtOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables option Olson timezone - wrapper for setOlsonOpts }{
+}\par
+}}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const int {\b iso8601Flag}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+ISO8601 format option. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const int {\b TZAbbrevFlag}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Timezone abbreviation option. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const int {\b TZOffsetFlag}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Timezone offset option. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const int {\b PosixFlag}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Posix format option. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const int {\b TZOlsonFlag}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Olson timezone option. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char {\b TZOffsetFmt} []\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - timezone offset }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char {\b TZAbbrevFmt} []\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - timezone abbreviation }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char {\b iso8601noTZFmt} []\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - ISO8601 without timezone }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char {\b iso8601TZOffset} []\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - ISO8601 + timezone offset }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char {\b iso8601TZAbbrev} []\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - ISO8601 + timezone abbreviation }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+const char {\b iso8601TZCombined} []\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - ISO8601 + timezone offset + timezone abbreviation }{
+}\par
+}}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some constants and some functions to manage the timestamp formats. \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Author:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid Laurent Cossin \par
+}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Date:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid July 2015 \par
+}}{
+Definition in file {\b libdatetimetz_converter_timestamptzformat.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v TIMESTAMPFORMATMAXLENGTH\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:TIMESTAMPFORMATMAXLENGTH}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TIMESTAMPFORMATMAXLENGTH}}
+\par
+{\bkmkstart AAAAAAAACO}
+{\bkmkend AAAAAAAACO}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 65 of file libdatetimetz_converter_timestamptzformat.h.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v buildFmtStr\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:buildFmtStr}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int buildFmtStr (int {\i FmtFlags}, char * {\i FmtStr})}}
+\par
+{\bkmkstart AAAAAAAACP}
+{\bkmkend AAAAAAAACP}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+builds the format string according to the options (FmtFlags) }}\par
+{
+Definition at line 231 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References appendISO8601noTZ(), appendTZAbbrev(), initFmtStr(), isISO8601(), and isTZAbbrev().}\par
+}
+{\xe \v setDefaultInputFmtOpts\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:setDefaultInputFmtOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setDefaultInputFmtOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAACQ}
+{\bkmkend AAAAAAAACQ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+set the default options for a timestamp as input }}\par
+{
+Definition at line 83 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References setISO8601Opts().}\par
+}
+{\xe \v setDefaultOutputFmtOpts\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:setDefaultOutputFmtOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setDefaultOutputFmtOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAACR}
+{\bkmkend AAAAAAAACR}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+set the default options for a timestamp as output }}\par
+{
+Definition at line 94 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References iso8601Flag, and TZAbbrevFlag.}\par
+}
+{\xe \v setISO8601OlsonOpts\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:setISO8601OlsonOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setISO8601OlsonOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAACS}
+{\bkmkend AAAAAAAACS}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables ISO8601 format + Olson timezone }}\par
+{
+Definition at line 52 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References setISO8601Opts(), and setOlsonOpts().}\par
+}
+{\xe \v setISO8601Opts\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:setISO8601Opts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setISO8601Opts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAACT}
+{\bkmkend AAAAAAAACT}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables the ISO8601 format }}\par
+{
+Definition at line 43 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References iso8601Flag.}\par
+{
+Referenced by setDefaultInputFmtOpts(), and setISO8601OlsonOpts().}\par
+}
+{\xe \v setOlsonInputFmtOpts\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:setOlsonInputFmtOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setOlsonInputFmtOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAACU}
+{\bkmkend AAAAAAAACU}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables option Olson timezone - wrapper for setOlsonOpts }}\par
+{
+Definition at line 63 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References setOlsonOpts().}\par
+}
+{\xe \v setOlsonOpts\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:setOlsonOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setOlsonOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAACV}
+{\bkmkend AAAAAAAACV}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables Olson timezone option }}\par
+{
+Definition at line 33 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References TZOlsonFlag.}\par
+{
+Referenced by setISO8601OlsonOpts(), setOlsonInputFmtOpts(), and setOlsonOutputFmtOpts().}\par
+}
+{\xe \v setOlsonOutputFmtOpts\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:setOlsonOutputFmtOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setOlsonOutputFmtOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAACW}
+{\bkmkend AAAAAAAACW}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables option Olson timezone - wrapper for setOlsonOpts }}\par
+{
+Definition at line 73 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References setOlsonOpts().}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variable Documentation\par
+\pard\plain 
+{\xe \v iso8601Flag\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:iso8601Flag}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const int iso8601Flag}}
+\par
+{\bkmkstart AAAAAAAACX}
+{\bkmkend AAAAAAAACX}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+ISO8601 format option. }}\par
+{
+Definition at line 47 of file libdatetimetz_converter_timestamptzformat.h.}\par
+{
+Referenced by isISO8601(), setDefaultOutputFmtOpts(), and setISO8601Opts().}\par
+}
+{\xe \v iso8601noTZFmt\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:iso8601noTZFmt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char iso8601noTZFmt[]}}
+\par
+{\bkmkstart AAAAAAAACY}
+{\bkmkend AAAAAAAACY}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - ISO8601 without timezone }}\par
+{
+Definition at line 78 of file libdatetimetz_converter_timestamptzformat.h.}\par
+{
+Referenced by appendISO8601noTZ().}\par
+}
+{\xe \v iso8601TZAbbrev\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:iso8601TZAbbrev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char iso8601TZAbbrev[]}}
+\par
+{\bkmkstart AAAAAAAACZ}
+{\bkmkend AAAAAAAACZ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - ISO8601 + timezone abbreviation }}\par
+{
+Definition at line 84 of file libdatetimetz_converter_timestamptzformat.h.}\par
+}
+{\xe \v iso8601TZCombined\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:iso8601TZCombined}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char iso8601TZCombined[]}}
+\par
+{\bkmkstart AAAAAAAADA}
+{\bkmkend AAAAAAAADA}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - ISO8601 + timezone offset + timezone abbreviation }}\par
+{
+Definition at line 87 of file libdatetimetz_converter_timestamptzformat.h.}\par
+}
+{\xe \v iso8601TZOffset\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:iso8601TZOffset}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char iso8601TZOffset[]}}
+\par
+{\bkmkstart AAAAAAAADB}
+{\bkmkend AAAAAAAADB}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - ISO8601 + timezone offset }}\par
+{
+Definition at line 81 of file libdatetimetz_converter_timestamptzformat.h.}\par
+{
+Referenced by formatted_now().}\par
+}
+{\xe \v PosixFlag\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:PosixFlag}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const int PosixFlag}}
+\par
+{\bkmkstart AAAAAAAADC}
+{\bkmkend AAAAAAAADC}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Posix format option. }}\par
+{
+Definition at line 56 of file libdatetimetz_converter_timestamptzformat.h.}\par
+}
+{\xe \v TZAbbrevFlag\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:TZAbbrevFlag}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const int TZAbbrevFlag}}
+\par
+{\bkmkstart AAAAAAAADD}
+{\bkmkend AAAAAAAADD}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Timezone abbreviation option. }}\par
+{
+Definition at line 50 of file libdatetimetz_converter_timestamptzformat.h.}\par
+{
+Referenced by isTZAbbrev(), and setDefaultOutputFmtOpts().}\par
+}
+{\xe \v TZAbbrevFmt\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:TZAbbrevFmt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char TZAbbrevFmt[]}}
+\par
+{\bkmkstart AAAAAAAADE}
+{\bkmkend AAAAAAAADE}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - timezone abbreviation }}\par
+{
+Definition at line 71 of file libdatetimetz_converter_timestamptzformat.h.}\par
+{
+Referenced by appendTZAbbrev().}\par
+}
+{\xe \v TZOffsetFlag\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:TZOffsetFlag}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const int TZOffsetFlag}}
+\par
+{\bkmkstart AAAAAAAADF}
+{\bkmkend AAAAAAAADF}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Timezone offset option. }}\par
+{
+Definition at line 53 of file libdatetimetz_converter_timestamptzformat.h.}\par
+}
+{\xe \v TZOffsetFmt\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:TZOffsetFmt}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const char TZOffsetFmt[]}}
+\par
+{\bkmkstart AAAAAAAADG}
+{\bkmkend AAAAAAAADG}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+strptime - timezone offset }}\par
+{
+Definition at line 68 of file libdatetimetz_converter_timestamptzformat.h.}\par
+}
+{\xe \v TZOlsonFlag\:libdatetimetz_converter_timestamptzformat.h}
+{\xe \v libdatetimetz_converter_timestamptzformat.h\:TZOlsonFlag}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+const int TZOlsonFlag}}
+\par
+{\bkmkstart AAAAAAAADH}
+{\bkmkend AAAAAAAADH}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Olson timezone option. }}\par
+{
+Definition at line 59 of file libdatetimetz_converter_timestamptzformat.h.}\par
+{
+Referenced by isTZOlson(), and setOlsonOpts().}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+include/libregex_custom.h File Reference\par \pard\plain 
+{\tc\tcl2 \v include/libregex_custom.h}
+{\xe \v include/libregex_custom.h}
+{\bkmkstart AAAAAAAADI}
+{\bkmkend AAAAAAAADI}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some custom 'regex' routines. }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b REGEXPMAXLENGTH}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b STRINGMAXLENGTH}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b regexp_verify} (char *string, char *regexpstr)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Verifies if a string matches a regular expression. }{
+}\par
+}}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some custom 'regex' routines. \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Author:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid Laurent Cossin \par
+}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Date:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid July 2015 \par
+}}{
+Definition in file {\b libregex_custom.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v REGEXPMAXLENGTH\:libregex_custom.h}
+{\xe \v libregex_custom.h\:REGEXPMAXLENGTH}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define REGEXPMAXLENGTH}}
+\par
+{\bkmkstart AAAAAAAADJ}
+{\bkmkend AAAAAAAADJ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 36 of file libregex_custom.h.}\par
+{
+Referenced by regexp_verify().}\par
+}
+{\xe \v STRINGMAXLENGTH\:libregex_custom.h}
+{\xe \v libregex_custom.h\:STRINGMAXLENGTH}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define STRINGMAXLENGTH}}
+\par
+{\bkmkstart AAAAAAAADK}
+{\bkmkend AAAAAAAADK}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 37 of file libregex_custom.h.}\par
+{
+Referenced by regexp_verify().}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v regexp_verify\:libregex_custom.h}
+{\xe \v libregex_custom.h\:regexp_verify}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int regexp_verify (char * {\i string}, char * {\i regexpstr})}}
+\par
+{\bkmkstart AAAAAAAADL}
+{\bkmkend AAAAAAAADL}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Verifies if a string matches a regular expression. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Parameters:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx1224
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx3061
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{in\cell }{{\i string} \cell }{The string to evaluate \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx1224
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx3061
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{in\cell }{{\i regexpstr} \cell }{The regular expression\cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Returns:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid the size of the longest part matching the regular expression pattern \par
+}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Return values:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i 0} \cell }{if the string does not match the regular expression \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i >0} \cell }{if the string matches the regular expression \cell }
+{\row }
+}
+}{
+Definition at line 30 of file libregex_custom.c.}\par
+{
+References log_debug(), log_finest(), REGEXPMAXLENGTH, STRINGMAXLENGTH, and TRACE_MESSAGE_MAXLENGTH.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+include/libtrace.h File Reference\par \pard\plain 
+{\tc\tcl2 \v include/libtrace.h}
+{\xe \v include/libtrace.h}
+{\bkmkstart AAAAAAAADM}
+{\bkmkend AAAAAAAADM}
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some helper functions to handle trace messages. }}\par
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macros\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_MESSAGE_MAXLENGTH}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE MESSAGE maxlength. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_NONE}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_NONE (constant) }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_NONE_HEADER}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_CRITICAL}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_CRITICAL (constant) }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_CRITICAL_HEADER}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_WARNING}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_WARNING (constant) }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_WARNING_HEADER}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_INFO}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_INFO (constant) }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_INFO_HEADER}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_FINE}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_FINE (constant) }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_FINE_HEADER}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_FINER}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_FINER (constant) }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_FINER_HEADER}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_FINEST}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_FINEST (constant) }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_FINEST_HEADER}\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_DEBUG}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_DEBUG (constant) }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+#define {\b TRACE_LEVEL_DEBUG_HEADER}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_exit_critical} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+writes the given message depending on TRACE_LEVEL }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_critical} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'critical' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_warning} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'warning' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_info} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'info' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_fine} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'fine' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_finer} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'fine' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_finest} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'finest' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_debug} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'debug' level message. }{
+}\par
+}}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b TRACE_LEVEL}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL (variable) }{
+}\par
+}}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Detailed Description\par
+\pard\plain 
+{
+\pard\plain \s17\sa60\sb30\widctlpar\qj \fs22\cgrid {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Provides some helper functions to handle trace messages. \par
+}{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+\par
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Author:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid Laurent Cossin \par
+}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Date:\par}\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid July 2015 \par
+}}{
+Definition in file {\b libtrace.h}.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Macro Definition Documentation\par
+\pard\plain 
+{\xe \v TRACE_LEVEL_CRITICAL\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_CRITICAL}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_CRITICAL}}
+\par
+{\bkmkstart AAAAAAAADN}
+{\bkmkend AAAAAAAADN}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_CRITICAL (constant) }}\par
+{
+Definition at line 44 of file libtrace.h.}\par
+{
+Referenced by log_critical().}\par
+}
+{\xe \v TRACE_LEVEL_CRITICAL_HEADER\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_CRITICAL_HEADER}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_CRITICAL_HEADER}}
+\par
+{\bkmkstart AAAAAAAADO}
+{\bkmkend AAAAAAAADO}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 45 of file libtrace.h.}\par
+{
+Referenced by log_critical().}\par
+}
+{\xe \v TRACE_LEVEL_DEBUG\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_DEBUG}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_DEBUG}}
+\par
+{\bkmkstart AAAAAAAADP}
+{\bkmkend AAAAAAAADP}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_DEBUG (constant) }}\par
+{
+Definition at line 68 of file libtrace.h.}\par
+{
+Referenced by log_debug().}\par
+}
+{\xe \v TRACE_LEVEL_DEBUG_HEADER\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_DEBUG_HEADER}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_DEBUG_HEADER}}
+\par
+{\bkmkstart AAAAAAAADQ}
+{\bkmkend AAAAAAAADQ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 69 of file libtrace.h.}\par
+{
+Referenced by log_debug().}\par
+}
+{\xe \v TRACE_LEVEL_FINE\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_FINE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_FINE}}
+\par
+{\bkmkstart AAAAAAAADR}
+{\bkmkend AAAAAAAADR}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_FINE (constant) }}\par
+{
+Definition at line 56 of file libtrace.h.}\par
+{
+Referenced by log_fine().}\par
+}
+{\xe \v TRACE_LEVEL_FINE_HEADER\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_FINE_HEADER}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_FINE_HEADER}}
+\par
+{\bkmkstart AAAAAAAADS}
+{\bkmkend AAAAAAAADS}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 57 of file libtrace.h.}\par
+{
+Referenced by log_fine().}\par
+}
+{\xe \v TRACE_LEVEL_FINER\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_FINER}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_FINER}}
+\par
+{\bkmkstart AAAAAAAADT}
+{\bkmkend AAAAAAAADT}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_FINER (constant) }}\par
+{
+Definition at line 60 of file libtrace.h.}\par
+{
+Referenced by log_finer().}\par
+}
+{\xe \v TRACE_LEVEL_FINER_HEADER\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_FINER_HEADER}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_FINER_HEADER}}
+\par
+{\bkmkstart AAAAAAAADU}
+{\bkmkend AAAAAAAADU}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 61 of file libtrace.h.}\par
+{
+Referenced by log_finer().}\par
+}
+{\xe \v TRACE_LEVEL_FINEST\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_FINEST}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_FINEST}}
+\par
+{\bkmkstart AAAAAAAADV}
+{\bkmkend AAAAAAAADV}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_FINEST (constant) }}\par
+{
+Definition at line 64 of file libtrace.h.}\par
+{
+Referenced by log_finest().}\par
+}
+{\xe \v TRACE_LEVEL_FINEST_HEADER\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_FINEST_HEADER}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_FINEST_HEADER}}
+\par
+{\bkmkstart AAAAAAAADW}
+{\bkmkend AAAAAAAADW}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 65 of file libtrace.h.}\par
+{
+Referenced by log_finest().}\par
+}
+{\xe \v TRACE_LEVEL_INFO\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_INFO}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_INFO}}
+\par
+{\bkmkstart AAAAAAAADX}
+{\bkmkend AAAAAAAADX}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_INFO (constant) }}\par
+{
+Definition at line 52 of file libtrace.h.}\par
+{
+Referenced by log_info().}\par
+}
+{\xe \v TRACE_LEVEL_INFO_HEADER\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_INFO_HEADER}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_INFO_HEADER}}
+\par
+{\bkmkstart AAAAAAAADY}
+{\bkmkend AAAAAAAADY}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 53 of file libtrace.h.}\par
+{
+Referenced by log_info().}\par
+}
+{\xe \v TRACE_LEVEL_NONE\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_NONE}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_NONE}}
+\par
+{\bkmkstart AAAAAAAADZ}
+{\bkmkend AAAAAAAADZ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_NONE (constant) }}\par
+{
+Definition at line 40 of file libtrace.h.}\par
+}
+{\xe \v TRACE_LEVEL_NONE_HEADER\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_NONE_HEADER}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_NONE_HEADER}}
+\par
+{\bkmkstart AAAAAAAAEA}
+{\bkmkend AAAAAAAAEA}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 41 of file libtrace.h.}\par
+}
+{\xe \v TRACE_LEVEL_WARNING\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_WARNING}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_WARNING}}
+\par
+{\bkmkstart AAAAAAAAEB}
+{\bkmkend AAAAAAAAEB}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL_WARNING (constant) }}\par
+{
+Definition at line 48 of file libtrace.h.}\par
+{
+Referenced by log_warning().}\par
+}
+{\xe \v TRACE_LEVEL_WARNING_HEADER\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL_WARNING_HEADER}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_LEVEL_WARNING_HEADER}}
+\par
+{\bkmkstart AAAAAAAAEC}
+{\bkmkend AAAAAAAAEC}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 49 of file libtrace.h.}\par
+{
+Referenced by log_warning().}\par
+}
+{\xe \v TRACE_MESSAGE_MAXLENGTH\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_MESSAGE_MAXLENGTH}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+#define TRACE_MESSAGE_MAXLENGTH}}
+\par
+{\bkmkstart AAAAAAAAED}
+{\bkmkend AAAAAAAAED}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE MESSAGE maxlength. }}\par
+{
+Definition at line 37 of file libtrace.h.}\par
+{
+Referenced by assert_pointer_is_not_null(), assert_string_is_not_null(), and regexp_verify().}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v log_critical\:libtrace.h}
+{\xe \v libtrace.h\:log_critical}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_critical (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAEE}
+{\bkmkend AAAAAAAAEE}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'critical' level message. }}\par
+{
+Definition at line 81 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_CRITICAL, and TRACE_LEVEL_CRITICAL_HEADER.}\par
+{
+Referenced by log_exit_critical().}\par
+}
+{\xe \v log_debug\:libtrace.h}
+{\xe \v libtrace.h\:log_debug}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_debug (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAEF}
+{\bkmkend AAAAAAAAEF}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'debug' level message. }}\par
+{
+Definition at line 132 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_DEBUG, and TRACE_LEVEL_DEBUG_HEADER.}\par
+{
+Referenced by assert_pointer_is_not_null(), assert_string_is_not_null(), parseRawString(), and regexp_verify().}\par
+}
+{\xe \v log_exit_critical\:libtrace.h}
+{\xe \v libtrace.h\:log_exit_critical}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_exit_critical (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAEG}
+{\bkmkend AAAAAAAAEG}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+writes the given message depending on TRACE_LEVEL }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes messages according to TRACE_LEVEL\par
+input : msg - the message to be written\par
+output stream : stderr (hard coded)Writes a 'critical' level message + aborts the program \par
+}{
+Definition at line 70 of file libtrace.c.}\par
+{
+References actionOnFailureOpts, and log_critical().}\par
+{
+Referenced by assert_pointer_is_not_null(), and assert_string_is_not_null().}\par
+}
+{\xe \v log_fine\:libtrace.h}
+{\xe \v libtrace.h\:log_fine}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_fine (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAEH}
+{\bkmkend AAAAAAAAEH}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'fine' level message. }}\par
+{
+Definition at line 105 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_FINE, and TRACE_LEVEL_FINE_HEADER.}\par
+}
+{\xe \v log_finer\:libtrace.h}
+{\xe \v libtrace.h\:log_finer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_finer (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAEI}
+{\bkmkend AAAAAAAAEI}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'fine' level message. }}\par
+{
+Definition at line 114 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_FINER, and TRACE_LEVEL_FINER_HEADER.}\par
+}
+{\xe \v log_finest\:libtrace.h}
+{\xe \v libtrace.h\:log_finest}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_finest (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAEJ}
+{\bkmkend AAAAAAAAEJ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'finest' level message. }}\par
+{
+Definition at line 123 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_FINEST, and TRACE_LEVEL_FINEST_HEADER.}\par
+{
+Referenced by regexp_verify().}\par
+}
+{\xe \v log_info\:libtrace.h}
+{\xe \v libtrace.h\:log_info}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_info (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAEK}
+{\bkmkend AAAAAAAAEK}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'info' level message. }}\par
+{
+Definition at line 97 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_INFO, and TRACE_LEVEL_INFO_HEADER.}\par
+}
+{\xe \v log_warning\:libtrace.h}
+{\xe \v libtrace.h\:log_warning}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_warning (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAEL}
+{\bkmkend AAAAAAAAEL}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'warning' level message. }}\par
+{
+Definition at line 89 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_WARNING, and TRACE_LEVEL_WARNING_HEADER.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variable Documentation\par
+\pard\plain 
+{\xe \v TRACE_LEVEL\:libtrace.h}
+{\xe \v libtrace.h\:TRACE_LEVEL}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int TRACE_LEVEL}}
+\par
+{\bkmkstart AAAAAAAAEM}
+{\bkmkend AAAAAAAAEM}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL (variable) }}\par
+{
+Definition at line 29 of file libtrace.c.}\par
+{
+Referenced by log_message().}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+src/libassert_custom.c File Reference\par \pard\plain 
+{\tc\tcl2 \v src/libassert_custom.c}
+{\xe \v src/libassert_custom.c}
+{\bkmkstart AAAAAAAAEN}
+{\bkmkend AAAAAAAAEN}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <stdlib.h>}\par
+{\f2 #include <stdio.h>}\par
+{\f2 #include <string.h>}\par
+{\f2 #include "libassert_custom.h"}\par
+{\f2 #include "libtrace.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b assert_pointer_is_not_null} (void *ptr, char *ptrname)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b assert_string_is_not_null} (char *string, char *stringname)\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v assert_pointer_is_not_null\:libassert_custom.c}
+{\xe \v libassert_custom.c\:assert_pointer_is_not_null}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int assert_pointer_is_not_null (void * {\i ptr}, char * {\i ptrname})}}
+\par
+{\bkmkstart AAAAAAAAEO}
+{\bkmkend AAAAAAAAEO}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 28 of file libassert_custom.c.}\par
+{
+References log_debug(), log_exit_critical(), and TRACE_MESSAGE_MAXLENGTH.}\par
+{
+Referenced by initFmtStr().}\par
+}
+{\xe \v assert_string_is_not_null\:libassert_custom.c}
+{\xe \v libassert_custom.c\:assert_string_is_not_null}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int assert_string_is_not_null (char * {\i string}, char * {\i stringname})}}
+\par
+{\bkmkstart AAAAAAAAEP}
+{\bkmkend AAAAAAAAEP}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 47 of file libassert_custom.c.}\par
+{
+References log_debug(), log_exit_critical(), and TRACE_MESSAGE_MAXLENGTH.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+src/libdatetimetz_converter_dataparsetimestamps.c File Reference\par \pard\plain 
+{\tc\tcl2 \v src/libdatetimetz_converter_dataparsetimestamps.c}
+{\xe \v src/libdatetimetz_converter_dataparsetimestamps.c}
+{\bkmkstart AAAAAAAAEQ}
+{\bkmkend AAAAAAAAEQ}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <time.h>}\par
+{\f2 #include <stdlib.h>}\par
+{\f2 #include <stdio.h>}\par
+{\f2 #include <string.h>}\par
+{\f2 #include "libtrace.h"}\par
+{\f2 #include "libdatetimetz_converter_dataparsetimestamps.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b parseRawString} (char *rawTimestampTZStr, char *outTimestampStrNoTZ, char *outOlsonTZ)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+parses a row from the input file }{
+}\par
+}}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v parseRawString\:libdatetimetz_converter_dataparsetimestamps.c}
+{\xe \v libdatetimetz_converter_dataparsetimestamps.c\:parseRawString}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int parseRawString (char * {\i rawTimestampTZStr}, char * {\i outTimestampStrNoTZ}, char * {\i outOlsonTZ})}}
+\par
+{\bkmkstart AAAAAAAAER}
+{\bkmkend AAAAAAAAER}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+parses a row from the input file }}\par
+{
+Definition at line 30 of file libdatetimetz_converter_dataparsetimestamps.c.}\par
+{
+References log_debug(), and RAWTIMESTAMPMAXLENGTH.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+src/libdatetimetz_converter_timestamptzformat.c File Reference\par \pard\plain 
+{\tc\tcl2 \v src/libdatetimetz_converter_timestamptzformat.c}
+{\xe \v src/libdatetimetz_converter_timestamptzformat.c}
+{\bkmkstart AAAAAAAAES}
+{\bkmkend AAAAAAAAES}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include "config.h"}\par
+{\f2 #include <time.h>}\par
+{\f2 #include <stdlib.h>}\par
+{\f2 #include <stdio.h>}\par
+{\f2 #include <string.h>}\par
+{\f2 #include "libtrace.h"}\par
+{\f2 #include "libassert_custom.h"}\par
+{\f2 #include "libdatetimetz_converter_timestamptzformat.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setOlsonOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables Olson timezone option }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setISO8601Opts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables the ISO8601 format }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setISO8601OlsonOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables ISO8601 format + Olson timezone }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setOlsonInputFmtOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables option Olson timezone - wrapper for setOlsonOpts }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setOlsonOutputFmtOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables option Olson timezone - wrapper for setOlsonOpts }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setDefaultInputFmtOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+set the default options for a timestamp as input }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b setDefaultOutputFmtOpts} (int *flags)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+set the default options for a timestamp as output }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b isISO8601} (int FmtFlags)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b isTZAbbrev} (int FmtFlags)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b isTZOlson} (int FmtFlags)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b append2FmtStr} (char *FmtStr, const char *addStr)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b appendISO8601noTZ} (char *FmtStr)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b appendTZAbbrev} (char *FmtStr)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b initFmtStr} (char *FmtStr)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+initializes an empty string }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b buildFmtStr} (int FmtFlags, char *FmtStr)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+builds the format string according to the options (FmtFlags) }{
+}\par
+}}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v append2FmtStr\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:append2FmtStr}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int append2FmtStr (char * {\i FmtStr}, const char * {\i addStr})}}
+\par
+{\bkmkstart AAAAAAAAET}
+{\bkmkend AAAAAAAAET}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 139 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+Referenced by appendISO8601noTZ(), and appendTZAbbrev().}\par
+}
+{\xe \v appendISO8601noTZ\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:appendISO8601noTZ}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int appendISO8601noTZ (char * {\i FmtStr})}}
+\par
+{\bkmkstart AAAAAAAAEU}
+{\bkmkend AAAAAAAAEU}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 180 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References append2FmtStr(), and iso8601noTZFmt.}\par
+{
+Referenced by buildFmtStr().}\par
+}
+{\xe \v appendTZAbbrev\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:appendTZAbbrev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int appendTZAbbrev (char * {\i FmtStr})}}
+\par
+{\bkmkstart AAAAAAAAEV}
+{\bkmkend AAAAAAAAEV}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 193 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References append2FmtStr(), and TZAbbrevFmt.}\par
+{
+Referenced by buildFmtStr().}\par
+}
+{\xe \v buildFmtStr\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:buildFmtStr}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int buildFmtStr (int {\i FmtFlags}, char * {\i FmtStr})}}
+\par
+{\bkmkstart AAAAAAAAEW}
+{\bkmkend AAAAAAAAEW}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+builds the format string according to the options (FmtFlags) }}\par
+{
+Definition at line 231 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References appendISO8601noTZ(), appendTZAbbrev(), initFmtStr(), isISO8601(), and isTZAbbrev().}\par
+}
+{\xe \v initFmtStr\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:initFmtStr}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int initFmtStr (char * {\i FmtStr})}}
+\par
+{\bkmkstart AAAAAAAAEX}
+{\bkmkend AAAAAAAAEX}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+initializes an empty string }}\par
+{
+Definition at line 209 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References assert_pointer_is_not_null().}\par
+{
+Referenced by buildFmtStr().}\par
+}
+{\xe \v isISO8601\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:isISO8601}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int isISO8601 (int {\i FmtFlags})}}
+\par
+{\bkmkstart AAAAAAAAEY}
+{\bkmkend AAAAAAAAEY}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 105 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References iso8601Flag.}\par
+{
+Referenced by buildFmtStr().}\par
+}
+{\xe \v isTZAbbrev\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:isTZAbbrev}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int isTZAbbrev (int {\i FmtFlags})}}
+\par
+{\bkmkstart AAAAAAAAEZ}
+{\bkmkend AAAAAAAAEZ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 116 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References TZAbbrevFlag.}\par
+{
+Referenced by buildFmtStr().}\par
+}
+{\xe \v isTZOlson\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:isTZOlson}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int isTZOlson (int {\i FmtFlags})}}
+\par
+{\bkmkstart AAAAAAAAFA}
+{\bkmkend AAAAAAAAFA}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 127 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References TZOlsonFlag.}\par
+}
+{\xe \v setDefaultInputFmtOpts\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:setDefaultInputFmtOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setDefaultInputFmtOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAAFB}
+{\bkmkend AAAAAAAAFB}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+set the default options for a timestamp as input }}\par
+{
+Definition at line 83 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References setISO8601Opts().}\par
+}
+{\xe \v setDefaultOutputFmtOpts\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:setDefaultOutputFmtOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setDefaultOutputFmtOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAAFC}
+{\bkmkend AAAAAAAAFC}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+set the default options for a timestamp as output }}\par
+{
+Definition at line 94 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References iso8601Flag, and TZAbbrevFlag.}\par
+}
+{\xe \v setISO8601OlsonOpts\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:setISO8601OlsonOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setISO8601OlsonOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAAFD}
+{\bkmkend AAAAAAAAFD}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables ISO8601 format + Olson timezone }}\par
+{
+Definition at line 52 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References setISO8601Opts(), and setOlsonOpts().}\par
+}
+{\xe \v setISO8601Opts\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:setISO8601Opts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setISO8601Opts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAAFE}
+{\bkmkend AAAAAAAAFE}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables the ISO8601 format }}\par
+{
+Definition at line 43 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References iso8601Flag.}\par
+{
+Referenced by setDefaultInputFmtOpts(), and setISO8601OlsonOpts().}\par
+}
+{\xe \v setOlsonInputFmtOpts\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:setOlsonInputFmtOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setOlsonInputFmtOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAAFF}
+{\bkmkend AAAAAAAAFF}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables option Olson timezone - wrapper for setOlsonOpts }}\par
+{
+Definition at line 63 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References setOlsonOpts().}\par
+}
+{\xe \v setOlsonOpts\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:setOlsonOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setOlsonOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAAFG}
+{\bkmkend AAAAAAAAFG}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables Olson timezone option }}\par
+{
+Definition at line 33 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References TZOlsonFlag.}\par
+{
+Referenced by setISO8601OlsonOpts(), setOlsonInputFmtOpts(), and setOlsonOutputFmtOpts().}\par
+}
+{\xe \v setOlsonOutputFmtOpts\:libdatetimetz_converter_timestamptzformat.c}
+{\xe \v libdatetimetz_converter_timestamptzformat.c\:setOlsonOutputFmtOpts}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int setOlsonOutputFmtOpts (int * {\i flags})}}
+\par
+{\bkmkstart AAAAAAAAFH}
+{\bkmkend AAAAAAAAFH}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+enables option Olson timezone - wrapper for setOlsonOpts }}\par
+{
+Definition at line 73 of file libdatetimetz_converter_timestamptzformat.c.}\par
+{
+References setOlsonOpts().}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+src/libregex_custom.c File Reference\par \pard\plain 
+{\tc\tcl2 \v src/libregex_custom.c}
+{\xe \v src/libregex_custom.c}
+{\bkmkstart AAAAAAAAFI}
+{\bkmkend AAAAAAAAFI}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <regex.h>}\par
+{\f2 #include <time.h>}\par
+{\f2 #include <stdlib.h>}\par
+{\f2 #include <stdio.h>}\par
+{\f2 #include <string.h>}\par
+{\f2 #include "libtrace.h"}\par
+{\f2 #include "libregex_custom.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b regexp_verify} (char *string, char *regexpstr)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Verifies if a string matches a regular expression. }{
+}\par
+}}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v regexp_verify\:libregex_custom.c}
+{\xe \v libregex_custom.c\:regexp_verify}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int regexp_verify (char * {\i string}, char * {\i regexpstr})}}
+\par
+{\bkmkstart AAAAAAAAFJ}
+{\bkmkend AAAAAAAAFJ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Verifies if a string matches a regular expression. }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+{\par
+{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Parameters:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx1224
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx3061
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{in\cell }{{\i string} \cell }{The string to evaluate \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx1224
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx3061
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{in\cell }{{\i regexpstr} \cell }{The regular expression\cell }
+{\row }
+}
+{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Returns:\par}\pard\plain \s62\li720\widctlpar\ql\adjustright \fs20\cgrid the size of the longest part matching the regular expression pattern \par
+}{{\s5\sb90\sa30\keepn\widctlpar\adjustright \b\f1\fs20\cgrid 
+Return values:\par}
+\pard\plain \s61\li360\widctlpar\ql\adjustright \fs20\cgrid \trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i 0} \cell }{if the string does not match the regular expression \cell }
+{\row }
+\trowd \trgaph108\trleft426\tblind426\trbrdrt\brdrs\brdrw10\brdrcf15 \trbrdrl\brdrs\brdrw10\brdrcf15 \trbrdrb\brdrs\brdrw10\brdrcf15 \trbrdrr\brdrs\brdrw10\brdrcf15 \trbrdrh\brdrs\brdrw10\brdrcf15 \trbrdrv\brdrs\brdrw10\brdrcf15 
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx2187
+\clvertalt\clbrdrt\brdrs\brdrw10\brdrcf15 \clbrdrl\brdrs\brdrw10\brdrcf15 \clbrdrb\brdrs\brdrw10\brdrcf15 \clbrdrr \brdrs\brdrw10\brdrcf15 \cltxlrtb \cellx8748
+\pard \widctlpar\intbl\adjustright
+{{\i >0} \cell }{if the string matches the regular expression \cell }
+{\row }
+}
+}{
+Definition at line 30 of file libregex_custom.c.}\par
+{
+References log_debug(), log_finest(), REGEXPMAXLENGTH, STRINGMAXLENGTH, and TRACE_MESSAGE_MAXLENGTH.}\par
+}
+\par \pard\plain 
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdremboss\brdrw15\brsp20 \adjustright \par}
+\s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+\pard\plain \s2\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs28\kerning28\cgrid 
+src/libtrace.c File Reference\par \pard\plain 
+{\tc\tcl2 \v src/libtrace.c}
+{\xe \v src/libtrace.c}
+{\bkmkstart AAAAAAAAFK}
+{\bkmkend AAAAAAAAFK}
+{
+\pard\plain \s18\widctlpar\fs22\cgrid {\f2 #include <stdlib.h>}\par
+{\f2 #include <stdio.h>}\par
+{\f2 #include <string.h>}\par
+{\f2 #include <time.h>}\par
+{\f2 #include "libtrace.h"}\par
+{\f2 #include "libdatetimetz_converter_parameter.h"}\par
+{\f2 #include "libdatetimetz_converter_timestamptzformat.h"}\par
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Functions\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b formatted_now} (char **nowstr)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_message} (char *msg, int msglevel, char *msgheader)\par
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_exit_critical} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+writes the given message depending on TRACE_LEVEL }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_critical} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'critical' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_warning} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'warning' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_info} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'info' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_fine} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'fine' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_finer} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'fine' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_finest} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'finest' level message. }{
+}\par
+}}
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b log_debug} (char *msg)\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'debug' level message. }{
+}\par
+}}
+}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variables\par
+\pard\plain 
+
+{
+\pard\plain \s80\fi-360\li360\widctlpar\jclisttab\tx360{\*\pn \pnlvlbody\ilvl0\ls1\pnrnot0\pndec }\ls1\adjustright \fs20\cgrid 
+int {\b TRACE_LEVEL}\par
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid {\i {\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL (variable) }{
+}\par
+}}
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Function Documentation\par
+\pard\plain 
+{\xe \v formatted_now\:libtrace.c}
+{\xe \v libtrace.c\:formatted_now}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int formatted_now (char ** {\i nowstr})}}
+\par
+{\bkmkstart AAAAAAAAFL}
+{\bkmkend AAAAAAAAFL}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 32 of file libtrace.c.}\par
+{
+References iso8601TZOffset, and TIMESTAMPMAXLENGTH.}\par
+{
+Referenced by log_message().}\par
+}
+{\xe \v log_critical\:libtrace.c}
+{\xe \v libtrace.c\:log_critical}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_critical (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAFM}
+{\bkmkend AAAAAAAAFM}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'critical' level message. }}\par
+{
+Definition at line 81 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_CRITICAL, and TRACE_LEVEL_CRITICAL_HEADER.}\par
+{
+Referenced by log_exit_critical().}\par
+}
+{\xe \v log_debug\:libtrace.c}
+{\xe \v libtrace.c\:log_debug}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_debug (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAFN}
+{\bkmkend AAAAAAAAFN}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'debug' level message. }}\par
+{
+Definition at line 132 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_DEBUG, and TRACE_LEVEL_DEBUG_HEADER.}\par
+{
+Referenced by assert_pointer_is_not_null(), assert_string_is_not_null(), parseRawString(), and regexp_verify().}\par
+}
+{\xe \v log_exit_critical\:libtrace.c}
+{\xe \v libtrace.c\:log_exit_critical}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_exit_critical (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAFO}
+{\bkmkend AAAAAAAAFO}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+writes the given message depending on TRACE_LEVEL }}\par
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes messages according to TRACE_LEVEL\par
+input : msg - the message to be written\par
+output stream : stderr (hard coded)Writes a 'critical' level message + aborts the program \par
+}{
+Definition at line 70 of file libtrace.c.}\par
+{
+References actionOnFailureOpts, and log_critical().}\par
+{
+Referenced by assert_pointer_is_not_null(), and assert_string_is_not_null().}\par
+}
+{\xe \v log_fine\:libtrace.c}
+{\xe \v libtrace.c\:log_fine}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_fine (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAFP}
+{\bkmkend AAAAAAAAFP}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'fine' level message. }}\par
+{
+Definition at line 105 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_FINE, and TRACE_LEVEL_FINE_HEADER.}\par
+}
+{\xe \v log_finer\:libtrace.c}
+{\xe \v libtrace.c\:log_finer}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_finer (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAFQ}
+{\bkmkend AAAAAAAAFQ}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'fine' level message. }}\par
+{
+Definition at line 114 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_FINER, and TRACE_LEVEL_FINER_HEADER.}\par
+}
+{\xe \v log_finest\:libtrace.c}
+{\xe \v libtrace.c\:log_finest}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_finest (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAFR}
+{\bkmkend AAAAAAAAFR}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'finest' level message. }}\par
+{
+Definition at line 123 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_FINEST, and TRACE_LEVEL_FINEST_HEADER.}\par
+{
+Referenced by regexp_verify().}\par
+}
+{\xe \v log_info\:libtrace.c}
+{\xe \v libtrace.c\:log_info}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_info (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAFS}
+{\bkmkend AAAAAAAAFS}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'info' level message. }}\par
+{
+Definition at line 97 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_INFO, and TRACE_LEVEL_INFO_HEADER.}\par
+}
+{\xe \v log_message\:libtrace.c}
+{\xe \v libtrace.c\:log_message}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_message (char * {\i msg}, int {\i msglevel}, char * {\i msgheader})}}
+\par
+{\bkmkstart AAAAAAAAFT}
+{\bkmkend AAAAAAAAFT}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+Definition at line 46 of file libtrace.c.}\par
+{
+References formatted_now(), and TRACE_LEVEL.}\par
+{
+Referenced by log_critical(), log_debug(), log_fine(), log_finer(), log_finest(), log_info(), and log_warning().}\par
+}
+{\xe \v log_warning\:libtrace.c}
+{\xe \v libtrace.c\:log_warning}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int log_warning (char * {\i msg})}}
+\par
+{\bkmkstart AAAAAAAAFU}
+{\bkmkend AAAAAAAAFU}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+Writes a 'warning' level message. }}\par
+{
+Definition at line 89 of file libtrace.c.}\par
+{
+References log_message(), TRACE_LEVEL_WARNING, and TRACE_LEVEL_WARNING_HEADER.}\par
+}
+{\pard\widctlpar\brdrb\brdrs\brdrw5\brsp20 \adjustright \par}
+\pard\plain \s3\sb240\sa60\keepn\widctlpar\adjustright \b\f1\cgrid 
+Variable Documentation\par
+\pard\plain 
+{\xe \v TRACE_LEVEL\:libtrace.c}
+{\xe \v libtrace.c\:TRACE_LEVEL}
+\pard\plain \s4\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs20\cgrid {
+{\b 
+int TRACE_LEVEL}}
+\par
+{\bkmkstart AAAAAAAAFV}
+{\bkmkend AAAAAAAAFV}
+{
+\pard\plain \s51\li360\sa60\sb30\qj\widctlpar\qj\adjustright \fs20\cgrid 
+\par
+{
+{\s17\sa60\sb30\widctlpar\qj \fs22\cgrid 
+TRACE_LEVEL (variable) }}\par
+{
+Definition at line 29 of file libtrace.c.}\par
+{
+Referenced by log_message().}\par
+}
+
+\pard\plain \sect\sbknone
+{\pard\widctlpar\brdrb\brdrs\brdrw75\brsp20 \adjustright \par}
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid 
+\s1\sb240\sa60\keepn\widctlpar\adjustright \b\f1\fs36\kerning36\cgrid Index\par 
+\pard\plain 
+{\tc \v Index}
+{\field\fldedit {\*\fldinst INDEX \\c2 \\*MERGEFORMAT}{\fldrslt INDEX}}
+}
