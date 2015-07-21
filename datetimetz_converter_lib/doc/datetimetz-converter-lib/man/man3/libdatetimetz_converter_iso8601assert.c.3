@@ -1,0 +1,60 @@
+.TH "src/libdatetimetz_converter_iso8601assert.c" 3 "Tue Jul 21 2015" "datetimetz-converter-lib-0.9" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/libdatetimetz_converter_iso8601assert.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'libtrace\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_iso8601verifier\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_parameter\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_iso8601assert\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBassert_isISO8601noTZ\fP (char *strval)"
+.br
+.RI "\fIVerifies if a string is a valid ISO8601 timestamp or Abort\&. \fP"
+.ti -1c
+.RI "int \fBassert_isISO8601TZ\fP (char *timestamp, char *timezone)"
+.br
+.RI "\fIVerifies if a timestamp (ISO8601 format) + timezone is consistent\&. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int assert_isISO8601noTZ (char *strval)"
+
+.PP
+Verifies if a string is a valid ISO8601 timestamp or Abort\&. 
+.PP
+Definition at line 33 of file libdatetimetz_converter_iso8601assert\&.c\&.
+.PP
+References isISO8601noTZ()\&.
+.PP
+Referenced by assert_isISO8601TZ(), compareISOTimestampTZBackToSameTZ(), and compareISOTimestampTZToSameTZ()\&.
+.SS "int assert_isISO8601TZ (char *timestamp, char *timezone)"
+
+.PP
+Verifies if a timestamp (ISO8601 format) + timezone is consistent\&. 
+.PP
+Definition at line 64 of file libdatetimetz_converter_iso8601assert\&.c\&.
+.PP
+References assert_isISO8601noTZ(), and checkISOTimestampTZConsistency()\&.
+.PP
+Referenced by convertISOTimestampTZ2TZ()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-lib-0\&.9 from the source code\&.

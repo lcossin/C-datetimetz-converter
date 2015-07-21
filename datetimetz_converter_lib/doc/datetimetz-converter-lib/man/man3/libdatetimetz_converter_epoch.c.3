@@ -1,0 +1,50 @@
+.TH "src/libdatetimetz_converter_epoch.c" 3 "Tue Jul 21 2015" "datetimetz-converter-lib-0.9" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/libdatetimetz_converter_epoch.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'config\&.h'\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'libtrace\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_timestamptzformat\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_epoch\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBconvertTimestampStr2Epochtimet\fP (char *inTimestampStr, char *inTimestampFmtStr, time_t *epochtimet)"
+.br
+.RI "\fIconverts a timestamp string to a time_t Epoch (inherits TZ environment variable) \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int convertTimestampStr2Epochtimet (char *inTimestampStr, char *inTimestampFmtStr, time_t *epochtimet)"
+
+.PP
+converts a timestamp string to a time_t Epoch (inherits TZ environment variable) converts timestamp string to time_t Epoch
+.PP
+inherits : TZ environment variable
+.PP
+input : inTimestampStr + inTimestampFmtStr output : epochtimet (time_t) 
+.PP
+Definition at line 31 of file libdatetimetz_converter_epoch\&.c\&.
+.PP
+Referenced by convertTimestampTZByFmtStr2Epochtimet()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-lib-0\&.9 from the source code\&.

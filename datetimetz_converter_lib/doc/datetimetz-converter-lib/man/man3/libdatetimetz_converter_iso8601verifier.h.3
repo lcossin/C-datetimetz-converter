@@ -1,0 +1,187 @@
+.TH "include/libdatetimetz_converter_iso8601verifier.h" 3 "Tue Jul 21 2015" "datetimetz-converter-lib-0.9" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/libdatetimetz_converter_iso8601verifier.h \- 
+.PP
+Provides some functions to compare results after timezone conversion\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBISO8601NOTZREGEXP\fP"
+.br
+.ti -1c
+.RI "#define \fBISO8601NOTZREGEXPEXPECTEDMATCHES\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBcompareISOTimestampTZToSameTZ\fP (char *inTimestampNoTZStr, char *inTZ)"
+.br
+.RI "\fIcompares a timestamp (in ISO8601 format) after conversion to the same timezone \fP"
+.ti -1c
+.RI "int \fBcompareISOTimestampTZBackToSameTZ\fP (char *inTimestampNoTZStr, char *inTZ, char *targetTZ)"
+.br
+.RI "\fIcompares a timestamp (in ISO8601 format) after conversion to another timezone and back to the original timezone \fP"
+.ti -1c
+.RI "int \fBcheckISOTimestampTZConsistency\fP (char *inTimestampNoTZStr, char *inTZ)"
+.br
+.RI "\fIchecks if the given timestamp (in ISO8601 format) is consistent after some conversions \fP"
+.ti -1c
+.RI "int \fBisISO8601noTZ\fP (char *strval)"
+.br
+.RI "\fIVerifies if a string matches an ISO8601 value without any timezone\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides some functions to compare results after timezone conversion\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Laurent Cossin 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+July 2015 
+.RE
+.PP
+
+.PP
+Definition in file \fBlibdatetimetz_converter_iso8601verifier\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ISO8601NOTZREGEXP"
+
+.PP
+Definition at line 82 of file libdatetimetz_converter_iso8601verifier\&.h\&.
+.PP
+Referenced by isISO8601noTZ()\&.
+.SS "#define ISO8601NOTZREGEXPEXPECTEDMATCHES"
+
+.PP
+Definition at line 84 of file libdatetimetz_converter_iso8601verifier\&.h\&.
+.PP
+Referenced by isISO8601noTZ()\&.
+.SH "Function Documentation"
+.PP 
+.SS "int checkISOTimestampTZConsistency (char *inTimestampNoTZStr, char *inTZ)"
+
+.PP
+checks if the given timestamp (in ISO8601 format) is consistent after some conversions 
+.PP
+Definition at line 162 of file libdatetimetz_converter_iso8601verifier\&.c\&.
+.PP
+References compareISOTimestampTZBackToSameTZ(), and compareISOTimestampTZToSameTZ()\&.
+.PP
+Referenced by assert_isISO8601TZ()\&.
+.SS "int compareISOTimestampTZBackToSameTZ (char *inTimestampNoTZStr, char *inTZ, char *targetTZ)"
+
+.PP
+compares a timestamp (in ISO8601 format) after conversion to another timezone and back to the original timezone 
+.PP
+\fBRemarks:\fP
+.RS 4
+The expected final timestamp is the same string as the original one as input parameter
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinTimestampNoTZStr\fP The timestamp string 
+.br
+\fIinTZ\fP The timezone 
+.br
+\fItargetTZ\fP The target timezone
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+return value of strcmp comparing the timestamp with the expected timestamp 
+.RE
+.PP
+\fBReturn values:\fP
+.RS 4
+\fI0\fP : timestamp matches the expected timestamp 
+.br
+\fI<>0\fP : return value of the strcmp function 
+.RE
+.PP
+
+.PP
+Definition at line 113 of file libdatetimetz_converter_iso8601verifier\&.c\&.
+.PP
+References assert_isISO8601noTZ(), and compareTimestampBackToSameTZ()\&.
+.PP
+Referenced by checkISOTimestampTZConsistency()\&.
+.SS "int compareISOTimestampTZToSameTZ (char *inTimestampNoTZStr, char *inTZ)"
+
+.PP
+compares a timestamp (in ISO8601 format) after conversion to the same timezone 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinTimestampNoTZStr\fP The timestamp string 
+.br
+\fIinTZ\fP The timezone
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+return value of strcmp comparing the timestamp with the expected timestamp 
+.RE
+.PP
+\fBReturn values:\fP
+.RS 4
+\fI0\fP : timestamp matches the expected timestamp 
+.br
+\fI<>0\fP : return value of the strcmp function 
+.RE
+.PP
+
+.PP
+Definition at line 64 of file libdatetimetz_converter_iso8601verifier\&.c\&.
+.PP
+References assert_isISO8601noTZ(), and compareTimestampToSameTZ()\&.
+.PP
+Referenced by checkISOTimestampTZConsistency()\&.
+.SS "int isISO8601noTZ (char *strval)"
+
+.PP
+Verifies if a string matches an ISO8601 value without any timezone\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIstrval\fP The string to evaluate
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The result of the test 
+.RE
+.PP
+\fBReturn values:\fP
+.RS 4
+\fI0\fP if strval is an ISO8601 value 
+.br
+\fI<>0\fP if strval is NOT an ISO8601 value 
+.RE
+.PP
+
+.PP
+Definition at line 37 of file libdatetimetz_converter_iso8601verifier\&.c\&.
+.PP
+References ISO8601NOTZREGEXP, and ISO8601NOTZREGEXPEXPECTEDMATCHES\&.
+.PP
+Referenced by assert_isISO8601noTZ()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-lib-0\&.9 from the source code\&.

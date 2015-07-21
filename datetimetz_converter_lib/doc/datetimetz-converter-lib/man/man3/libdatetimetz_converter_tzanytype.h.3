@@ -1,0 +1,118 @@
+.TH "include/libdatetimetz_converter_tzanytype.h" 3 "Tue Jul 21 2015" "datetimetz-converter-lib-0.9" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/libdatetimetz_converter_tzanytype.h \- 
+.PP
+Provides some functions to handle timestamps defined with any type of timezone\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'libdatetimetz_converter_parameter\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBconvertTimestampTZByFmtStr2Epochtimet\fP (char *inTimestampStr, char *inTimestampFmtStr, char *inTZ, time_t *epochtimet)"
+.br
+.RI "\fIconverts a timestamp given as a string in a timezone to Epoch \fP"
+.ti -1c
+.RI "int \fBcondcheckConvertTimestampTZByFmtStr2TZ\fP (char *inTimestampStr, char *inTimestampFmtStr, char *outTimestampStr, char *outTimestampFmtStr, char *inTZ, char *outTZ, int DoCheck)"
+.br
+.RI "\fIconditional checkings, then converts \fP"
+.ti -1c
+.RI "int \fBconvertTimestampTZByFmtStr2TZ\fP (char *inTimestampStr, char *inTimestampFmtStr, char *targetTimestampStr, char *targetTimestampFmtStr, char *inTZ, char *targetTZ)"
+.br
+.RI "\fIconverts a timestamp given as a string and the timezone to another timezone \fP"
+.ti -1c
+.RI "int \fBconvertTimestampTZByFmt2TZ\fP (char *inTimestampStr, int inTimestampFmt, char *targetTimestampStr, int targetTimestampFmt, char *inTZ, char *targetTZ)"
+.br
+.RI "\fIconverts a timestamp in an TZ in a custom format to a timestamp in an TZ in a custom format \fP"
+.ti -1c
+.RI "int \fBconvertISOTimestampTZ2TZ\fP (char *inTimestampStr, char *targetTimestampStr, char *inTZ, char *targetTZ)"
+.br
+.RI "\fIconverts an ISO8601 timestamp in a TZ to an ISO8601 timestamp in a TZ \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides some functions to handle timestamps defined with any type of timezone\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Laurent Cossin 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+July 2015 
+.RE
+.PP
+
+.PP
+Definition in file \fBlibdatetimetz_converter_tzanytype\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "int condcheckConvertTimestampTZByFmtStr2TZ (char *inTimestampStr, char *inTimestampFmtStr, char *outTimestampStr, char *outTimestampFmtStr, char *inTZ, char *outTZ, intDoCheck)"
+
+.PP
+conditional checkings, then converts 
+.PP
+Definition at line 86 of file libdatetimetz_converter_tzanytype\&.c\&.
+.PP
+References convertTimestampTZByFmtStr2Epochtimet(), and isTimestampConsistentorAbort()\&.
+.PP
+Referenced by compareTimestampBackToSameTZ(), compareTimestampToSameTZ(), and convertTimestampTZByFmtStr2TZ()\&.
+.SS "int convertISOTimestampTZ2TZ (char *inTimestampStr, char *targetTimestampStr, char *inTZ, char *targetTZ)"
+
+.PP
+converts an ISO8601 timestamp in a TZ to an ISO8601 timestamp in a TZ converts a given timestamp in ISO8601 format and a TZ (inTZ) to a timestamp in ISO8601 format in a TZ (targetTZ) 
+.PP
+Definition at line 280 of file libdatetimetz_converter_tzanytype\&.c\&.
+.PP
+References assert_isISO8601TZ(), and convertTimestampTZByFmt2TZ()\&.
+.SS "int convertTimestampTZByFmt2TZ (char *inTimestampStr, intinTimestampFmt, char *targetTimestampStr, inttargetTimestampFmt, char *inTZ, char *targetTZ)"
+
+.PP
+converts a timestamp in an TZ in a custom format to a timestamp in an TZ in a custom format converts a given timestamp in a format (inTimestampFmt) and TZ (inTZ) to a timestamp in a format (targetTimestampFmt) in an TZ (targetTZ) 
+.PP
+Definition at line 212 of file libdatetimetz_converter_tzanytype\&.c\&.
+.PP
+References convertTimestampTZByFmtStr2TZ()\&.
+.PP
+Referenced by convertISOTimestampTZ2TZ()\&.
+.SS "int convertTimestampTZByFmtStr2Epochtimet (char *inTimestampStr, char *inTimestampFmtStr, char *inTZ, time_t *epochtimet)"
+
+.PP
+converts a timestamp given as a string in a timezone to Epoch converts a timestamp given as a string in a TZ to Epoch (time_t)
+.PP
+input : inTimestampStr, inTZ output : epochtimet (time_t) 
+.PP
+Definition at line 36 of file libdatetimetz_converter_tzanytype\&.c\&.
+.PP
+References convertTimestampStr2Epochtimet()\&.
+.PP
+Referenced by condcheckConvertTimestampTZByFmtStr2TZ()\&.
+.SS "int convertTimestampTZByFmtStr2TZ (char *inTimestampStr, char *inTimestampFmtStr, char *targetTimestampStr, char *targetTimestampFmtStr, char *inTZ, char *targetTZ)"
+
+.PP
+converts a timestamp given as a string and the timezone to another timezone converts a timestamp given as a string (inTimeStr) and its timezone (inTZ) to another timezone (targetTZ)
+.PP
+input : inTimeStr - timestamp given for the timezone inTZ, targetTZ - target timezone
+.PP
+output : targetTimeStr - timestamp converted to the target timezone targetTZ 
+.PP
+Definition at line 154 of file libdatetimetz_converter_tzanytype\&.c\&.
+.PP
+References condcheckConvertTimestampTZByFmtStr2TZ()\&.
+.PP
+Referenced by convertTimestampTZByFmt2TZ(), and main()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-lib-0\&.9 from the source code\&.
