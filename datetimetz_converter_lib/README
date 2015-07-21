@@ -33,11 +33,16 @@ The source files do not use features that requires _GNU_SOURCE.
 Build requirements
 ------------------
 
+* project 'datetimetz-converter-libhelper'
+
 * automake, autoconf, libtool, make
 * Doxygen 1.8 and later
-* dejagnu (for the tests)
 
-* sub projects 'datetimetz-converter-libhelper'
+Requirements for tests (make check)
+-----------------------------------
+
+* dejagnu (for the tests)
+* valgrind (for the tests) (OPTIONAL)
 
 Verified on operating systems
 -----------------------------
