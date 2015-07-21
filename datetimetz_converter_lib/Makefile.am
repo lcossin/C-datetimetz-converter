@@ -3,7 +3,7 @@ AUTOMAKE_OPTIONS = dejagnu
 
 SUBDIRS = doc include src tests
 
-EXTRA_DIST = doc
+EXTRA_DIST = doc doxygen.cfg
 
 MOSTLYCLEANFILES = $(DX_CLEANFILES)
 

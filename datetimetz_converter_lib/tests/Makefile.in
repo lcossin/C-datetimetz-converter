@@ -173,7 +173,8 @@ am_testtzconverter_WrongTimestamps_OBJECTS =  \
 testtzconverter_WrongTimestamps_OBJECTS =  \
 	$(am_testtzconverter_WrongTimestamps_OBJECTS)
 testtzconverter_WrongTimestamps_DEPENDENCIES = $(am__DEPENDENCIES_2)
-am_testtzconverter_memleaks_OBJECTS = $(MEMLEAKS_FILE).$(OBJEXT)
+am_testtzconverter_memleaks_OBJECTS =  \
+	testtzconverter-memleaks.$(OBJEXT)
 testtzconverter_memleaks_OBJECTS =  \
 	$(am_testtzconverter_memleaks_OBJECTS)
 testtzconverter_memleaks_DEPENDENCIES = $(am__DEPENDENCIES_2)
@@ -612,6 +613,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = dejagnu
+EXTRA_DIST = testtzconverter-memleaks.sh.am
 AM_CPPFLAGS = $(am__append_1) $(am__append_2) $(am__append_3) -Wall \
 	-D_XOPEN_SOURCE=600 -DDATADIR=$(pkgdatadir) \
 	$(TZCONVERTLIBHELPER_INCLUDE)
@@ -621,6 +623,7 @@ TZ_LIBS = ../src/libdatetimetz_converter_lib.la \
 	$(TZCONVERTLIBHELPER_LTLIB)
 MEMLEAKS_PROG = testtzconverter_memleaks
 MEMLEAKS_FILE = testtzconverter-memleaks
+MEMLEAKS_CFILE = $(MEMLEAKS_FILE).c
 MEMLEAKS_SHELL = $(MEMLEAKS_FILE).sh
 MEMLEAKS_BIN = $(bindir)/$(MEMLEAKS_PROG).sh
 TZTESTS_ERRORS = testtzconverter_WrongParameters testtzconverter_WrongTimestamps
@@ -656,7 +659,7 @@ testtzconverter_WrongParameters_SOURCES = testtzconvert-WrongParameters.c
 testtzconverter_WrongParameters_LDADD = $(TZ_LIBS)
 testtzconverter_WrongTimestamps_SOURCES = testtzconvert-WrongTimestamps.c
 testtzconverter_WrongTimestamps_LDADD = $(TZ_LIBS)
-testtzconverter_memleaks_SOURCES = $(MEMLEAKS_FILE).c
+testtzconverter_memleaks_SOURCES = testtzconverter-memleaks.c
 testtzconverter_memleaks_LDADD = $(TZ_LIBS)
 all: all-am
 
@@ -805,7 +808,6 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/$(MEMLEAKS_FILE).Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-DST-Berlin.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-DST-CEST.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-DST-CET.Po@am__quote@
@@ -817,6 +819,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-UTC.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-WrongParameters.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-WrongTimestamps.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconverter-memleaks.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

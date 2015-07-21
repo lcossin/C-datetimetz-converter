@@ -681,14 +681,14 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>testtzconvert-TZoffset.c</name>
+    <name>testtzconvert-GMToffset.c</name>
     <path>/usr/local/oracle/lib/datetimetz_converter_lib/tests/</path>
-    <filename>testtzconvert-TZoffset_8c</filename>
+    <filename>testtzconvert-GMToffset_8c</filename>
     <includes id="libdatetimetz__converter__tzanytype_8h" name="libdatetimetz_converter_tzanytype.h" local="yes" imported="no">libdatetimetz_converter_tzanytype.h</includes>
     <member kind="function">
       <type>int</type>
       <name>main</name>
-      <anchorfile>testtzconvert-TZoffset_8c.html</anchorfile>
+      <anchorfile>testtzconvert-GMToffset_8c.html</anchorfile>
       <anchor>ae66f6b31b5ad750f1fe042a706a4e3d4</anchor>
       <arglist>()</arglist>
     </member>
@@ -800,7 +800,7 @@
     <file>testtzconvert-DST-EST5EDT.c</file>
     <file>testtzconvert-DST-NewYork.c</file>
     <file>testtzconvert-DST-tzdata2015e.c</file>
-    <file>testtzconvert-TZoffset.c</file>
+    <file>testtzconvert-GMToffset.c</file>
     <file>testtzconvert-UTC.c</file>
     <file>testtzconvert-WrongParameters.c</file>
     <file>testtzconvert-WrongTimestamps.c</file>

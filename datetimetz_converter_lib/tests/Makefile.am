@@ -1,5 +1,7 @@
 AUTOMAKE_OPTIONS = dejagnu
 
+EXTRA_DIST = testtzconverter-memleaks.sh.am
+
 AM_CPPFLAGS =
 
 if OS_IS_DARWIN
@@ -28,6 +30,7 @@ TZ_LIBS += $(TZCONVERTLIBHELPER_LTLIB)
 
 MEMLEAKS_PROG = testtzconverter_memleaks
 MEMLEAKS_FILE  = testtzconverter-memleaks
+MEMLEAKS_CFILE = $(MEMLEAKS_FILE).c
 MEMLEAKS_SHELL = $(MEMLEAKS_FILE).sh
 MEMLEAKS_BIN = $(bindir)/$(MEMLEAKS_PROG).sh
 
@@ -92,7 +95,7 @@ testtzconverter_WrongTimestamps_SOURCES = testtzconvert-WrongTimestamps.c
 testtzconverter_WrongTimestamps_LDADD = $(TZ_LIBS)
 
 bin_PROGRAMS = $(MEMLEAKS_PROG)
-testtzconverter_memleaks_SOURCES = $(MEMLEAKS_FILE).c
+testtzconverter_memleaks_SOURCES = testtzconverter-memleaks.c
 testtzconverter_memleaks_LDADD = $(TZ_LIBS)
 
 check-local : install ;

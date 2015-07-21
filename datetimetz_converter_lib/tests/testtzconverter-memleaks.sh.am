@@ -1,0 +1,64 @@
+#!/bin/sh
+
+unset LANG
+
+PRG_DIR=#BINDIR#
+PRG_NAME=#PROGNAME#
+PRG_FILE=${PRG_DIR}/${PRG_NAME}
+OUT_FILE=/tmp/${PRG_NAME}.out
+
+if [ -d ${PRG_DIR} -a -f ${PRG_FILE} -a -x ${PRG_FILE} ];
+then
+
+	cd ${PRG_DIR}
+
+	valgrind -v --leak-check=full --show-leak-kinds=all ${PRG_FILE} 1>${OUT_FILE} 2>&1
+
+	VALGRIND_RC=$?
+
+	cat ${OUT_FILE} | tail -100 | grep "All heap blocks were freed -- no leaks are possible" 1>/dev/null
+	VALGRIND_RC=$?
+
+	n=`cat ${OUT_FILE} | grep -n "= HEAP SUMMARY:" | cut -d":" -f1`
+
+	cat <<-CATEOF
+
+	############ Valgrind Report - BEG ############
+
+	CATEOF
+
+	cat ${OUT_FILE} | tail -n+${n}
+
+	cat <<-CATEOF
+
+return code :  ${VALGRIND_RC}
+
+output file : ${OUT_FILE}
+
+Valgrind test : PASSED
+
+	CATEOF
+
+else
+
+	cat <<-CATEOF
+
+	Valgrind test : FAILED
+
+	CATEOF
+
+	VALGRIND_RC=2
+
+fi;
+
+rm -vf ${PRG_FILE}
+
+	cat <<-CATEOF
+
+	############ Valgrind Report - END ############
+
+	CATEOF
+
+
+exit ${VALGRIND_RC}
+

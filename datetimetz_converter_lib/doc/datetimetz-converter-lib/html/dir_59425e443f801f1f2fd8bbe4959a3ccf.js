@@ -7,7 +7,7 @@ var dir_59425e443f801f1f2fd8bbe4959a3ccf =
     [ "testtzconvert-DST-EST5EDT.c", "testtzconvert-DST-EST5EDT_8c.html", "testtzconvert-DST-EST5EDT_8c" ],
     [ "testtzconvert-DST-NewYork.c", "testtzconvert-DST-NewYork_8c.html", "testtzconvert-DST-NewYork_8c" ],
     [ "testtzconvert-DST-tzdata2015e.c", "testtzconvert-DST-tzdata2015e_8c.html", "testtzconvert-DST-tzdata2015e_8c" ],
-    [ "testtzconvert-TZoffset.c", "testtzconvert-TZoffset_8c.html", "testtzconvert-TZoffset_8c" ],
+    [ "testtzconvert-GMToffset.c", "testtzconvert-GMToffset_8c.html", "testtzconvert-GMToffset_8c" ],
     [ "testtzconvert-UTC.c", "testtzconvert-UTC_8c.html", "testtzconvert-UTC_8c" ],
     [ "testtzconvert-WrongParameters.c", "testtzconvert-WrongParameters_8c.html", "testtzconvert-WrongParameters_8c" ],
     [ "testtzconvert-WrongTimestamps.c", "testtzconvert-WrongTimestamps_8c.html", "testtzconvert-WrongTimestamps_8c" ],
