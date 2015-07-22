@@ -1,15 +1,32 @@
 # C-datetimetz-converter
 Some libraries in C to convert date time between timezones
 
+## How to contribute ?
+
+Feel free to create new issue for any type of request, fixe some bugs or ask for some enhancements.
+
+## Sub projects
+
 The projects is composed of sub projects.
 
-## Libraries 'helper'
+### Libraries 'helper'
 
 Refer to README in the sub-project.
 
-## Libraries 'lib' (timestamp convert)
+### Libraries 'lib' (timestamp convert)
 
 Refer to README in the sub-project.
+
+### Additional sub-projects
+
+Some wrappers are given as examples to call the timezone converter routines from within other programs : 
+* PL/SQL application (Oracle Database)
+
+## Documentation
+
+Documentation is provided in various formats (using Doxygen), HTML, RTF, man pages.
+
+The documentation can be generated again using 'make doxygen-doc' from the library sub-projects.
 
 ## How to build ?
 
@@ -41,13 +58,3 @@ If valgrind is installed, make check will report the result of the 'no memory le
 
 Valgrind does not detect any memory leak.
 
-## Additional sub-projects
-
-Some wrappers are given as examples to call the timezone converter routines from within other programs : 
-* PL/SQL application (Oracle Database)
-
-## Documentation
-
-Documentation in various formats (using Doxygen), HTML, RTF, man pages.
-
-The documentation can be generated again using 'make doxygen-doc' from the library sub-projects.
