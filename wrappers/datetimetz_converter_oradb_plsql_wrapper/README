@@ -1,0 +1,68 @@
+
+Requirements
+==============
+
+Oracle Database
+---------------
+
+Oracle Database 11.2 and later
+
+Operating Systems
+------------------
+
+Any *NIX operating system where the shared library can be built.
+
+How to install in a database ?
+==============================
+
+Go to sql folder
+
+$ cd sql
+
+Define the parameters
+---------------------
+
+Adjust the parameters in 'parameters.sql'
+
+Create the schemas and install PL/SQL API
+-----------------------------------------
+
+Set environment variables for the database
+
+$ . oraenv
+
+Log on as SYSDBA
+
+$ sqlplus / as sysdba
+
+SQL> @oradb_plsql_wrapper_tzconverter_crusers.sql
+SQL> @oradb_plsql_wrapper_tzconverter_crobjects.sql
+
+Expected results
+================
+
+Expected results at the end of installation
+--------------------------------------------
+
+some tests
+first OK
+res : 2015-10-25 01:01:00 retcode=0
+res : 2015-10-25T01:01:00 retcode=0
+
+PL/SQL procedure successfully completed.
+
+second FAILED
+res :  retcode=2
+BEGIN demotzapi.TZCONVERTER_DEMO.demo_wrongval; END;
+
+*
+ERROR at line 1:
+ORA-01405: fetched column value is NULL
+
+
+third OK
+res : 2015-10-25 01:01:00 retcode=0
+res : 2015-10-25T01:01:00 retcode=0
+
+PL/SQL procedure successfully completed.
+

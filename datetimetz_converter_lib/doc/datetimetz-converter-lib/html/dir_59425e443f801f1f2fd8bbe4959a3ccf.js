@@ -11,5 +11,5 @@ var dir_59425e443f801f1f2fd8bbe4959a3ccf =
     [ "testtzconvert-UTC.c", "testtzconvert-UTC_8c.html", "testtzconvert-UTC_8c" ],
     [ "testtzconvert-WrongParameters.c", "testtzconvert-WrongParameters_8c.html", "testtzconvert-WrongParameters_8c" ],
     [ "testtzconvert-WrongTimestamps.c", "testtzconvert-WrongTimestamps_8c.html", "testtzconvert-WrongTimestamps_8c" ],
-    [ "testtzconverter-memleaks.c", "testtzconverter-memleaks_8c.html", "testtzconverter-memleaks_8c" ]
+    [ "testtzconverter-nomemleaks.c", "testtzconverter-nomemleaks_8c.html", "testtzconverter-nomemleaks_8c" ]
 ];

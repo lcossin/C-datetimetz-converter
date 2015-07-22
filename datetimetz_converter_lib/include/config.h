@@ -71,7 +71,7 @@
 #define PACKAGE "datetimetz-converter-lib"
 
 /* Define to the address where bug reports for this package should be sent. */
-#define PACKAGE_BUGREPORT "lcossin@users.noreply.github.com"
+#define PACKAGE_BUGREPORT "https://github.com/lcossin/C-datetimetz-converter"
 
 /* Define to the full name of this package. */
 #define PACKAGE_NAME "datetimetz-converter-lib"
