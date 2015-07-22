@@ -1,0 +1,44 @@
+.TH "src/libdatetimetz_converter_assert.c" 3 "Wed Jul 22 2015" "datetimetz-converter-lib-0.5" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/libdatetimetz_converter_assert.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'libtrace\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_consistency\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_assert\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBassert_TimestampTZIsValid\fP (char *timestamp, char *timestampformat, char *timezone, int abortOnFailure)"
+.br
+.RI "\fIChecks if the timestamp (with a custom format) is consistent\&. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int assert_TimestampTZIsValid (char *timestamp, char *timestampformat, char *timezone, intabortOnFailure)"
+
+.PP
+Checks if the timestamp (with a custom format) is consistent\&. 
+.PP
+Definition at line 31 of file libdatetimetz_converter_assert\&.c\&.
+.PP
+References checkTimestampConsistency()\&.
+.PP
+Referenced by condcheckConvertTimestampTZByFmtStr2TZ()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-lib-0\&.5 from the source code\&.

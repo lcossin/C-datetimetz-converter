@@ -258,6 +258,18 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>libdatetimetz_converter_assert.h</name>
+    <path>/usr/local/oracle/lib/datetimetz_converter_lib/include/</path>
+    <filename>libdatetimetz__converter__assert_8h</filename>
+    <member kind="function">
+      <type>int</type>
+      <name>assert_TimestampTZIsValid</name>
+      <anchorfile>libdatetimetz__converter__assert_8h.html</anchorfile>
+      <anchor>a623e1f28261da00fd928c4e15d6bff0e</anchor>
+      <arglist>(char *timestamp, char *timestampformat, char *timezone, int abortOnFailure)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>libdatetimetz_converter_consistency.h</name>
     <path>/usr/local/oracle/lib/datetimetz_converter_lib/include/</path>
     <filename>libdatetimetz__converter__consistency_8h</filename>
@@ -367,18 +379,6 @@
     <filename>libdatetimetz__converter__lib_8h</filename>
   </compound>
   <compound kind="file">
-    <name>libdatetimetz_converter_prereqs.h</name>
-    <path>/usr/local/oracle/lib/datetimetz_converter_lib/include/</path>
-    <filename>libdatetimetz__converter__prereqs_8h</filename>
-    <member kind="function">
-      <type>int</type>
-      <name>isTimestampConsistentorAbort</name>
-      <anchorfile>libdatetimetz__converter__prereqs_8h.html</anchorfile>
-      <anchor>a56b02d9084441fcfe08219d01b29ef21</anchor>
-      <arglist>(char *timestamp, char *timestampformat, char *timezone, int abortOnFailure)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>libdatetimetz_converter_tzanytype.h</name>
     <path>/usr/local/oracle/lib/datetimetz_converter_lib/include/</path>
     <filename>libdatetimetz__converter__tzanytype_8h</filename>
@@ -422,6 +422,20 @@
     <name>LinkDef.h</name>
     <path>/usr/local/oracle/lib/datetimetz_converter_lib/include/</path>
     <filename>LinkDef_8h</filename>
+  </compound>
+  <compound kind="file">
+    <name>libdatetimetz_converter_assert.c</name>
+    <path>/usr/local/oracle/lib/datetimetz_converter_lib/src/</path>
+    <filename>libdatetimetz__converter__assert_8c</filename>
+    <includes id="libdatetimetz__converter__consistency_8h" name="libdatetimetz_converter_consistency.h" local="yes" imported="no">libdatetimetz_converter_consistency.h</includes>
+    <includes id="libdatetimetz__converter__assert_8h" name="libdatetimetz_converter_assert.h" local="yes" imported="no">libdatetimetz_converter_assert.h</includes>
+    <member kind="function">
+      <type>int</type>
+      <name>assert_TimestampTZIsValid</name>
+      <anchorfile>libdatetimetz__converter__assert_8c.html</anchorfile>
+      <anchor>a623e1f28261da00fd928c4e15d6bff0e</anchor>
+      <arglist>(char *timestamp, char *timestampformat, char *timezone, int abortOnFailure)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>libdatetimetz_converter_consistency.c</name>
@@ -531,20 +545,6 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>libdatetimetz_converter_prereqs.c</name>
-    <path>/usr/local/oracle/lib/datetimetz_converter_lib/src/</path>
-    <filename>libdatetimetz__converter__prereqs_8c</filename>
-    <includes id="libdatetimetz__converter__consistency_8h" name="libdatetimetz_converter_consistency.h" local="yes" imported="no">libdatetimetz_converter_consistency.h</includes>
-    <includes id="libdatetimetz__converter__prereqs_8h" name="libdatetimetz_converter_prereqs.h" local="yes" imported="no">libdatetimetz_converter_prereqs.h</includes>
-    <member kind="function">
-      <type>int</type>
-      <name>isTimestampConsistentorAbort</name>
-      <anchorfile>libdatetimetz__converter__prereqs_8c.html</anchorfile>
-      <anchor>a56b02d9084441fcfe08219d01b29ef21</anchor>
-      <arglist>(char *timestamp, char *timestampformat, char *timezone, int abortOnFailure)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>libdatetimetz_converter_tzanytype.c</name>
     <path>/usr/local/oracle/lib/datetimetz_converter_lib/src/</path>
     <filename>libdatetimetz__converter__tzanytype_8c</filename>
@@ -552,7 +552,7 @@
     <includes id="libdatetimetz__converter__epoch_8h" name="libdatetimetz_converter_epoch.h" local="yes" imported="no">libdatetimetz_converter_epoch.h</includes>
     <includes id="libdatetimetz__converter__tzanytype_8h" name="libdatetimetz_converter_tzanytype.h" local="yes" imported="no">libdatetimetz_converter_tzanytype.h</includes>
     <includes id="libdatetimetz__converter__iso8601assert_8h" name="libdatetimetz_converter_iso8601assert.h" local="yes" imported="no">libdatetimetz_converter_iso8601assert.h</includes>
-    <includes id="libdatetimetz__converter__prereqs_8h" name="libdatetimetz_converter_prereqs.h" local="yes" imported="no">libdatetimetz_converter_prereqs.h</includes>
+    <includes id="libdatetimetz__converter__assert_8h" name="libdatetimetz_converter_assert.h" local="yes" imported="no">libdatetimetz_converter_assert.h</includes>
     <member kind="function">
       <type>int</type>
       <name>convertTimestampTZByFmtStr2Epochtimet</name>
@@ -749,9 +749,9 @@
     <name>datetimetz_converter</name>
     <title>Converter for Timestamp (Date-Time)</title>
     <filename>group__datetimetz__converter.html</filename>
+    <file>libdatetimetz_converter_assert.h</file>
     <file>libdatetimetz_converter_epoch.h</file>
     <file>libdatetimetz_converter_iso8601assert.h</file>
-    <file>libdatetimetz_converter_prereqs.h</file>
     <file>libdatetimetz_converter_tzanytype.h</file>
   </compound>
   <compound kind="group">
@@ -769,12 +769,12 @@
     <path>/usr/local/oracle/lib/datetimetz_converter_lib/include/</path>
     <filename>dir_d44c64559bbebec7f509842c48db8b23.html</filename>
     <file>config.h</file>
+    <file>libdatetimetz_converter_assert.h</file>
     <file>libdatetimetz_converter_consistency.h</file>
     <file>libdatetimetz_converter_epoch.h</file>
     <file>libdatetimetz_converter_iso8601assert.h</file>
     <file>libdatetimetz_converter_iso8601verifier.h</file>
     <file>libdatetimetz_converter_lib.h</file>
-    <file>libdatetimetz_converter_prereqs.h</file>
     <file>libdatetimetz_converter_tzanytype.h</file>
     <file>LinkDef.h</file>
   </compound>
@@ -782,11 +782,11 @@
     <name>src</name>
     <path>/usr/local/oracle/lib/datetimetz_converter_lib/src/</path>
     <filename>dir_68267d1309a1af8e8297ef4c3efbcdba.html</filename>
+    <file>libdatetimetz_converter_assert.c</file>
     <file>libdatetimetz_converter_consistency.c</file>
     <file>libdatetimetz_converter_epoch.c</file>
     <file>libdatetimetz_converter_iso8601assert.c</file>
     <file>libdatetimetz_converter_iso8601verifier.c</file>
-    <file>libdatetimetz_converter_prereqs.c</file>
     <file>libdatetimetz_converter_tzanytype.c</file>
   </compound>
   <compound kind="dir">

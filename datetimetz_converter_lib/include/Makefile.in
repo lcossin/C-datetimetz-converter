@@ -312,7 +312,7 @@ BASIC_LIBS = libdatetimetz_converter_lib.h
 CONSISTENCY_LIBS = libdatetimetz_converter_consistency.h \
 	libdatetimetz_converter_iso8601verifier.h \
 	libdatetimetz_converter_iso8601assert.h \
-	libdatetimetz_converter_prereqs.h
+	libdatetimetz_converter_assert.h
 CONVERTER_LIBS = libdatetimetz_converter_epoch.h \
 	libdatetimetz_converter_tzanytype.h
 pkginclude_HEADERS = $(BASIC_LIBS) $(CONSISTENCY_LIBS) $(CONVERTER_LIBS)

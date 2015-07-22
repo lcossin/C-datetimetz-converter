@@ -1,6 +1,6 @@
 AUTOMAKE_OPTIONS = dejagnu
 
-EXTRA_DIST = testtzconverter-memleaks.sh.am
+EXTRA_DIST = testtzconverter-nomemleaks.sh.am
 
 AM_CPPFLAGS =
 
@@ -28,8 +28,8 @@ TZ_LIBS =
 TZ_LIBS += ../src/libdatetimetz_converter_lib.la
 TZ_LIBS += $(TZCONVERTLIBHELPER_LTLIB)
 
-MEMLEAKS_PROG = testtzconverter_memleaks
-MEMLEAKS_FILE  = testtzconverter-memleaks
+MEMLEAKS_PROG = testtzconverter_nomemleaks
+MEMLEAKS_FILE  = testtzconverter-nomemleaks
 MEMLEAKS_CFILE = $(MEMLEAKS_FILE).c
 MEMLEAKS_SHELL = $(MEMLEAKS_FILE).sh
 MEMLEAKS_BIN = $(bindir)/$(MEMLEAKS_PROG).sh
@@ -95,8 +95,8 @@ testtzconverter_WrongTimestamps_SOURCES = testtzconvert-WrongTimestamps.c
 testtzconverter_WrongTimestamps_LDADD = $(TZ_LIBS)
 
 bin_PROGRAMS = $(MEMLEAKS_PROG)
-testtzconverter_memleaks_SOURCES = testtzconverter-memleaks.c
-testtzconverter_memleaks_LDADD = $(TZ_LIBS)
+testtzconverter_nomemleaks_SOURCES = testtzconverter-nomemleaks.c
+testtzconverter_nomemleaks_LDADD = $(TZ_LIBS)
 
 check-local : install ;
 	cat $(MEMLEAKS_SHELL).am | sed -e "s;#BINDIR#;$(bindir);" -e "s;#PROGNAME#;$(MEMLEAKS_PROG);" > $(MEMLEAKS_BIN)

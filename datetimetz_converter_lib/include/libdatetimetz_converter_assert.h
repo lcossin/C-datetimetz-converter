@@ -19,7 +19,7 @@
 */
 
 /**
- * @file libdatetimetz_converter_prereqs.h
+ * @file libdatetimetz_converter_assert.h
  * @author Laurent Cossin
  * @date   July 2015
  *
@@ -36,7 +36,7 @@
 /// Checks if the timestamp (with a custom format) is consistent
 
 int 
-isTimestampConsistentorAbort(
+assert_TimestampTZIsValid(
 	char *timestamp, char *timestampformat,
 	char *timezone,
 	int abortOnFailure

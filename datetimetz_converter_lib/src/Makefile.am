@@ -20,7 +20,7 @@ AM_LDFLAGS = -module -shared -avoid-version
 
 CONSISTENCY_LIBS =
 CONSISTENCY_LIBS += libdatetimetz_converter_consistency.c libdatetimetz_converter_iso8601verifier.c
-CONSISTENCY_LIBS += libdatetimetz_converter_iso8601assert.c libdatetimetz_converter_prereqs.c 
+CONSISTENCY_LIBS += libdatetimetz_converter_iso8601assert.c libdatetimetz_converter_assert.c 
 
 CONVERTER_LIBS =
 CONVERTER_LIBS += libdatetimetz_converter_epoch.c

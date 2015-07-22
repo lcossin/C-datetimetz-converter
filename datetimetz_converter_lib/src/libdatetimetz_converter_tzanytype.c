@@ -30,7 +30,7 @@
 #include "libdatetimetz_converter_epoch.h"
 #include "libdatetimetz_converter_tzanytype.h"
 #include "libdatetimetz_converter_iso8601assert.h"
-#include "libdatetimetz_converter_prereqs.h"
+#include "libdatetimetz_converter_assert.h"
 
 int 
 convertTimestampTZByFmtStr2Epochtimet( 
@@ -111,7 +111,7 @@ condcheckConvertTimestampTZByFmtStr2TZ(
 	log_debug("entering condcheckconvertTimestampTZByFmtStr2TZ");
 
 	if ( DoCheck )
-		res = isTimestampConsistentorAbort(inTimestampStr, inTimestampFmtStr, inTZ, actionOnFailureOpts);
+		res = assert_TimestampTZIsValid(inTimestampStr, inTimestampFmtStr, inTZ, actionOnFailureOpts);
 
 	if ( ! res )
 	{
@@ -140,7 +140,7 @@ condcheckConvertTimestampTZByFmtStr2TZ(
 		// restore the TZ settings
 		setenv(TZ_ENV_VARNAME,envTZbackup,1);
 
-	} // if after isTimestampConsistentorAbort
+	} // if after assert_TimestampTZIsValid
 
 	sprintf(msg,"leaving condcheckconvertTimestampTZByFmtStr2TZ res=%d", res);
 	log_debug(msg);

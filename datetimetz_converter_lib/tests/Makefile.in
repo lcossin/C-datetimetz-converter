@@ -98,7 +98,7 @@ mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/include/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
-am__EXEEXT_1 = testtzconverter_memleaks$(EXEEXT)
+am__EXEEXT_1 = testtzconverter_nomemleaks$(EXEEXT)
 am__installdirs = "$(DESTDIR)$(bindir)"
 am__EXEEXT_2 = testtzconverter_UTC$(EXEEXT) \
 	testtzconverter_GMToffset$(EXEEXT)
@@ -173,11 +173,11 @@ am_testtzconverter_WrongTimestamps_OBJECTS =  \
 testtzconverter_WrongTimestamps_OBJECTS =  \
 	$(am_testtzconverter_WrongTimestamps_OBJECTS)
 testtzconverter_WrongTimestamps_DEPENDENCIES = $(am__DEPENDENCIES_2)
-am_testtzconverter_memleaks_OBJECTS =  \
-	testtzconverter-memleaks.$(OBJEXT)
-testtzconverter_memleaks_OBJECTS =  \
-	$(am_testtzconverter_memleaks_OBJECTS)
-testtzconverter_memleaks_DEPENDENCIES = $(am__DEPENDENCIES_2)
+am_testtzconverter_nomemleaks_OBJECTS =  \
+	testtzconverter-nomemleaks.$(OBJEXT)
+testtzconverter_nomemleaks_OBJECTS =  \
+	$(am_testtzconverter_nomemleaks_OBJECTS)
+testtzconverter_nomemleaks_DEPENDENCIES = $(am__DEPENDENCIES_2)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
 am__v_P_0 = false
@@ -223,7 +223,7 @@ SOURCES = $(testtzconverter_DST_Berlin_SOURCES) \
 	$(testtzconverter_UTC_SOURCES) \
 	$(testtzconverter_WrongParameters_SOURCES) \
 	$(testtzconverter_WrongTimestamps_SOURCES) \
-	$(testtzconverter_memleaks_SOURCES)
+	$(testtzconverter_nomemleaks_SOURCES)
 DIST_SOURCES = $(testtzconverter_DST_Berlin_SOURCES) \
 	$(testtzconverter_DST_CEST_SOURCES) \
 	$(testtzconverter_DST_CET_SOURCES) \
@@ -235,7 +235,7 @@ DIST_SOURCES = $(testtzconverter_DST_Berlin_SOURCES) \
 	$(testtzconverter_UTC_SOURCES) \
 	$(testtzconverter_WrongParameters_SOURCES) \
 	$(testtzconverter_WrongTimestamps_SOURCES) \
-	$(testtzconverter_memleaks_SOURCES)
+	$(testtzconverter_nomemleaks_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
     n|no|NO) false;; \
@@ -613,7 +613,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = dejagnu
-EXTRA_DIST = testtzconverter-memleaks.sh.am
+EXTRA_DIST = testtzconverter-nomemleaks.sh.am
 AM_CPPFLAGS = $(am__append_1) $(am__append_2) $(am__append_3) -Wall \
 	-D_XOPEN_SOURCE=600 -DDATADIR=$(pkgdatadir) \
 	$(TZCONVERTLIBHELPER_INCLUDE)
@@ -621,8 +621,8 @@ AM_LDFLAGS = -module -shared -avoid-version \
 	-Wl,--allow-multiple-definition
 TZ_LIBS = ../src/libdatetimetz_converter_lib.la \
 	$(TZCONVERTLIBHELPER_LTLIB)
-MEMLEAKS_PROG = testtzconverter_memleaks
-MEMLEAKS_FILE = testtzconverter-memleaks
+MEMLEAKS_PROG = testtzconverter_nomemleaks
+MEMLEAKS_FILE = testtzconverter-nomemleaks
 MEMLEAKS_CFILE = $(MEMLEAKS_FILE).c
 MEMLEAKS_SHELL = $(MEMLEAKS_FILE).sh
 MEMLEAKS_BIN = $(bindir)/$(MEMLEAKS_PROG).sh
@@ -659,8 +659,8 @@ testtzconverter_WrongParameters_SOURCES = testtzconvert-WrongParameters.c
 testtzconverter_WrongParameters_LDADD = $(TZ_LIBS)
 testtzconverter_WrongTimestamps_SOURCES = testtzconvert-WrongTimestamps.c
 testtzconverter_WrongTimestamps_LDADD = $(TZ_LIBS)
-testtzconverter_memleaks_SOURCES = testtzconverter-memleaks.c
-testtzconverter_memleaks_LDADD = $(TZ_LIBS)
+testtzconverter_nomemleaks_SOURCES = testtzconverter-nomemleaks.c
+testtzconverter_nomemleaks_LDADD = $(TZ_LIBS)
 all: all-am
 
 .SUFFIXES:
@@ -798,9 +798,9 @@ testtzconverter_WrongTimestamps$(EXEEXT): $(testtzconverter_WrongTimestamps_OBJE
 	@rm -f testtzconverter_WrongTimestamps$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(testtzconverter_WrongTimestamps_OBJECTS) $(testtzconverter_WrongTimestamps_LDADD) $(LIBS)
 
-testtzconverter_memleaks$(EXEEXT): $(testtzconverter_memleaks_OBJECTS) $(testtzconverter_memleaks_DEPENDENCIES) $(EXTRA_testtzconverter_memleaks_DEPENDENCIES) 
-	@rm -f testtzconverter_memleaks$(EXEEXT)
-	$(AM_V_CCLD)$(LINK) $(testtzconverter_memleaks_OBJECTS) $(testtzconverter_memleaks_LDADD) $(LIBS)
+testtzconverter_nomemleaks$(EXEEXT): $(testtzconverter_nomemleaks_OBJECTS) $(testtzconverter_nomemleaks_DEPENDENCIES) $(EXTRA_testtzconverter_nomemleaks_DEPENDENCIES) 
+	@rm -f testtzconverter_nomemleaks$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(testtzconverter_nomemleaks_OBJECTS) $(testtzconverter_nomemleaks_LDADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
@@ -819,7 +819,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-UTC.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-WrongParameters.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-WrongTimestamps.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconverter-memleaks.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconverter-nomemleaks.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

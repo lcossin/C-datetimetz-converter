@@ -131,7 +131,7 @@ am__objects_1 = libdatetimetz_converter_epoch.lo \
 am__objects_2 = libdatetimetz_converter_consistency.lo \
 	libdatetimetz_converter_iso8601verifier.lo \
 	libdatetimetz_converter_iso8601assert.lo \
-	libdatetimetz_converter_prereqs.lo
+	libdatetimetz_converter_assert.lo
 am_libdatetimetz_converter_lib_la_OBJECTS = $(am__objects_1) \
 	$(am__objects_2)
 libdatetimetz_converter_lib_la_OBJECTS =  \
@@ -362,7 +362,7 @@ AM_LDFLAGS = -module -shared -avoid-version
 CONSISTENCY_LIBS = libdatetimetz_converter_consistency.c \
 	libdatetimetz_converter_iso8601verifier.c \
 	libdatetimetz_converter_iso8601assert.c \
-	libdatetimetz_converter_prereqs.c
+	libdatetimetz_converter_assert.c
 CONVERTER_LIBS = libdatetimetz_converter_epoch.c \
 	libdatetimetz_converter_tzanytype.c
 
@@ -452,11 +452,11 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_assert.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_consistency.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_epoch.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_iso8601assert.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_iso8601verifier.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_prereqs.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_tzanytype.Plo@am__quote@
 
 .c.o:

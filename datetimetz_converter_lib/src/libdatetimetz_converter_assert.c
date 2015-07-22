@@ -25,10 +25,10 @@
 #include "libtrace.h"
 
 #include "libdatetimetz_converter_consistency.h"
-#include "libdatetimetz_converter_prereqs.h"
+#include "libdatetimetz_converter_assert.h"
 
 int 
-isTimestampConsistentorAbort(
+assert_TimestampTZIsValid(
 	char *timestamp, char *timestampformat,
 	char *timezone,
 	int abortOnFailure
@@ -39,28 +39,28 @@ isTimestampConsistentorAbort(
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
 
-	sprintf(msg,"entering isTimestampConsistentorAbort abortOnFailure=%d",abortOnFailure);
+	sprintf(msg,"entering assert_TimestampTZIsValid abortOnFailure=%d",abortOnFailure);
 	log_debug(msg);
 
 	res = checkTimestampConsistency(timestamp, timestampformat, timezone);
 
 	if ( ! res )
 	{
-		sprintf(msg, "[isTimestampConsistentorAbort] %s %s is a valid timestamp",timestamp,timezone);
+		sprintf(msg, "[assert_TimestampTZIsValid] %s %s is a valid timestamp",timestamp,timezone);
 		log_finest(msg);
 	}
 	else
 	{
-		sprintf(msg, "[isTimestampConsistentorAbort] %s %s is a wrong timestamp",timestamp,timezone);
+		sprintf(msg, "[assert_TimestampTZIsValid] %s %s is a wrong timestamp",timestamp,timezone);
 		log_critical(msg);
 		if ( abortOnFailure )
 			abort();
 	}
 
-	sprintf(msg,"leaving isTimestampConsistentorAbort abortOnFailure=%d",abortOnFailure);
+	sprintf(msg,"leaving assert_TimestampTZIsValid abortOnFailure=%d",abortOnFailure);
 	log_debug(msg);
 
 	return res;
 
-} // isTimestampConsistentorAbort
+} // assert_TimestampTZIsValid
 
