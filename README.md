@@ -3,7 +3,7 @@ Some libraries in C to convert date time between timezones
 
 ## How to contribute ?
 
-Feel free to create new issues for any type of requests, fixe some bugs or ask for some enhancements.
+Feel free to create new issues for any type of requests, request a fix for bugs, ask for some enhancements.
 
 ## Sub projects
 
