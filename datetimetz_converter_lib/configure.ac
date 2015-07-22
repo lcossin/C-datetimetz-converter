@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([datetimetz-converter-lib], [0.5], [lcossin@users.noreply.github.com])
+AC_INIT([datetimetz-converter-lib], [0.5], [https://github.com/lcossin/C-datetimetz-converter])
 
 AC_COPYRIGHT([Copyright (C) 2015 Laurent Cossin])
 AC_REVISION([$Revision: 0.5$])

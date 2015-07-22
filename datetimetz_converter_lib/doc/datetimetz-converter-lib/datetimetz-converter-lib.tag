@@ -733,14 +733,14 @@
     </member>
   </compound>
   <compound kind="file">
-    <name>testtzconverter-memleaks.c</name>
+    <name>testtzconverter-nomemleaks.c</name>
     <path>/usr/local/oracle/lib/datetimetz_converter_lib/tests/</path>
-    <filename>testtzconverter-memleaks_8c</filename>
+    <filename>testtzconverter-nomemleaks_8c</filename>
     <includes id="libdatetimetz__converter__tzanytype_8h" name="libdatetimetz_converter_tzanytype.h" local="yes" imported="no">libdatetimetz_converter_tzanytype.h</includes>
     <member kind="function">
       <type>int</type>
       <name>main</name>
-      <anchorfile>testtzconverter-memleaks_8c.html</anchorfile>
+      <anchorfile>testtzconverter-nomemleaks_8c.html</anchorfile>
       <anchor>ae66f6b31b5ad750f1fe042a706a4e3d4</anchor>
       <arglist>()</arglist>
     </member>
@@ -804,6 +804,6 @@
     <file>testtzconvert-UTC.c</file>
     <file>testtzconvert-WrongParameters.c</file>
     <file>testtzconvert-WrongTimestamps.c</file>
-    <file>testtzconverter-memleaks.c</file>
+    <file>testtzconverter-nomemleaks.c</file>
   </compound>
 </tagfile>

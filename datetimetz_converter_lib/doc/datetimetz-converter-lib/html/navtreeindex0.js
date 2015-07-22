@@ -147,7 +147,7 @@ var NAVTREEINDEX0 =
 "testtzconvert-WrongTimestamps_8c.html":[1,0,2,10],
 "testtzconvert-WrongTimestamps_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[1,0,2,10,0],
 "testtzconvert-WrongTimestamps_8c_source.html":[1,0,2,10],
-"testtzconverter-memleaks_8c.html":[1,0,2,11],
-"testtzconverter-memleaks_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[1,0,2,11,0],
-"testtzconverter-memleaks_8c_source.html":[1,0,2,11]
+"testtzconverter-nomemleaks_8c.html":[1,0,2,11],
+"testtzconverter-nomemleaks_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[1,0,2,11,0],
+"testtzconverter-nomemleaks_8c_source.html":[1,0,2,11]
 };
