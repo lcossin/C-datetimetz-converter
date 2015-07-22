@@ -1,5 +1,5 @@
 # C-datetimetz-converter
-libraries in C to convert date time between timezones
+Some libraries in C to convert date time between timezones
 
 The projects is composed of sub projects.
 
