@@ -29,7 +29,7 @@
 #include "libdatetimetz_converter_tzanytype.h"
 
 #include "libdatetimetz_converter_datatypes.h"
-#include "libdatetimetz_converter_consistency.h"
+#include "libdatetimetz_converter_timestampverifier.h"
 #include "libdatetimetz_converter_iso8601verifier.h"
 #include "libdatetimetz_converter_iso8601assert.h"
 

@@ -38,6 +38,8 @@ TZTESTS_ERRORS = testtzconverter_WrongParameters testtzconverter_WrongTimestamps
 
 TZTESTS_UTC = testtzconverter_UTC
 TZTESTS_UTC += testtzconverter_GMToffset
+TZTESTS_UTC += testtzconverter_2timeoffset
+TZTESTS_UTC += testtzconverter_fromAnd2timeoffset
 
 TZTESTS_EU = testtzconverter_DST_Berlin
 TZTESTS_EU += testtzconverter_DST_CET 
@@ -88,6 +90,12 @@ testtzconverter_UTC_LDADD = $(TZ_LIBS)
 testtzconverter_GMToffset_SOURCES = testtzconvert-GMToffset.c
 testtzconverter_GMToffset_LDADD = $(TZ_LIBS)
 
+testtzconverter_2timeoffset_SOURCES = testtzconvert-2timeoffset.c
+testtzconverter_2timeoffset_LDADD = $(TZ_LIBS)
+
+testtzconverter_fromAnd2timeoffset_SOURCES = testtzconvert-fromAnd2timeoffset.c
+testtzconverter_fromAnd2timeoffset_LDADD = $(TZ_LIBS)
+
 testtzconverter_WrongParameters_SOURCES = testtzconvert-WrongParameters.c
 testtzconverter_WrongParameters_LDADD = $(TZ_LIBS)
 
@@ -104,4 +112,7 @@ check-local : install ;
 	$(MEMLEAKS_BIN);
 	rm $(MEMLEAKS_BIN)
 
+clean-local :
+	rm -vf *.log *.out *.trs
+	find . -maxdepth 1 -type f -regex "\./testtzconverter_[^\.]+" -perm /+x -exec rm -vf {} \;
 

@@ -1,0 +1,107 @@
+.TH "src/libdatetimetz_converter_tztimeoffset.c" 3 "Thu Jul 23 2015" "datetimetz-converter-lib-0.5" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/libdatetimetz_converter_tztimeoffset.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <time\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'libtrace\&.h'\fP
+.br
+\fC#include 'libregex_custom\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_timestamptzformat\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_tzanytype\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_datatypes\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_consistency\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_tztimeoffset\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBisUTCTimeOffsetTZ\fP (char *TZval)"
+.br
+.RI "\fIVerifies if a given TZ value is a valid time offset for UTC - cf ISO8601 rules\&. \fP"
+.ti -1c
+.RI "int \fBisTimeOffsetTZ\fP (char *TZval)"
+.br
+.RI "\fIVerifies if a given TZ value is a valid time offset\&. \fP"
+.ti -1c
+.RI "int \fBconvertTimeOffsetToSeconds\fP (char *TZval, int *offsetSeconds)"
+.br
+.RI "\fIConverts a time offset TZ to seconds\&. \fP"
+.ti -1c
+.RI "int \fBsplitTimeOffsetStrToValues\fP (char *timeoffsetstr, int *signfactor, int *hours, int *minutes)"
+.br
+.ti -1c
+.RI "int \fBsplitconvertTimeOffsetStrToValues\fP (char *timeoffsetstr, int *timeoffsetseconds)"
+.br
+.RI "\fISplits and converts a time string into seconds\&. \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int convertTimeOffsetToSeconds (char *TZval, int *offsetSeconds)"
+
+.PP
+Converts a time offset TZ to seconds\&. 
+.PP
+Definition at line 120 of file libdatetimetz_converter_tztimeoffset\&.c\&.
+.PP
+References isTimeOffsetTZ(), isUTCTimeOffsetTZ(), and splitconvertTimeOffsetStrToValues()\&.
+.PP
+Referenced by condcheckConvertTimestampTZByFmtStr2TZ(), and convertTimestampTZByFmtStr2Epochtimet()\&.
+.SS "int isTimeOffsetTZ (char *TZval)"
+
+.PP
+Verifies if a given TZ value is a valid time offset\&. 
+.PP
+Definition at line 77 of file libdatetimetz_converter_tztimeoffset\&.c\&.
+.PP
+References OFFSETTZREGEXP, OFFSETTZREGEXPEXPECTEDMATCHES_MAX, OFFSETTZREGEXPEXPECTEDMATCHES_MIN, UTCWRONGOFFSETTZREGEXP, UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MAX, and UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MIN\&.
+.PP
+Referenced by convertTimeOffsetToSeconds()\&.
+.SS "int isUTCTimeOffsetTZ (char *TZval)"
+
+.PP
+Verifies if a given TZ value is a valid time offset for UTC - cf ISO8601 rules\&. 
+.PP
+Definition at line 36 of file libdatetimetz_converter_tztimeoffset\&.c\&.
+.PP
+References UTCOFFSETTZREGEXP, UTCOFFSETTZREGEXPEXPECTEDMATCHES_MAX, UTCOFFSETTZREGEXPEXPECTEDMATCHES_MIN, UTCSPECIALOFFSETTZREGEXP, and UTCSPECIALOFFSETTZREGEXPEXPECTEDMATCHES\&.
+.PP
+Referenced by convertTimeOffsetToSeconds()\&.
+.SS "int splitconvertTimeOffsetStrToValues (char *timeoffsetstr, int *timeoffsetseconds)"
+
+.PP
+Splits and converts a time string into seconds\&. 
+.PP
+Definition at line 198 of file libdatetimetz_converter_tztimeoffset\&.c\&.
+.PP
+References splitTimeOffsetStrToValues()\&.
+.PP
+Referenced by convertTimeOffsetToSeconds()\&.
+.SS "int splitTimeOffsetStrToValues (char *timeoffsetstr, int *signfactor, int *hours, int *minutes)"
+timeoffsetstr can be [sign][hh][mm] or [sign][hh]:[mm] hours are the 2 first digits (after the leading sign) minutes are the 2 trailing digits
+.PP
+extracts the sign of the offset 
+.PP
+Definition at line 157 of file libdatetimetz_converter_tztimeoffset\&.c\&.
+.PP
+Referenced by splitconvertTimeOffsetStrToValues()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-lib-0\&.5 from the source code\&.

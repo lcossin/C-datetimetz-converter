@@ -30,6 +30,8 @@
 #include "libdatetimetz_converter_epoch.h"
 #include "libdatetimetz_converter_tzanytype.h"
 #include "libdatetimetz_converter_iso8601assert.h"
+#include "libdatetimetz_converter_iso8601verifier.h"
+#include "libdatetimetz_converter_tztimeoffset.h"
 #include "libdatetimetz_converter_assert.h"
 
 int 
@@ -51,30 +53,60 @@ convertTimestampTZByFmtStr2Epochtimet(
 
 	log_debug("entering convertTimestampTZByFmtStr2Epochtimet");
 
+	int timeoffsetres;
+	int timeoffsetseconds;
+	char inTZeff[TIMESTAMPMAXLENGTH];
+
 	int res;
 
-	// backup the current settings
+	// backup the current value of the TZ environment variable
+
 	if ( getenv(TZ_ENV_VARNAME) )
 		strcpy(envTZbackup,getenv(TZ_ENV_VARNAME));
 	else
 		strcpy(envTZbackup,DEFAULT_TIMEZONE);
 
-	// set TZ according to the input timestamp 
-  // if UTC = set TZ to empty value
-  // otherwise set TZ with the given TZ as argument
+	sprintf(msg,"[convertTimestampTZByFmtStr2Epoch] TZ=%s inTimestampStr=%s inTZ=%s",envTZbackup,inTimestampStr,inTZ);
+	log_debug(msg);
 
-  if ( ! strcmp(inTZ,EPOCH_TIMEZONE) )
-		setenv(TZ_ENV_VARNAME,"",1);
+	// set TZ environment variable according to the input timestamp 
+  //	if inTZ=UTC then set TZ to empty value
+  //	otherwise set TZ with the value of inTZ
+
+  if ( strcmp(inTZ,EPOCH_TIMEZONE) == EXIT_SUCCESS )
+	{
+		strcpy(inTZeff,"");
+		timeoffsetres = EXIT_FAILURE;
+	}
 	else
-		setenv(TZ_ENV_VARNAME,inTZ,1);
+	{
+		timeoffsetres = convertTimeOffsetToSeconds(inTZ, &timeoffsetseconds);
+
+		if ( timeoffsetres != EXIT_SUCCESS ) 
+			strcpy(inTZeff,inTZ);
+		else
+			strcpy(inTZeff,"");
+
+	}
+
+	setenv(TZ_ENV_VARNAME,inTZeff,1);
+
+	sprintf(msg,"[convertTimestampTZByFmtStr2Epoch] inTimestampStr=%s inTZ=%s effTZ=%s",inTimestampStr,inTZ,inTZeff);
+	log_debug(msg);
+
 
 	// set the Epoch value for the given timestamp
 	res = convertTimestampStr2Epochtimet(inTimestampStr,inTimestampFmtStr,epochtimet);
 
-	// restore the TZ settings
+	if ( timeoffsetres == EXIT_SUCCESS )
+	{
+		(*epochtimet) -= timeoffsetseconds;
+	}
+
+	// restore the initial value of the  TZ environment variable 
 	setenv(TZ_ENV_VARNAME,envTZbackup,1);
 
-	sprintf(msg,"leaving convertTimestampTZByFmtStr2Epoch res=%d",res);
+	sprintf(msg,"leaving convertTimestampTZByFmtStr2Epoch TZ=%s res=%d",envTZbackup,res);
 	log_debug(msg);
 
 	return res;
@@ -100,6 +132,12 @@ condcheckConvertTimestampTZByFmtStr2TZ(
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
 	char envTZbackup[TIMESTAMPMAXLENGTH];
+
+	int timeoffsetres;
+	int timeoffsetseconds;
+
+	char targetTZeff[TIMESTAMPMAXLENGTH]; // effectiv target timezone
+
 	int res = 0;
 
 	// stores the result in a tm strut
@@ -109,6 +147,9 @@ condcheckConvertTimestampTZByFmtStr2TZ(
 	time_t epoch_time;
 
 	log_debug("entering condcheckconvertTimestampTZByFmtStr2TZ");
+
+	sprintf(msg,"[condcheckconvertTimestampTZByFmtStr2TZ] inTimestampStr=%s inTZ=%s targetTZ=%s",inTimestampStr, inTZ, targetTZ);
+	log_debug(msg);
 
 	if ( DoCheck )
 		res = assert_TimestampTZIsValid(inTimestampStr, inTimestampFmtStr, inTZ, actionOnFailureOpts);
@@ -122,20 +163,61 @@ condcheckConvertTimestampTZByFmtStr2TZ(
 
 		// convert Epoch to the target timezone
 
+	timeoffsetres = convertTimeOffsetToSeconds(targetTZ, &timeoffsetseconds);
+
 	// backup the current settings
 	if ( getenv(TZ_ENV_VARNAME) )
 		strcpy(envTZbackup,getenv(TZ_ENV_VARNAME));
 	else
 		strcpy(envTZbackup,DEFAULT_TIMEZONE);
 
-		// set TZ settings to the target TZ
-		setenv(TZ_ENV_VARNAME,targetTZ,1);
+	if ( timeoffsetres != EXIT_SUCCESS ) // not a TZ time offset
+	{
+		sprintf(msg,"[condcheckconvertTimestampTZByFmtStr2TZ] [ZONEINFO] epoch_time=%zu inTimestampStr=%s inTZ=%s targetTZ=%s", epoch_time,inTimestampStr, inTZ, targetTZ);
+	log_debug(msg);
 
-		outTM = localtime(&epoch_time);
+		strcpy(targetTZeff,targetTZ);
 
-		// format the output string
+	}
+	else
+	{
+		sprintf(msg,"[condcheckconvertTimestampTZByFmtStr2TZ] [TIMEOFFSET] epoch_time=%zu timeoffsetseconds=%d inTimestampStr=%s inTZ=%s targetTZ=%s", epoch_time,timeoffsetseconds, inTimestampStr, inTZ, targetTZ);
+		log_debug(msg);
 
-		strftime(targetTimestampStr,255,targetTimestampFmtStr, outTM);
+		strcpy(targetTZeff,"");
+
+		epoch_time += timeoffsetseconds;
+
+	}
+
+	sprintf(msg,"[condcheckconvertTimestampTZByFmtStr2TZ] [MAIN] epoch_time=%zu requested targetTZ=%s effectiv targetTZ=%s ",epoch_time, targetTZ, targetTZeff);
+	log_debug(msg);
+
+	// set TZ settings to the target TZ (effectiv targetTZ)
+	setenv(TZ_ENV_VARNAME,targetTZeff,1);
+
+	outTM = localtime(&epoch_time);
+
+	// format the output string
+
+	if ( timeoffsetres == EXIT_SUCCESS && strchr(targetTimestampFmtStr,'z') )
+	{
+
+		char customFmtStr[255];
+
+		sprintf(customFmtStr,"%s %s","%Y-%m-%dT%H:%M:%S",targetTZ);
+
+		strftime(targetTimestampStr,255,customFmtStr, outTM);
+
+	}
+	else
+	{
+
+	// format the output string
+
+	strftime(targetTimestampStr,255,targetTimestampFmtStr, outTM);
+
+	}
 
 		// restore the TZ settings
 		setenv(TZ_ENV_VARNAME,envTZbackup,1);

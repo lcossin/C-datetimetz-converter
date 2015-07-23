@@ -19,11 +19,11 @@
 */
 
 /**
- * @file libdatetimetz_converter_consistency.h
+ * @file libdatetimetz_converter_verifier.h
  * @author Laurent Cossin
  * @date   July 2015
  *
- * @ingroup datetimetz_converter_consistency
+ * @ingroup datetimetz_converter_consistency_verifier
  *
  * @brief Provides some functions to compare results after timezone conversion
  *

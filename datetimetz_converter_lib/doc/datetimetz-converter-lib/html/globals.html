@@ -62,9 +62,11 @@
       <li><a href="#index_i"><span>i</span></a></li>
       <li><a href="#index_l"><span>l</span></a></li>
       <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
       <li><a href="#index_p"><span>p</span></a></li>
       <li><a href="#index_s"><span>s</span></a></li>
       <li><a href="#index_t"><span>t</span></a></li>
+      <li><a href="#index_u"><span>u</span></a></li>
       <li><a href="#index_v"><span>v</span></a></li>
     </ul>
   </div>
@@ -150,12 +152,16 @@ $(document).ready(function(){initNavTree('globals.html','');});
 , <a class="el" href="libdatetimetz__converter__consistency_8c.html#a3a141fa4fe44367ac7591bd59660eccb">libdatetimetz_converter_consistency.c</a>
 </li>
 <li>condcheckConvertTimestampTZByFmtStr2TZ()
-: <a class="el" href="libdatetimetz__converter__tzanytype_8c.html#aab8c6f52b4205099f0076bcbc749964c">libdatetimetz_converter_tzanytype.c</a>
-, <a class="el" href="libdatetimetz__converter__tzanytype_8h.html#accb6a2943610f9a9c418dba63fed265d">libdatetimetz_converter_tzanytype.h</a>
+: <a class="el" href="libdatetimetz__converter__tzanytype_8h.html#accb6a2943610f9a9c418dba63fed265d">libdatetimetz_converter_tzanytype.h</a>
+, <a class="el" href="libdatetimetz__converter__tzanytype_8c.html#aab8c6f52b4205099f0076bcbc749964c">libdatetimetz_converter_tzanytype.c</a>
 </li>
 <li>convertISOTimestampTZ2TZ()
 : <a class="el" href="libdatetimetz__converter__tzanytype_8h.html#a413d0f9832ea4aca2b9fa1357182f58c">libdatetimetz_converter_tzanytype.h</a>
 , <a class="el" href="libdatetimetz__converter__tzanytype_8c.html#a413d0f9832ea4aca2b9fa1357182f58c">libdatetimetz_converter_tzanytype.c</a>
+</li>
+<li>convertTimeOffsetToSeconds()
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#aca8f48526dcf48898f45b2ea1c567fc4">libdatetimetz_converter_tztimeoffset.h</a>
+, <a class="el" href="libdatetimetz__converter__tztimeoffset_8c.html#aca8f48526dcf48898f45b2ea1c567fc4">libdatetimetz_converter_tztimeoffset.c</a>
 </li>
 <li>convertTimestampStr2Epochtimet()
 : <a class="el" href="libdatetimetz__converter__epoch_8h.html#aa119dc2738a08c3750e33c1c4128dadd">libdatetimetz_converter_epoch.h</a>
@@ -251,6 +257,14 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>ISO8601NOTZREGEXPEXPECTEDMATCHES
 : <a class="el" href="libdatetimetz__converter__iso8601verifier_8h.html#ad0270fe91c041e27163f409f18afdea8">libdatetimetz_converter_iso8601verifier.h</a>
 </li>
+<li>isTimeOffsetTZ()
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#a02ef2b1d2b272f0976d42ae4a1b3bf95">libdatetimetz_converter_tztimeoffset.h</a>
+, <a class="el" href="libdatetimetz__converter__tztimeoffset_8c.html#a02ef2b1d2b272f0976d42ae4a1b3bf95">libdatetimetz_converter_tztimeoffset.c</a>
+</li>
+<li>isUTCTimeOffsetTZ()
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8c.html#aaa31dc226c2019bca32e13e9cc95f15f">libdatetimetz_converter_tztimeoffset.c</a>
+, <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#aaa31dc226c2019bca32e13e9cc95f15f">libdatetimetz_converter_tztimeoffset.h</a>
+</li>
 </ul>
 
 
@@ -268,6 +282,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
 , <a class="el" href="testtzconvert-WrongTimestamps_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">testtzconvert-WrongTimestamps.c</a>
 , <a class="el" href="testtzconvert-WrongParameters_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">testtzconvert-WrongParameters.c</a>
 , <a class="el" href="testtzconvert-UTC_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">testtzconvert-UTC.c</a>
+, <a class="el" href="testtzconvert-timeoffset_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">testtzconvert-timeoffset.c</a>
 , <a class="el" href="testtzconvert-GMToffset_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">testtzconvert-GMToffset.c</a>
 , <a class="el" href="testtzconvert-DST-tzdata2015e_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">testtzconvert-DST-tzdata2015e.c</a>
 , <a class="el" href="testtzconvert-DST-NewYork_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">testtzconvert-DST-NewYork.c</a>
@@ -275,6 +290,19 @@ $(document).ready(function(){initNavTree('globals.html','');});
 , <a class="el" href="testtzconvert-DST-EST_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">testtzconvert-DST-EST.c</a>
 , <a class="el" href="testtzconvert-DST-CET_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">testtzconvert-DST-CET.c</a>
 , <a class="el" href="testtzconvert-DST-CEST_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">testtzconvert-DST-CEST.c</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>OFFSETTZREGEXP
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#ac26021317790621b6046c004ecac6948">libdatetimetz_converter_tztimeoffset.h</a>
+</li>
+<li>OFFSETTZREGEXPEXPECTEDMATCHES_MAX
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#a2d008007e234b20594dfef90b2ceca65">libdatetimetz_converter_tztimeoffset.h</a>
+</li>
+<li>OFFSETTZREGEXPEXPECTEDMATCHES_MIN
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#ad4351fc35b9c59d25c8ea1511edcfec7">libdatetimetz_converter_tztimeoffset.h</a>
 </li>
 </ul>
 
@@ -305,6 +333,16 @@ $(document).ready(function(){initNavTree('globals.html','');});
 
 
 <h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>splitconvertTimeOffsetStrToValues()
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#a6bb819c1932072b32a42efdd17d7171c">libdatetimetz_converter_tztimeoffset.h</a>
+, <a class="el" href="libdatetimetz__converter__tztimeoffset_8c.html#a6bb819c1932072b32a42efdd17d7171c">libdatetimetz_converter_tztimeoffset.c</a>
+</li>
+<li>splitTimeOffseStrtToValues()
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#a951dd7055f5c53580e489696f99bbae4">libdatetimetz_converter_tztimeoffset.h</a>
+</li>
+<li>splitTimeOffsetStrToValues()
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8c.html#aa251b50b6401f955e47f3e66e03ce250">libdatetimetz_converter_tztimeoffset.c</a>
+</li>
 <li>STDC_HEADERS
 : <a class="el" href="config_8h.html#a550e5c272cc3cf3814651721167dcd23">config.h</a>
 </li>
@@ -314,6 +352,34 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
 <li>TIME_WITH_SYS_TIME
 : <a class="el" href="config_8h.html#a2b44ef64cf38e064ef11e11f35271380">config.h</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>UTCOFFSETTZREGEXP
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#abc6bf71d35d2c04ef3486dc7c3069a67">libdatetimetz_converter_tztimeoffset.h</a>
+</li>
+<li>UTCOFFSETTZREGEXPEXPECTEDMATCHES_MAX
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#a25d5132ba2fdffe45066a134f23390b0">libdatetimetz_converter_tztimeoffset.h</a>
+</li>
+<li>UTCOFFSETTZREGEXPEXPECTEDMATCHES_MIN
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#a0950e6ecdca860b8233a3dd384d41031">libdatetimetz_converter_tztimeoffset.h</a>
+</li>
+<li>UTCSPECIALOFFSETTZREGEXP
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#aa63a448bc0b45d17b6e519f55e35458a">libdatetimetz_converter_tztimeoffset.h</a>
+</li>
+<li>UTCSPECIALOFFSETTZREGEXPEXPECTEDMATCHES
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#a1d49a3487277522517d36d7b37e701d9">libdatetimetz_converter_tztimeoffset.h</a>
+</li>
+<li>UTCWRONGOFFSETTZREGEXP
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#a6e1760defc64d09c1a082a6b1c1c0862">libdatetimetz_converter_tztimeoffset.h</a>
+</li>
+<li>UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MAX
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#a54edc71835feda234591d33f8bb760bc">libdatetimetz_converter_tztimeoffset.h</a>
+</li>
+<li>UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MIN
+: <a class="el" href="libdatetimetz__converter__tztimeoffset_8h.html#ab5d60c94a1e1d6ffcfbdea688f3348a6">libdatetimetz_converter_tztimeoffset.h</a>
 </li>
 </ul>
 

@@ -24,7 +24,7 @@
 
 #include "libtrace.h"
 
-#include "libdatetimetz_converter_consistency.h"
+#include "libdatetimetz_converter_timestampverifier.h"
 #include "libdatetimetz_converter_assert.h"
 
 int 
