@@ -8,5 +8,6 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "libdatetimetz_converter_iso8601verifier.h", "libdatetimetz__converter__iso8601verifier_8h.html", "libdatetimetz__converter__iso8601verifier_8h" ],
     [ "libdatetimetz_converter_lib.h", "libdatetimetz__converter__lib_8h.html", null ],
     [ "libdatetimetz_converter_tzanytype.h", "libdatetimetz__converter__tzanytype_8h.html", "libdatetimetz__converter__tzanytype_8h" ],
+    [ "libdatetimetz_converter_tztimeoffset.h", "libdatetimetz__converter__tztimeoffset_8h.html", "libdatetimetz__converter__tztimeoffset_8h" ],
     [ "LinkDef.h", "LinkDef_8h.html", null ]
 ];

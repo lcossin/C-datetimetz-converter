@@ -101,7 +101,9 @@ CONFIG_CLEAN_VPATH_FILES =
 am__EXEEXT_1 = testtzconverter_nomemleaks$(EXEEXT)
 am__installdirs = "$(DESTDIR)$(bindir)"
 am__EXEEXT_2 = testtzconverter_UTC$(EXEEXT) \
-	testtzconverter_GMToffset$(EXEEXT)
+	testtzconverter_GMToffset$(EXEEXT) \
+	testtzconverter_2timeoffset$(EXEEXT) \
+	testtzconverter_fromAnd2timeoffset$(EXEEXT)
 am__EXEEXT_3 = testtzconverter_DST_Berlin$(EXEEXT) \
 	testtzconverter_DST_CET$(EXEEXT)
 am__EXEEXT_4 = testtzconverter_DST_NewYork$(EXEEXT) \
@@ -115,18 +117,23 @@ am__EXEEXT_9 = $(am__EXEEXT_2) $(am__EXEEXT_6) $(am__EXEEXT_8)
 am__EXEEXT_10 = testtzconverter_DST_CEST$(EXEEXT) \
 	testtzconverter_DST_EST$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS)
-am_testtzconverter_DST_Berlin_OBJECTS =  \
-	testtzconvert-DST-Berlin.$(OBJEXT)
-testtzconverter_DST_Berlin_OBJECTS =  \
-	$(am_testtzconverter_DST_Berlin_OBJECTS)
+am_testtzconverter_2timeoffset_OBJECTS =  \
+	testtzconvert-2timeoffset.$(OBJEXT)
+testtzconverter_2timeoffset_OBJECTS =  \
+	$(am_testtzconverter_2timeoffset_OBJECTS)
 am__DEPENDENCIES_1 =
 am__DEPENDENCIES_2 = ../src/libdatetimetz_converter_lib.la \
 	$(am__DEPENDENCIES_1)
-testtzconverter_DST_Berlin_DEPENDENCIES = $(am__DEPENDENCIES_2)
+testtzconverter_2timeoffset_DEPENDENCIES = $(am__DEPENDENCIES_2)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
+am_testtzconverter_DST_Berlin_OBJECTS =  \
+	testtzconvert-DST-Berlin.$(OBJEXT)
+testtzconverter_DST_Berlin_OBJECTS =  \
+	$(am_testtzconverter_DST_Berlin_OBJECTS)
+testtzconverter_DST_Berlin_DEPENDENCIES = $(am__DEPENDENCIES_2)
 am_testtzconverter_DST_CEST_OBJECTS =  \
 	testtzconvert-DST-CEST.$(OBJEXT)
 testtzconverter_DST_CEST_OBJECTS =  \
@@ -173,6 +180,12 @@ am_testtzconverter_WrongTimestamps_OBJECTS =  \
 testtzconverter_WrongTimestamps_OBJECTS =  \
 	$(am_testtzconverter_WrongTimestamps_OBJECTS)
 testtzconverter_WrongTimestamps_DEPENDENCIES = $(am__DEPENDENCIES_2)
+am_testtzconverter_fromAnd2timeoffset_OBJECTS =  \
+	testtzconvert-fromAnd2timeoffset.$(OBJEXT)
+testtzconverter_fromAnd2timeoffset_OBJECTS =  \
+	$(am_testtzconverter_fromAnd2timeoffset_OBJECTS)
+testtzconverter_fromAnd2timeoffset_DEPENDENCIES =  \
+	$(am__DEPENDENCIES_2)
 am_testtzconverter_nomemleaks_OBJECTS =  \
 	testtzconverter-nomemleaks.$(OBJEXT)
 testtzconverter_nomemleaks_OBJECTS =  \
@@ -212,7 +225,8 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = $(testtzconverter_DST_Berlin_SOURCES) \
+SOURCES = $(testtzconverter_2timeoffset_SOURCES) \
+	$(testtzconverter_DST_Berlin_SOURCES) \
 	$(testtzconverter_DST_CEST_SOURCES) \
 	$(testtzconverter_DST_CET_SOURCES) \
 	$(testtzconverter_DST_EST_SOURCES) \
@@ -223,8 +237,10 @@ SOURCES = $(testtzconverter_DST_Berlin_SOURCES) \
 	$(testtzconverter_UTC_SOURCES) \
 	$(testtzconverter_WrongParameters_SOURCES) \
 	$(testtzconverter_WrongTimestamps_SOURCES) \
+	$(testtzconverter_fromAnd2timeoffset_SOURCES) \
 	$(testtzconverter_nomemleaks_SOURCES)
-DIST_SOURCES = $(testtzconverter_DST_Berlin_SOURCES) \
+DIST_SOURCES = $(testtzconverter_2timeoffset_SOURCES) \
+	$(testtzconverter_DST_Berlin_SOURCES) \
 	$(testtzconverter_DST_CEST_SOURCES) \
 	$(testtzconverter_DST_CET_SOURCES) \
 	$(testtzconverter_DST_EST_SOURCES) \
@@ -235,6 +251,7 @@ DIST_SOURCES = $(testtzconverter_DST_Berlin_SOURCES) \
 	$(testtzconverter_UTC_SOURCES) \
 	$(testtzconverter_WrongParameters_SOURCES) \
 	$(testtzconverter_WrongTimestamps_SOURCES) \
+	$(testtzconverter_fromAnd2timeoffset_SOURCES) \
 	$(testtzconverter_nomemleaks_SOURCES)
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
@@ -627,7 +644,8 @@ MEMLEAKS_CFILE = $(MEMLEAKS_FILE).c
 MEMLEAKS_SHELL = $(MEMLEAKS_FILE).sh
 MEMLEAKS_BIN = $(bindir)/$(MEMLEAKS_PROG).sh
 TZTESTS_ERRORS = testtzconverter_WrongParameters testtzconverter_WrongTimestamps
-TZTESTS_UTC = testtzconverter_UTC testtzconverter_GMToffset
+TZTESTS_UTC = testtzconverter_UTC testtzconverter_GMToffset \
+	testtzconverter_2timeoffset testtzconverter_fromAnd2timeoffset
 TZTESTS_EU = testtzconverter_DST_Berlin testtzconverter_DST_CET
 TZTESTS_FAILURES = testtzconverter_DST_CEST testtzconverter_DST_EST
 TZTESTS_USA2007 = testtzconverter_DST_NewYork \
@@ -655,6 +673,10 @@ testtzconverter_UTC_SOURCES = testtzconvert-UTC.c
 testtzconverter_UTC_LDADD = $(TZ_LIBS)
 testtzconverter_GMToffset_SOURCES = testtzconvert-GMToffset.c
 testtzconverter_GMToffset_LDADD = $(TZ_LIBS)
+testtzconverter_2timeoffset_SOURCES = testtzconvert-2timeoffset.c
+testtzconverter_2timeoffset_LDADD = $(TZ_LIBS)
+testtzconverter_fromAnd2timeoffset_SOURCES = testtzconvert-fromAnd2timeoffset.c
+testtzconverter_fromAnd2timeoffset_LDADD = $(TZ_LIBS)
 testtzconverter_WrongParameters_SOURCES = testtzconvert-WrongParameters.c
 testtzconverter_WrongParameters_LDADD = $(TZ_LIBS)
 testtzconverter_WrongTimestamps_SOURCES = testtzconvert-WrongTimestamps.c
@@ -754,6 +776,10 @@ clean-checkPROGRAMS:
 	echo " rm -f" $$list; \
 	rm -f $$list
 
+testtzconverter_2timeoffset$(EXEEXT): $(testtzconverter_2timeoffset_OBJECTS) $(testtzconverter_2timeoffset_DEPENDENCIES) $(EXTRA_testtzconverter_2timeoffset_DEPENDENCIES) 
+	@rm -f testtzconverter_2timeoffset$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(testtzconverter_2timeoffset_OBJECTS) $(testtzconverter_2timeoffset_LDADD) $(LIBS)
+
 testtzconverter_DST_Berlin$(EXEEXT): $(testtzconverter_DST_Berlin_OBJECTS) $(testtzconverter_DST_Berlin_DEPENDENCIES) $(EXTRA_testtzconverter_DST_Berlin_DEPENDENCIES) 
 	@rm -f testtzconverter_DST_Berlin$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(testtzconverter_DST_Berlin_OBJECTS) $(testtzconverter_DST_Berlin_LDADD) $(LIBS)
@@ -798,6 +824,10 @@ testtzconverter_WrongTimestamps$(EXEEXT): $(testtzconverter_WrongTimestamps_OBJE
 	@rm -f testtzconverter_WrongTimestamps$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(testtzconverter_WrongTimestamps_OBJECTS) $(testtzconverter_WrongTimestamps_LDADD) $(LIBS)
 
+testtzconverter_fromAnd2timeoffset$(EXEEXT): $(testtzconverter_fromAnd2timeoffset_OBJECTS) $(testtzconverter_fromAnd2timeoffset_DEPENDENCIES) $(EXTRA_testtzconverter_fromAnd2timeoffset_DEPENDENCIES) 
+	@rm -f testtzconverter_fromAnd2timeoffset$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(testtzconverter_fromAnd2timeoffset_OBJECTS) $(testtzconverter_fromAnd2timeoffset_LDADD) $(LIBS)
+
 testtzconverter_nomemleaks$(EXEEXT): $(testtzconverter_nomemleaks_OBJECTS) $(testtzconverter_nomemleaks_DEPENDENCIES) $(EXTRA_testtzconverter_nomemleaks_DEPENDENCIES) 
 	@rm -f testtzconverter_nomemleaks$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(testtzconverter_nomemleaks_OBJECTS) $(testtzconverter_nomemleaks_LDADD) $(LIBS)
@@ -808,6 +838,7 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-2timeoffset.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-DST-Berlin.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-DST-CEST.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-DST-CET.Po@am__quote@
@@ -819,6 +850,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-UTC.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-WrongParameters.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-WrongTimestamps.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconvert-fromAnd2timeoffset.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/testtzconverter-nomemleaks.Po@am__quote@
 
 .c.o:
@@ -1097,6 +1129,20 @@ testtzconverter_GMToffset.log: testtzconverter_GMToffset$(EXEEXT)
 	--log-file $$b.log --trs-file $$b.trs \
 	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
 	"$$tst" $(AM_TESTS_FD_REDIRECT)
+testtzconverter_2timeoffset.log: testtzconverter_2timeoffset$(EXEEXT)
+	@p='testtzconverter_2timeoffset$(EXEEXT)'; \
+	b='testtzconverter_2timeoffset'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
+testtzconverter_fromAnd2timeoffset.log: testtzconverter_fromAnd2timeoffset$(EXEEXT)
+	@p='testtzconverter_fromAnd2timeoffset$(EXEEXT)'; \
+	b='testtzconverter_fromAnd2timeoffset'; \
+	$(am__check_pre) $(LOG_DRIVER) --test-name "$$f" \
+	--log-file $$b.log --trs-file $$b.trs \
+	$(am__common_driver_flags) $(AM_LOG_DRIVER_FLAGS) $(LOG_DRIVER_FLAGS) -- $(LOG_COMPILE) \
+	"$$tst" $(AM_TESTS_FD_REDIRECT)
 testtzconverter_DST_Berlin.log: testtzconverter_DST_Berlin$(EXEEXT)
 	@p='testtzconverter_DST_Berlin$(EXEEXT)'; \
 	b='testtzconverter_DST_Berlin'; \
@@ -1236,7 +1282,7 @@ maintainer-clean-generic:
 clean: clean-am
 
 clean-am: clean-binPROGRAMS clean-checkPROGRAMS clean-generic \
-	clean-libtool mostlyclean-am
+	clean-libtool clean-local mostlyclean-am
 
 distclean: distclean-am
 	-rm -rf ./$(DEPDIR)
@@ -1308,19 +1354,20 @@ uninstall-am: uninstall-binPROGRAMS
 
 .PHONY: CTAGS GTAGS TAGS all all-am check check-DEJAGNU check-TESTS \
 	check-am check-local clean clean-binPROGRAMS \
-	clean-checkPROGRAMS clean-generic clean-libtool cscopelist-am \
-	ctags ctags-am distclean distclean-DEJAGNU distclean-compile \
-	distclean-generic distclean-libtool distclean-tags distdir dvi \
-	dvi-am html html-am info info-am install install-am \
-	install-binPROGRAMS install-data install-data-am install-dvi \
-	install-dvi-am install-exec install-exec-am install-html \
-	install-html-am install-info install-info-am install-man \
-	install-pdf install-pdf-am install-ps install-ps-am \
-	install-strip installcheck installcheck-am installdirs \
-	maintainer-clean maintainer-clean-generic mostlyclean \
-	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
-	pdf pdf-am ps ps-am recheck tags tags-am uninstall \
-	uninstall-am uninstall-binPROGRAMS
+	clean-checkPROGRAMS clean-generic clean-libtool clean-local \
+	cscopelist-am ctags ctags-am distclean distclean-DEJAGNU \
+	distclean-compile distclean-generic distclean-libtool \
+	distclean-tags distdir dvi dvi-am html html-am info info-am \
+	install install-am install-binPROGRAMS install-data \
+	install-data-am install-dvi install-dvi-am install-exec \
+	install-exec-am install-html install-html-am install-info \
+	install-info-am install-man install-pdf install-pdf-am \
+	install-ps install-ps-am install-strip installcheck \
+	installcheck-am installdirs maintainer-clean \
+	maintainer-clean-generic mostlyclean mostlyclean-compile \
+	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+	recheck tags tags-am uninstall uninstall-am \
+	uninstall-binPROGRAMS
 
 
 check-local : install ;
@@ -1328,6 +1375,10 @@ check-local : install ;
 	chmod u+x $(MEMLEAKS_BIN); ls -l $(MEMLEAKS_BIN); 
 	$(MEMLEAKS_BIN);
 	rm $(MEMLEAKS_BIN)
+
+clean-local :
+	rm -vf *.log *.out *.trs
+	find . -maxdepth 1 -type f -regex "\./testtzconverter_[^\.]+" -perm /+x -exec rm -vf {} \;
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

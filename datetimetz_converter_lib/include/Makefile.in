@@ -309,13 +309,14 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 BASIC_LIBS = libdatetimetz_converter_lib.h
-CONSISTENCY_LIBS = libdatetimetz_converter_consistency.h \
+CONSISTENCY_LIBS = libdatetimetz_converter_timestampverifier.h \
 	libdatetimetz_converter_iso8601verifier.h \
 	libdatetimetz_converter_iso8601assert.h \
 	libdatetimetz_converter_assert.h
 CONVERTER_LIBS = libdatetimetz_converter_epoch.h \
 	libdatetimetz_converter_tzanytype.h
-pkginclude_HEADERS = $(BASIC_LIBS) $(CONSISTENCY_LIBS) $(CONVERTER_LIBS)
+FILTER_LIBS = libdatetimetz_converter_tztimeoffset.h
+pkginclude_HEADERS = $(BASIC_LIBS) $(CONSISTENCY_LIBS) $(CONVERTER_LIBS) $(FILTER_LIBS)
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 

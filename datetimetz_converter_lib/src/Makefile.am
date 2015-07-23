@@ -19,16 +19,19 @@ AM_CPPFLAGS += -Wall $(TZCONVERTLIBHELPER_INCLUDE) -D_XOPEN_SOURCE=600 -DDATADIR
 AM_LDFLAGS = -module -shared -avoid-version
 
 CONSISTENCY_LIBS =
-CONSISTENCY_LIBS += libdatetimetz_converter_consistency.c libdatetimetz_converter_iso8601verifier.c
+CONSISTENCY_LIBS += libdatetimetz_converter_timestampverifier.c libdatetimetz_converter_iso8601verifier.c
 CONSISTENCY_LIBS += libdatetimetz_converter_iso8601assert.c libdatetimetz_converter_assert.c 
 
 CONVERTER_LIBS =
 CONVERTER_LIBS += libdatetimetz_converter_epoch.c
 CONVERTER_LIBS += libdatetimetz_converter_tzanytype.c 
 
+FILTER_LIBS =
+FILTER_LIBS += libdatetimetz_converter_tztimeoffset.c
+
 # the shared libraries
 pkglib_LTLIBRARIES = libdatetimetz_converter_lib.la
-libdatetimetz_converter_lib_la_SOURCES = $(CONVERTER_LIBS) $(CONSISTENCY_LIBS)
+libdatetimetz_converter_lib_la_SOURCES = $(CONVERTER_LIBS) $(CONSISTENCY_LIBS) $(FILTER_LIBS)
 libdatetimetz_converter_lib_la_LIBADD = $(TZCONVERTLIBHELPER_LTLIB)
 
 #libdatetimetz_converter_lib_la_LDFLAGS = -module -shared

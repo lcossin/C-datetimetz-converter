@@ -23,15 +23,15 @@
  * @author Laurent Cossin
  * @date   July 2015
  *
- * @ingroup datetimetz_converter_consistency
+ * @ingroup datetimetz_converter_verifier
  *
  * @brief Provides some functions to compare results after timezone conversion
  *
 */
 
-#ifndef ISO8601CONSISTENCY_HEADERS
+#ifndef ISO8601VERIFIER_HEADERS
 
-	#define ISO8601CONSISTENCY_HEADERS
+	#define ISO8601VERIFIER_HEADERS
 
 
 /// compares a timestamp (in ISO8601 format) after conversion to the same timezone 
@@ -79,8 +79,11 @@ checkISOTimestampTZConsistency(
 	char* inTimestampNoTZStr,
 	char* inTZ);
 
+	// full regexp date"T"time (at seconds)
+
 	#define ISO8601NOTZREGEXP "^[1-2][0-9]{3}-((0[1,3-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])|02-(0[1-9]|[1-2][0-9]))T([0-1][0-9]|2[0-3]):([0-5][0-9]):([0-5][0-9])"
 
+	// the length of the matching pattern is exactly 19 characters
 	#define ISO8601NOTZREGEXPEXPECTEDMATCHES 19
 
 /// Verifies if a string matches an ISO8601 value without any timezone

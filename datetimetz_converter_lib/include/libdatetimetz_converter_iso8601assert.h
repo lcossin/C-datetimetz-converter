@@ -23,7 +23,7 @@
  * @author Laurent Cossin
  * @date   July 2015
  *
- * @ingroup datetimetz_converter
+ * @ingroup datetimetz_converter_verifier
  *
  * @brief Provides some functions to validate the requirements before the conversion
  *

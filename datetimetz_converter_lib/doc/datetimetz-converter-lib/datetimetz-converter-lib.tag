@@ -419,6 +419,123 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>libdatetimetz_converter_tztimeoffset.h</name>
+    <path>/usr/local/oracle/lib/datetimetz_converter_lib/include/</path>
+    <filename>libdatetimetz__converter__tztimeoffset_8h</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>UTCSPECIALOFFSETTZREGEXP</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>aa63a448bc0b45d17b6e519f55e35458a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>UTCSPECIALOFFSETTZREGEXPEXPECTEDMATCHES</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>a1d49a3487277522517d36d7b37e701d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>UTCOFFSETTZREGEXP</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>abc6bf71d35d2c04ef3486dc7c3069a67</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>UTCOFFSETTZREGEXPEXPECTEDMATCHES_MIN</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>a0950e6ecdca860b8233a3dd384d41031</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>UTCOFFSETTZREGEXPEXPECTEDMATCHES_MAX</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>a25d5132ba2fdffe45066a134f23390b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>UTCWRONGOFFSETTZREGEXP</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>a6e1760defc64d09c1a082a6b1c1c0862</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MIN</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>ab5d60c94a1e1d6ffcfbdea688f3348a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MAX</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>a54edc71835feda234591d33f8bb760bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>OFFSETTZREGEXP</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>ac26021317790621b6046c004ecac6948</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>OFFSETTZREGEXPEXPECTEDMATCHES_MIN</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>ad4351fc35b9c59d25c8ea1511edcfec7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="define">
+      <type>#define</type>
+      <name>OFFSETTZREGEXPEXPECTEDMATCHES_MAX</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>a2d008007e234b20594dfef90b2ceca65</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>isUTCTimeOffsetTZ</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>aaa31dc226c2019bca32e13e9cc95f15f</anchor>
+      <arglist>(char *TZval)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>isTimeOffsetTZ</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>a02ef2b1d2b272f0976d42ae4a1b3bf95</anchor>
+      <arglist>(char *TZval)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>convertTimeOffsetToSeconds</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>aca8f48526dcf48898f45b2ea1c567fc4</anchor>
+      <arglist>(char *TZval, int *offsetSeconds)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>splitTimeOffseStrtToValues</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>a951dd7055f5c53580e489696f99bbae4</anchor>
+      <arglist>(char *timeoffsetstr, int *signfactor, int *hours, int *minutes)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>splitconvertTimeOffsetStrToValues</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8h.html</anchorfile>
+      <anchor>a6bb819c1932072b32a42efdd17d7171c</anchor>
+      <arglist>(char *timeoffsetstr, int *timeoffsetseconds)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>LinkDef.h</name>
     <path>/usr/local/oracle/lib/datetimetz_converter_lib/include/</path>
     <filename>LinkDef_8h</filename>
@@ -552,6 +669,7 @@
     <includes id="libdatetimetz__converter__epoch_8h" name="libdatetimetz_converter_epoch.h" local="yes" imported="no">libdatetimetz_converter_epoch.h</includes>
     <includes id="libdatetimetz__converter__tzanytype_8h" name="libdatetimetz_converter_tzanytype.h" local="yes" imported="no">libdatetimetz_converter_tzanytype.h</includes>
     <includes id="libdatetimetz__converter__iso8601assert_8h" name="libdatetimetz_converter_iso8601assert.h" local="yes" imported="no">libdatetimetz_converter_iso8601assert.h</includes>
+    <includes id="libdatetimetz__converter__iso8601verifier_8h" name="libdatetimetz_converter_iso8601verifier.h" local="yes" imported="no">libdatetimetz_converter_iso8601verifier.h</includes>
     <includes id="libdatetimetz__converter__assert_8h" name="libdatetimetz_converter_assert.h" local="yes" imported="no">libdatetimetz_converter_assert.h</includes>
     <member kind="function">
       <type>int</type>
@@ -587,6 +705,49 @@
       <anchorfile>libdatetimetz__converter__tzanytype_8c.html</anchorfile>
       <anchor>a413d0f9832ea4aca2b9fa1357182f58c</anchor>
       <arglist>(char *inTimestampStr, char *targetTimestampStr, char *inTZ, char *targetTZ)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>libdatetimetz_converter_tztimeoffset.c</name>
+    <path>/usr/local/oracle/lib/datetimetz_converter_lib/src/</path>
+    <filename>libdatetimetz__converter__tztimeoffset_8c</filename>
+    <includes id="libdatetimetz__converter__tzanytype_8h" name="libdatetimetz_converter_tzanytype.h" local="yes" imported="no">libdatetimetz_converter_tzanytype.h</includes>
+    <includes id="libdatetimetz__converter__consistency_8h" name="libdatetimetz_converter_consistency.h" local="yes" imported="no">libdatetimetz_converter_consistency.h</includes>
+    <includes id="libdatetimetz__converter__tztimeoffset_8h" name="libdatetimetz_converter_tztimeoffset.h" local="yes" imported="no">libdatetimetz_converter_tztimeoffset.h</includes>
+    <member kind="function">
+      <type>int</type>
+      <name>isUTCTimeOffsetTZ</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8c.html</anchorfile>
+      <anchor>aaa31dc226c2019bca32e13e9cc95f15f</anchor>
+      <arglist>(char *TZval)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>isTimeOffsetTZ</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8c.html</anchorfile>
+      <anchor>a02ef2b1d2b272f0976d42ae4a1b3bf95</anchor>
+      <arglist>(char *TZval)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>convertTimeOffsetToSeconds</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8c.html</anchorfile>
+      <anchor>aca8f48526dcf48898f45b2ea1c567fc4</anchor>
+      <arglist>(char *TZval, int *offsetSeconds)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>splitTimeOffsetStrToValues</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8c.html</anchorfile>
+      <anchor>aa251b50b6401f955e47f3e66e03ce250</anchor>
+      <arglist>(char *timeoffsetstr, int *signfactor, int *hours, int *minutes)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>splitconvertTimeOffsetStrToValues</name>
+      <anchorfile>libdatetimetz__converter__tztimeoffset_8c.html</anchorfile>
+      <anchor>a6bb819c1932072b32a42efdd17d7171c</anchor>
+      <arglist>(char *timeoffsetstr, int *timeoffsetseconds)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -694,6 +855,19 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>testtzconvert-timeoffset.c</name>
+    <path>/usr/local/oracle/lib/datetimetz_converter_lib/tests/</path>
+    <filename>testtzconvert-timeoffset_8c</filename>
+    <includes id="libdatetimetz__converter__tzanytype_8h" name="libdatetimetz_converter_tzanytype.h" local="yes" imported="no">libdatetimetz_converter_tzanytype.h</includes>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>testtzconvert-timeoffset_8c.html</anchorfile>
+      <anchor>ae66f6b31b5ad750f1fe042a706a4e3d4</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
     <name>testtzconvert-UTC.c</name>
     <path>/usr/local/oracle/lib/datetimetz_converter_lib/tests/</path>
     <filename>testtzconvert-UTC_8c</filename>
@@ -749,10 +923,22 @@
     <name>datetimetz_converter</name>
     <title>Converter for Timestamp (Date-Time)</title>
     <filename>group__datetimetz__converter.html</filename>
-    <file>libdatetimetz_converter_assert.h</file>
     <file>libdatetimetz_converter_epoch.h</file>
-    <file>libdatetimetz_converter_iso8601assert.h</file>
     <file>libdatetimetz_converter_tzanytype.h</file>
+  </compound>
+  <compound kind="group">
+    <name>datetimetz_converter_verifier</name>
+    <title>Routines to enforce the timestamp (Date-Time)</title>
+    <filename>group__datetimetz__converter__verifier.html</filename>
+    <file>libdatetimetz_converter_assert.h</file>
+    <file>libdatetimetz_converter_iso8601assert.h</file>
+    <file>libdatetimetz_converter_iso8601verifier.h</file>
+  </compound>
+  <compound kind="group">
+    <name>datetimetz_converter_filter</name>
+    <title>Routines to adjust values (timestamp, TZ) while processing the data</title>
+    <filename>group__datetimetz__converter__filter.html</filename>
+    <file>libdatetimetz_converter_tztimeoffset.h</file>
   </compound>
   <compound kind="group">
     <name>datetimetz_converter_helper</name>
@@ -776,6 +962,7 @@
     <file>libdatetimetz_converter_iso8601verifier.h</file>
     <file>libdatetimetz_converter_lib.h</file>
     <file>libdatetimetz_converter_tzanytype.h</file>
+    <file>libdatetimetz_converter_tztimeoffset.h</file>
     <file>LinkDef.h</file>
   </compound>
   <compound kind="dir">
@@ -788,6 +975,7 @@
     <file>libdatetimetz_converter_iso8601assert.c</file>
     <file>libdatetimetz_converter_iso8601verifier.c</file>
     <file>libdatetimetz_converter_tzanytype.c</file>
+    <file>libdatetimetz_converter_tztimeoffset.c</file>
   </compound>
   <compound kind="dir">
     <name>tests</name>
@@ -801,6 +989,7 @@
     <file>testtzconvert-DST-NewYork.c</file>
     <file>testtzconvert-DST-tzdata2015e.c</file>
     <file>testtzconvert-GMToffset.c</file>
+    <file>testtzconvert-timeoffset.c</file>
     <file>testtzconvert-UTC.c</file>
     <file>testtzconvert-WrongParameters.c</file>
     <file>testtzconvert-WrongTimestamps.c</file>

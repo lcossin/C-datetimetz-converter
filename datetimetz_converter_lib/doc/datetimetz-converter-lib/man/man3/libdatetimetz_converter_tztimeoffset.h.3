@@ -1,0 +1,208 @@
+.TH "include/libdatetimetz_converter_tztimeoffset.h" 3 "Thu Jul 23 2015" "datetimetz-converter-lib-0.5" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/libdatetimetz_converter_tztimeoffset.h \- 
+.PP
+Provides some functions to handle a timezone given as a time offset\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUTCSPECIALOFFSETTZREGEXP\fP"
+.br
+.ti -1c
+.RI "#define \fBUTCSPECIALOFFSETTZREGEXPEXPECTEDMATCHES\fP"
+.br
+.ti -1c
+.RI "#define \fBUTCOFFSETTZREGEXP\fP"
+.br
+.ti -1c
+.RI "#define \fBUTCOFFSETTZREGEXPEXPECTEDMATCHES_MIN\fP"
+.br
+.ti -1c
+.RI "#define \fBUTCOFFSETTZREGEXPEXPECTEDMATCHES_MAX\fP"
+.br
+.ti -1c
+.RI "#define \fBUTCWRONGOFFSETTZREGEXP\fP"
+.br
+.ti -1c
+.RI "#define \fBUTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MIN\fP"
+.br
+.ti -1c
+.RI "#define \fBUTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MAX\fP"
+.br
+.ti -1c
+.RI "#define \fBOFFSETTZREGEXP\fP"
+.br
+.ti -1c
+.RI "#define \fBOFFSETTZREGEXPEXPECTEDMATCHES_MIN\fP"
+.br
+.ti -1c
+.RI "#define \fBOFFSETTZREGEXPEXPECTEDMATCHES_MAX\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBisUTCTimeOffsetTZ\fP (char *TZval)"
+.br
+.RI "\fIVerifies if a given TZ value is a valid time offset for UTC - cf ISO8601 rules\&. \fP"
+.ti -1c
+.RI "int \fBisTimeOffsetTZ\fP (char *TZval)"
+.br
+.RI "\fIVerifies if a given TZ value is a valid time offset\&. \fP"
+.ti -1c
+.RI "int \fBconvertTimeOffsetToSeconds\fP (char *TZval, int *offsetSeconds)"
+.br
+.RI "\fIConverts a time offset TZ to seconds\&. \fP"
+.ti -1c
+.RI "int \fBsplitTimeOffseStrtToValues\fP (char *timeoffsetstr, int *signfactor, int *hours, int *minutes)"
+.br
+.RI "\fISplits a time string into hours and minutes, and sign factor (1 or -1) \fP"
+.ti -1c
+.RI "int \fBsplitconvertTimeOffsetStrToValues\fP (char *timeoffsetstr, int *timeoffsetseconds)"
+.br
+.RI "\fISplits and converts a time string into seconds\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Provides some functions to handle a timezone given as a time offset\&. 
+
+
+.PP
+\fBAuthor:\fP
+.RS 4
+Laurent Cossin 
+.RE
+.PP
+\fBDate:\fP
+.RS 4
+July 2015 
+.RE
+.PP
+
+.PP
+Definition in file \fBlibdatetimetz_converter_tztimeoffset\&.h\fP\&.
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define OFFSETTZREGEXP"
+
+.PP
+Definition at line 55 of file libdatetimetz_converter_tztimeoffset\&.h\&.
+.PP
+Referenced by isTimeOffsetTZ()\&.
+.SS "#define OFFSETTZREGEXPEXPECTEDMATCHES_MAX"
+
+.PP
+Definition at line 59 of file libdatetimetz_converter_tztimeoffset\&.h\&.
+.PP
+Referenced by isTimeOffsetTZ()\&.
+.SS "#define OFFSETTZREGEXPEXPECTEDMATCHES_MIN"
+
+.PP
+Definition at line 58 of file libdatetimetz_converter_tztimeoffset\&.h\&.
+.PP
+Referenced by isTimeOffsetTZ()\&.
+.SS "#define UTCOFFSETTZREGEXP"
+
+.PP
+Definition at line 42 of file libdatetimetz_converter_tztimeoffset\&.h\&.
+.PP
+Referenced by isUTCTimeOffsetTZ()\&.
+.SS "#define UTCOFFSETTZREGEXPEXPECTEDMATCHES_MAX"
+
+.PP
+Definition at line 44 of file libdatetimetz_converter_tztimeoffset\&.h\&.
+.PP
+Referenced by isUTCTimeOffsetTZ()\&.
+.SS "#define UTCOFFSETTZREGEXPEXPECTEDMATCHES_MIN"
+
+.PP
+Definition at line 43 of file libdatetimetz_converter_tztimeoffset\&.h\&.
+.PP
+Referenced by isUTCTimeOffsetTZ()\&.
+.SS "#define UTCSPECIALOFFSETTZREGEXP"
+
+.PP
+Definition at line 38 of file libdatetimetz_converter_tztimeoffset\&.h\&.
+.PP
+Referenced by isUTCTimeOffsetTZ()\&.
+.SS "#define UTCSPECIALOFFSETTZREGEXPEXPECTEDMATCHES"
+
+.PP
+Definition at line 39 of file libdatetimetz_converter_tztimeoffset\&.h\&.
+.PP
+Referenced by isUTCTimeOffsetTZ()\&.
+.SS "#define UTCWRONGOFFSETTZREGEXP"
+
+.PP
+Definition at line 47 of file libdatetimetz_converter_tztimeoffset\&.h\&.
+.PP
+Referenced by isTimeOffsetTZ()\&.
+.SS "#define UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MAX"
+
+.PP
+Definition at line 49 of file libdatetimetz_converter_tztimeoffset\&.h\&.
+.PP
+Referenced by isTimeOffsetTZ()\&.
+.SS "#define UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MIN"
+
+.PP
+Definition at line 48 of file libdatetimetz_converter_tztimeoffset\&.h\&.
+.PP
+Referenced by isTimeOffsetTZ()\&.
+.SH "Function Documentation"
+.PP 
+.SS "int convertTimeOffsetToSeconds (char *TZval, int *offsetSeconds)"
+
+.PP
+Converts a time offset TZ to seconds\&. 
+.PP
+Definition at line 120 of file libdatetimetz_converter_tztimeoffset\&.c\&.
+.PP
+References isTimeOffsetTZ(), isUTCTimeOffsetTZ(), and splitconvertTimeOffsetStrToValues()\&.
+.PP
+Referenced by condcheckConvertTimestampTZByFmtStr2TZ(), and convertTimestampTZByFmtStr2Epochtimet()\&.
+.SS "int isTimeOffsetTZ (char *TZval)"
+
+.PP
+Verifies if a given TZ value is a valid time offset\&. 
+.PP
+Definition at line 77 of file libdatetimetz_converter_tztimeoffset\&.c\&.
+.PP
+References OFFSETTZREGEXP, OFFSETTZREGEXPEXPECTEDMATCHES_MAX, OFFSETTZREGEXPEXPECTEDMATCHES_MIN, UTCWRONGOFFSETTZREGEXP, UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MAX, and UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MIN\&.
+.PP
+Referenced by convertTimeOffsetToSeconds()\&.
+.SS "int isUTCTimeOffsetTZ (char *TZval)"
+
+.PP
+Verifies if a given TZ value is a valid time offset for UTC - cf ISO8601 rules\&. 
+.PP
+Definition at line 36 of file libdatetimetz_converter_tztimeoffset\&.c\&.
+.PP
+References UTCOFFSETTZREGEXP, UTCOFFSETTZREGEXPEXPECTEDMATCHES_MAX, UTCOFFSETTZREGEXPEXPECTEDMATCHES_MIN, UTCSPECIALOFFSETTZREGEXP, and UTCSPECIALOFFSETTZREGEXPEXPECTEDMATCHES\&.
+.PP
+Referenced by convertTimeOffsetToSeconds()\&.
+.SS "int splitconvertTimeOffsetStrToValues (char *timeoffsetstr, int *timeoffsetseconds)"
+
+.PP
+Splits and converts a time string into seconds\&. 
+.PP
+Definition at line 198 of file libdatetimetz_converter_tztimeoffset\&.c\&.
+.PP
+References splitTimeOffsetStrToValues()\&.
+.PP
+Referenced by convertTimeOffsetToSeconds()\&.
+.SS "int splitTimeOffseStrtToValues (char *timeoffsetstr, int *signfactor, int *hours, int *minutes)"
+
+.PP
+Splits a time string into hours and minutes, and sign factor (1 or -1) 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-lib-0\&.5 from the source code\&.

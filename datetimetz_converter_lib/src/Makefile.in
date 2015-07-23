@@ -128,12 +128,13 @@ am__DEPENDENCIES_1 =
 libdatetimetz_converter_lib_la_DEPENDENCIES = $(am__DEPENDENCIES_1)
 am__objects_1 = libdatetimetz_converter_epoch.lo \
 	libdatetimetz_converter_tzanytype.lo
-am__objects_2 = libdatetimetz_converter_consistency.lo \
+am__objects_2 = libdatetimetz_converter_timestampverifier.lo \
 	libdatetimetz_converter_iso8601verifier.lo \
 	libdatetimetz_converter_iso8601assert.lo \
 	libdatetimetz_converter_assert.lo
+am__objects_3 = libdatetimetz_converter_tztimeoffset.lo
 am_libdatetimetz_converter_lib_la_OBJECTS = $(am__objects_1) \
-	$(am__objects_2)
+	$(am__objects_2) $(am__objects_3)
 libdatetimetz_converter_lib_la_OBJECTS =  \
 	$(am_libdatetimetz_converter_lib_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
@@ -359,16 +360,17 @@ AM_CPPFLAGS = $(am__append_1) $(am__append_2) $(am__append_3) -Wall \
 	$(TZCONVERTLIBHELPER_INCLUDE) -D_XOPEN_SOURCE=600 \
 	-DDATADIR=$(pkgdatadir)
 AM_LDFLAGS = -module -shared -avoid-version
-CONSISTENCY_LIBS = libdatetimetz_converter_consistency.c \
+CONSISTENCY_LIBS = libdatetimetz_converter_timestampverifier.c \
 	libdatetimetz_converter_iso8601verifier.c \
 	libdatetimetz_converter_iso8601assert.c \
 	libdatetimetz_converter_assert.c
 CONVERTER_LIBS = libdatetimetz_converter_epoch.c \
 	libdatetimetz_converter_tzanytype.c
+FILTER_LIBS = libdatetimetz_converter_tztimeoffset.c
 
 # the shared libraries
 pkglib_LTLIBRARIES = libdatetimetz_converter_lib.la
-libdatetimetz_converter_lib_la_SOURCES = $(CONVERTER_LIBS) $(CONSISTENCY_LIBS)
+libdatetimetz_converter_lib_la_SOURCES = $(CONVERTER_LIBS) $(CONSISTENCY_LIBS) $(FILTER_LIBS)
 libdatetimetz_converter_lib_la_LIBADD = $(TZCONVERTLIBHELPER_LTLIB)
 
 #libdatetimetz_converter_lib_la_LDFLAGS = -module -shared
@@ -453,11 +455,12 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_assert.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_consistency.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_epoch.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_iso8601assert.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_iso8601verifier.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_timestampverifier.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_tzanytype.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libdatetimetz_converter_tztimeoffset.Plo@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<

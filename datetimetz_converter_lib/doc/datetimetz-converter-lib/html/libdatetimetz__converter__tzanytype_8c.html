@@ -78,6 +78,7 @@ $(document).ready(function(){initNavTree('libdatetimetz__converter__tzanytype_8c
 <code>#include &quot;<a class="el" href="libdatetimetz__converter__epoch_8h_source.html">libdatetimetz_converter_epoch.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="libdatetimetz__converter__tzanytype_8h_source.html">libdatetimetz_converter_tzanytype.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="libdatetimetz__converter__iso8601assert_8h_source.html">libdatetimetz_converter_iso8601assert.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="libdatetimetz__converter__iso8601verifier_8h_source.html">libdatetimetz_converter_iso8601verifier.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="libdatetimetz__converter__assert_8h_source.html">libdatetimetz_converter_assert.h</a>&quot;</code><br/>
 </div>
 <p><a href="libdatetimetz__converter__tzanytype_8c_source.html">Go to the source code of this file.</a></p>
@@ -157,11 +158,11 @@ Functions</h2></td></tr>
 
 <p>conditional checkings, then converts </p>
 
-<p>Definition at line <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00086">86</a> of file <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html">libdatetimetz_converter_tzanytype.c</a>.</p>
+<p>Definition at line <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00099">99</a> of file <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html">libdatetimetz_converter_tzanytype.c</a>.</p>
 
-<p>References <a class="el" href="libdatetimetz__converter__assert_8c_source.html#l00031">assert_TimestampTZIsValid()</a>, and <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00036">convertTimestampTZByFmtStr2Epochtimet()</a>.</p>
+<p>References <a class="el" href="libdatetimetz__converter__assert_8c_source.html#l00031">assert_TimestampTZIsValid()</a>, <a class="el" href="libdatetimetz__converter__tztimeoffset_8c_source.html#l00120">convertTimeOffsetToSeconds()</a>, and <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00037">convertTimestampTZByFmtStr2Epochtimet()</a>.</p>
 
-<p>Referenced by <a class="el" href="libdatetimetz__converter__consistency_8c_source.html#l00092">compareTimestampBackToSameTZ()</a>, <a class="el" href="libdatetimetz__converter__consistency_8c_source.html#l00050">compareTimestampToSameTZ()</a>, and <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00154">convertTimestampTZByFmtStr2TZ()</a>.</p>
+<p>Referenced by <a class="el" href="libdatetimetz__converter__consistency_8c_source.html#l00092">compareTimestampBackToSameTZ()</a>, <a class="el" href="libdatetimetz__converter__consistency_8c_source.html#l00050">compareTimestampToSameTZ()</a>, and <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00217">convertTimestampTZByFmtStr2TZ()</a>.</p>
 
 </div>
 </div>
@@ -204,9 +205,9 @@ Functions</h2></td></tr>
 <p>converts an ISO8601 timestamp in a TZ to an ISO8601 timestamp in a TZ </p>
 <p>converts a given timestamp in ISO8601 format and a TZ (inTZ) to a timestamp in ISO8601 format in a TZ (targetTZ) </p>
 
-<p>Definition at line <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00280">280</a> of file <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html">libdatetimetz_converter_tzanytype.c</a>.</p>
+<p>Definition at line <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00343">343</a> of file <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html">libdatetimetz_converter_tzanytype.c</a>.</p>
 
-<p>References <a class="el" href="libdatetimetz__converter__iso8601assert_8c_source.html#l00064">assert_isISO8601TZ()</a>, and <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00212">convertTimestampTZByFmt2TZ()</a>.</p>
+<p>References <a class="el" href="libdatetimetz__converter__iso8601assert_8c_source.html#l00064">assert_isISO8601TZ()</a>, and <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00275">convertTimestampTZByFmt2TZ()</a>.</p>
 
 </div>
 </div>
@@ -261,11 +262,11 @@ Functions</h2></td></tr>
 <p>converts a timestamp in an TZ in a custom format to a timestamp in an TZ in a custom format </p>
 <p>converts a given timestamp in a format (inTimestampFmt) and TZ (inTZ) to a timestamp in a format (targetTimestampFmt) in an TZ (targetTZ) </p>
 
-<p>Definition at line <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00212">212</a> of file <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html">libdatetimetz_converter_tzanytype.c</a>.</p>
+<p>Definition at line <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00275">275</a> of file <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html">libdatetimetz_converter_tzanytype.c</a>.</p>
 
-<p>References <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00154">convertTimestampTZByFmtStr2TZ()</a>.</p>
+<p>References <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00217">convertTimestampTZByFmtStr2TZ()</a>.</p>
 
-<p>Referenced by <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00280">convertISOTimestampTZ2TZ()</a>.</p>
+<p>Referenced by <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00343">convertISOTimestampTZ2TZ()</a>.</p>
 
 </div>
 </div>
@@ -309,11 +310,11 @@ Functions</h2></td></tr>
 <p>converts a timestamp given as a string in a TZ to Epoch (time_t)</p>
 <p>input : inTimestampStr, inTZ output : epochtimet (time_t) </p>
 
-<p>Definition at line <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00036">36</a> of file <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html">libdatetimetz_converter_tzanytype.c</a>.</p>
+<p>Definition at line <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00037">37</a> of file <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html">libdatetimetz_converter_tzanytype.c</a>.</p>
 
-<p>References <a class="el" href="libdatetimetz__converter__epoch_8c_source.html#l00031">convertTimestampStr2Epochtimet()</a>.</p>
+<p>References <a class="el" href="libdatetimetz__converter__tztimeoffset_8c_source.html#l00120">convertTimeOffsetToSeconds()</a>, and <a class="el" href="libdatetimetz__converter__epoch_8c_source.html#l00031">convertTimestampStr2Epochtimet()</a>.</p>
 
-<p>Referenced by <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00086">condcheckConvertTimestampTZByFmtStr2TZ()</a>.</p>
+<p>Referenced by <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00099">condcheckConvertTimestampTZByFmtStr2TZ()</a>.</p>
 
 </div>
 </div>
@@ -370,11 +371,11 @@ Functions</h2></td></tr>
 <p>input : inTimeStr - timestamp given for the timezone inTZ, targetTZ - target timezone</p>
 <p>output : targetTimeStr - timestamp converted to the target timezone targetTZ </p>
 
-<p>Definition at line <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00154">154</a> of file <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html">libdatetimetz_converter_tzanytype.c</a>.</p>
+<p>Definition at line <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00217">217</a> of file <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html">libdatetimetz_converter_tzanytype.c</a>.</p>
 
-<p>References <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00086">condcheckConvertTimestampTZByFmtStr2TZ()</a>.</p>
+<p>References <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00099">condcheckConvertTimestampTZByFmtStr2TZ()</a>.</p>
 
-<p>Referenced by <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00212">convertTimestampTZByFmt2TZ()</a>, and <a class="el" href="testtzconvert-DST-Berlin_8c_source.html#l00008">main()</a>.</p>
+<p>Referenced by <a class="el" href="libdatetimetz__converter__tzanytype_8c_source.html#l00275">convertTimestampTZByFmt2TZ()</a>, and <a class="el" href="testtzconvert-DST-Berlin_8c_source.html#l00008">main()</a>.</p>
 
 </div>
 </div>

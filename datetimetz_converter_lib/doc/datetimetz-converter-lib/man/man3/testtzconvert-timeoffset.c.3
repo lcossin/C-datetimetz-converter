@@ -1,16 +1,22 @@
-.TH "tests/testtzconverter-memleaks.c" 3 "Wed Jul 22 2015" "datetimetz-converter-lib-0.5" \" -*- nroff -*-
+.TH "tests/testtzconvert-timeoffset.c" 3 "Thu Jul 23 2015" "datetimetz-converter-lib-0.5" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-tests/testtzconverter-memleaks.c \- 
+tests/testtzconvert-timeoffset.c \- 
 .SH SYNOPSIS
 .br
 .PP
+\fC#include <assert\&.h>\fP
+.br
 \fC#include <string\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
 .br
 \fC#include <stdlib\&.h>\fP
 .br
 \fC#include 'libdatetimetz_converter_tzanytype\&.h'\fP
+.br
+\fC#include 'libtrace\&.h'\fP
 .br
 
 .SS "Functions"
@@ -25,7 +31,7 @@ tests/testtzconverter-memleaks.c \-
 .SS "int main ()"
 
 .PP
-Definition at line 7 of file testtzconverter-memleaks\&.c\&.
+Definition at line 10 of file testtzconvert-timeoffset\&.c\&.
 .PP
 References convertTimestampTZByFmtStr2TZ()\&.
 .SH "Author"

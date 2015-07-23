@@ -27,7 +27,8 @@
 #include "libdatetimetz_converter_timestamptzformat.h"
 #include "libdatetimetz_converter_tzanytype.h"
 
-#include "libdatetimetz_converter_consistency.h"
+#include "libdatetimetz_converter_timestampverifier.h"
+#include "libdatetimetz_converter_tztimeoffset.h"
 #include "libdatetimetz_converter_datatypes.h"
 
 int
@@ -159,11 +160,21 @@ checkTimestampConsistency(
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
 
-	int res = 0;
-	int expectedres = 0;
+	int res = EXIT_SUCCESS;
+	int expectedres = EXIT_SUCCESS; // ie, expected value is '0'
 
-	res += compareTimestampToSameTZ(inTimestampNoTZStr, inTimestampFmtStr, inTZ);
-	res += compareTimestampBackToSameTZ(inTimestampNoTZStr, inTimestampFmtStr, inTZ, EPOCH_TIMEZONE);
+	// do not verify a timestamp defined as a time offset
+	// in that case : a timestamp with a valid time offset is always valid
+
+	res = isTimeOffsetTZ(inTZ);
+
+	if ( res != EXIT_SUCCESS )
+	{
+
+		res += compareTimestampToSameTZ(inTimestampNoTZStr, inTimestampFmtStr, inTZ);
+		res += compareTimestampBackToSameTZ(inTimestampNoTZStr, inTimestampFmtStr, inTZ, EPOCH_TIMEZONE);
+
+	}
 
 	if ( res == expectedres )
 	{
