@@ -3,7 +3,7 @@ AUTOMAKE_OPTIONS = dejagnu
 
 SUBDIRS = doc include src
 
-EXTRA_DIST = doc doxygen.cfg
+EXTRA_DIST = COPYING.FDL doc doxygen.cfg
 
 MOSTLYCLEANFILES = $(DX_CLEANFILES)
 

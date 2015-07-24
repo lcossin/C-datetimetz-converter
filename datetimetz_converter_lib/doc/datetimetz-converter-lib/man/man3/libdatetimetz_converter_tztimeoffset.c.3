@@ -1,4 +1,4 @@
-.TH "src/libdatetimetz_converter_tztimeoffset.c" 3 "Thu Jul 23 2015" "datetimetz-converter-lib-0.5" \" -*- nroff -*-
+.TH "src/libdatetimetz_converter_tztimeoffset.c" 3 "Fri Jul 24 2015" "datetimetz-converter-lib-0.5.2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -24,7 +24,7 @@ src/libdatetimetz_converter_tztimeoffset.c \-
 .br
 \fC#include 'libdatetimetz_converter_datatypes\&.h'\fP
 .br
-\fC#include 'libdatetimetz_converter_consistency\&.h'\fP
+\fC#include 'libdatetimetz_converter_timestampverifier\&.h'\fP
 .br
 \fC#include 'libdatetimetz_converter_tztimeoffset\&.h'\fP
 .br
@@ -73,7 +73,7 @@ Definition at line 77 of file libdatetimetz_converter_tztimeoffset\&.c\&.
 .PP
 References OFFSETTZREGEXP, OFFSETTZREGEXPEXPECTEDMATCHES_MAX, OFFSETTZREGEXPEXPECTEDMATCHES_MIN, UTCWRONGOFFSETTZREGEXP, UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MAX, and UTCWRONGOFFSETTZREGEXPEXPECTEDMATCHES_MIN\&.
 .PP
-Referenced by convertTimeOffsetToSeconds()\&.
+Referenced by checkTimestampConsistency(), and convertTimeOffsetToSeconds()\&.
 .SS "int isUTCTimeOffsetTZ (char *TZval)"
 
 .PP
@@ -89,7 +89,7 @@ Referenced by convertTimeOffsetToSeconds()\&.
 .PP
 Splits and converts a time string into seconds\&. 
 .PP
-Definition at line 198 of file libdatetimetz_converter_tztimeoffset\&.c\&.
+Definition at line 207 of file libdatetimetz_converter_tztimeoffset\&.c\&.
 .PP
 References splitTimeOffsetStrToValues()\&.
 .PP
@@ -104,4 +104,4 @@ Definition at line 157 of file libdatetimetz_converter_tztimeoffset\&.c\&.
 Referenced by splitconvertTimeOffsetStrToValues()\&.
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for datetimetz-converter-lib-0\&.5 from the source code\&.
+Generated automatically by Doxygen for datetimetz-converter-lib-0\&.5\&.2 from the source code\&.

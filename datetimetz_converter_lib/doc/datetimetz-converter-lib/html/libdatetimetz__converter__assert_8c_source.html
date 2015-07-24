@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>datetimetz-converter-lib-0.5: src/libdatetimetz_converter_assert.c Source File</title>
+<title>datetimetz-converter-lib-0.5.2: src/libdatetimetz_converter_assert.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">datetimetz-converter-lib-0.5
+   <div id="projectname">datetimetz-converter-lib-0.5.2
    </div>
   </td>
  </tr>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('libdatetimetz__converter__assert_8c_so
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;libtrace.h&quot;</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="libdatetimetz__converter__consistency_8h.html">libdatetimetz_converter_consistency.h</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="libdatetimetz__converter__timestampverifier_8h.html">libdatetimetz_converter_timestampverifier.h</a>&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="libdatetimetz__converter__assert_8h.html">libdatetimetz_converter_assert.h</a>&quot;</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">int</span> </div>
@@ -110,7 +110,7 @@ $(document).ready(function(){initNavTree('libdatetimetz__converter__assert_8c_so
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    sprintf(msg,<span class="stringliteral">&quot;entering assert_TimestampTZIsValid abortOnFailure=%d&quot;</span>,abortOnFailure);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    log_debug(msg);</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    res = <a class="code" href="libdatetimetz__converter__consistency_8h.html#a57b85f6a64fdf72823af1619628daa5a">checkTimestampConsistency</a>(timestamp, timestampformat, timezone);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    res = <a class="code" href="libdatetimetz__converter__timestampverifier_8h.html#a57b85f6a64fdf72823af1619628daa5a">checkTimestampConsistency</a>(timestamp, timestampformat, timezone);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">if</span> ( ! res )</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
@@ -133,9 +133,9 @@ $(document).ready(function(){initNavTree('libdatetimetz__converter__assert_8c_so
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;} <span class="comment">// assert_TimestampTZIsValid</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="ttc" id="libdatetimetz__converter__assert_8h_html"><div class="ttname"><a href="libdatetimetz__converter__assert_8h.html">libdatetimetz_converter_assert.h</a></div><div class="ttdoc">Provides some functions to validate the requirements before the conversion. </div></div>
-<div class="ttc" id="libdatetimetz__converter__consistency_8h_html_a57b85f6a64fdf72823af1619628daa5a"><div class="ttname"><a href="libdatetimetz__converter__consistency_8h.html#a57b85f6a64fdf72823af1619628daa5a">checkTimestampConsistency</a></div><div class="ttdeci">int checkTimestampConsistency(char *inTimestampNoTZStr, char *inTimestampFmtStr, char *inTZ)</div><div class="ttdoc">checks if the timestamp (with a custom format) + timezone is consistent </div><div class="ttdef"><b>Definition:</b> <a href="libdatetimetz__converter__consistency_8c_source.html#l00155">libdatetimetz_converter_consistency.c:155</a></div></div>
+<div class="ttc" id="libdatetimetz__converter__timestampverifier_8h_html_a57b85f6a64fdf72823af1619628daa5a"><div class="ttname"><a href="libdatetimetz__converter__timestampverifier_8h.html#a57b85f6a64fdf72823af1619628daa5a">checkTimestampConsistency</a></div><div class="ttdeci">int checkTimestampConsistency(char *inTimestampNoTZStr, char *inTimestampFmtStr, char *inTZ)</div><div class="ttdoc">checks if the timestamp (with a custom format) + timezone is consistent </div><div class="ttdef"><b>Definition:</b> <a href="libdatetimetz__converter__timestampverifier_8c_source.html#l00156">libdatetimetz_converter_timestampverifier.c:156</a></div></div>
 <div class="ttc" id="libdatetimetz__converter__assert_8h_html_a623e1f28261da00fd928c4e15d6bff0e"><div class="ttname"><a href="libdatetimetz__converter__assert_8h.html#a623e1f28261da00fd928c4e15d6bff0e">assert_TimestampTZIsValid</a></div><div class="ttdeci">int assert_TimestampTZIsValid(char *timestamp, char *timestampformat, char *timezone, int abortOnFailure)</div><div class="ttdoc">Checks if the timestamp (with a custom format) is consistent. </div><div class="ttdef"><b>Definition:</b> <a href="libdatetimetz__converter__assert_8c_source.html#l00031">libdatetimetz_converter_assert.c:31</a></div></div>
-<div class="ttc" id="libdatetimetz__converter__consistency_8h_html"><div class="ttname"><a href="libdatetimetz__converter__consistency_8h.html">libdatetimetz_converter_consistency.h</a></div><div class="ttdoc">Provides some functions to compare results after timezone conversion. </div></div>
+<div class="ttc" id="libdatetimetz__converter__timestampverifier_8h_html"><div class="ttname"><a href="libdatetimetz__converter__timestampverifier_8h.html">libdatetimetz_converter_timestampverifier.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

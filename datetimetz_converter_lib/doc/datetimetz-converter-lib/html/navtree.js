@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "datetimetz-converter-lib-0.5", "index.html", [
+  [ "datetimetz-converter-lib-0.5.2", "index.html", [
     [ "Modules", "modules.html", "modules" ],
     [ "Files", null, [
       [ "File List", "files.html", "files" ],

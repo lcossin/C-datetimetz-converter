@@ -1,4 +1,4 @@
-.TH "include/libdatetimetz_converter_tzanytype.h" 3 "Thu Jul 23 2015" "datetimetz-converter-lib-0.5" \" -*- nroff -*-
+.TH "include/libdatetimetz_converter_tzanytype.h" 3 "Fri Jul 24 2015" "datetimetz-converter-lib-0.5.2" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -64,7 +64,7 @@ Definition in file \fBlibdatetimetz_converter_tzanytype\&.h\fP\&.
 .PP
 conditional checkings, then converts 
 .PP
-Definition at line 99 of file libdatetimetz_converter_tzanytype\&.c\&.
+Definition at line 118 of file libdatetimetz_converter_tzanytype\&.c\&.
 .PP
 References assert_TimestampTZIsValid(), convertTimeOffsetToSeconds(), and convertTimestampTZByFmtStr2Epochtimet()\&.
 .PP
@@ -74,7 +74,7 @@ Referenced by compareTimestampBackToSameTZ(), compareTimestampToSameTZ(), and co
 .PP
 converts an ISO8601 timestamp in a TZ to an ISO8601 timestamp in a TZ converts a given timestamp in ISO8601 format and a TZ (inTZ) to a timestamp in ISO8601 format in a TZ (targetTZ) 
 .PP
-Definition at line 343 of file libdatetimetz_converter_tzanytype\&.c\&.
+Definition at line 362 of file libdatetimetz_converter_tzanytype\&.c\&.
 .PP
 References assert_isISO8601TZ(), and convertTimestampTZByFmt2TZ()\&.
 .SS "int convertTimestampTZByFmt2TZ (char *inTimestampStr, intinTimestampFmt, char *targetTimestampStr, inttargetTimestampFmt, char *inTZ, char *targetTZ)"
@@ -82,7 +82,7 @@ References assert_isISO8601TZ(), and convertTimestampTZByFmt2TZ()\&.
 .PP
 converts a timestamp in an TZ in a custom format to a timestamp in an TZ in a custom format converts a given timestamp in a format (inTimestampFmt) and TZ (inTZ) to a timestamp in a format (targetTimestampFmt) in an TZ (targetTZ) 
 .PP
-Definition at line 275 of file libdatetimetz_converter_tzanytype\&.c\&.
+Definition at line 294 of file libdatetimetz_converter_tzanytype\&.c\&.
 .PP
 References convertTimestampTZByFmtStr2TZ()\&.
 .PP
@@ -94,7 +94,7 @@ converts a timestamp given as a string in a timezone to Epoch converts a timesta
 .PP
 input : inTimestampStr, inTZ output : epochtimet (time_t) 
 .PP
-Definition at line 37 of file libdatetimetz_converter_tzanytype\&.c\&.
+Definition at line 38 of file libdatetimetz_converter_tzanytype\&.c\&.
 .PP
 References convertTimeOffsetToSeconds(), and convertTimestampStr2Epochtimet()\&.
 .PP
@@ -108,11 +108,11 @@ input : inTimeStr - timestamp given for the timezone inTZ, targetTZ - target tim
 .PP
 output : targetTimeStr - timestamp converted to the target timezone targetTZ 
 .PP
-Definition at line 217 of file libdatetimetz_converter_tzanytype\&.c\&.
+Definition at line 236 of file libdatetimetz_converter_tzanytype\&.c\&.
 .PP
 References condcheckConvertTimestampTZByFmtStr2TZ()\&.
 .PP
 Referenced by convertTimestampTZByFmt2TZ(), and main()\&.
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for datetimetz-converter-lib-0\&.5 from the source code\&.
+Generated automatically by Doxygen for datetimetz-converter-lib-0\&.5\&.2 from the source code\&.

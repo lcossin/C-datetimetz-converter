@@ -1,0 +1,144 @@
+.TH "src/libdatetimetz_converter_timestampverifier.c" 3 "Fri Jul 24 2015" "datetimetz-converter-lib-0.5.2" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/libdatetimetz_converter_timestampverifier.c \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <time\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include 'libtrace\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_timestamptzformat\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_tzanytype\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_timestampverifier\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_tztimeoffset\&.h'\fP
+.br
+\fC#include 'libdatetimetz_converter_datatypes\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBcompareTimestampsNoTZ\fP (char *timestamp, char *expectedtimestamp)"
+.br
+.ti -1c
+.RI "int \fBcompareTimestampToSameTZ\fP (char *inTimestampStr, char *inTimestampFmtStr, char *inTZ)"
+.br
+.RI "\fIcompares a timestamp (in a custom format) after conversion to the same timezone \fP"
+.ti -1c
+.RI "int \fBcompareTimestampBackToSameTZ\fP (char *inTimestampStr, char *inTimestampFmtStr, char *inTZ, char *targetTZ)"
+.br
+.RI "\fIcompares a timestamp (in a custom format) after conversion to another timezone and back to the original timezone \fP"
+.ti -1c
+.RI "int \fBcheckTimestampConsistency\fP (char *inTimestampNoTZStr, char *inTimestampFmtStr, char *inTZ)"
+.br
+.RI "\fIchecks if the timestamp (with a custom format) + timezone is consistent \fP"
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int checkTimestampConsistency (char *inTimestampNoTZStr, char *inTimestampFmtStr, char *inTZ)"
+
+.PP
+checks if the timestamp (with a custom format) + timezone is consistent 
+.PP
+Definition at line 156 of file libdatetimetz_converter_timestampverifier\&.c\&.
+.PP
+References compareTimestampBackToSameTZ(), compareTimestampToSameTZ(), and isTimeOffsetTZ()\&.
+.PP
+Referenced by assert_TimestampTZIsValid()\&.
+.SS "int compareTimestampBackToSameTZ (char *inTimestampStr, char *inTimestampFmtStr, char *inTZ, char *targetTZ)"
+
+.PP
+compares a timestamp (in a custom format) after conversion to another timezone and back to the original timezone 
+.PP
+\fBRemarks:\fP
+.RS 4
+The expected final timestamp is the same string as the original one as input parameter
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinTimestampStr\fP The timestamp string 
+.br
+\fIinTimestampFmtStr\fP The format of the timestamp string 
+.br
+\fIinTZ\fP The timezone 
+.br
+\fItargetTZ\fP The target timezone
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+return value of strcmp comparing the timestamp with the expected timestamp 
+.RE
+.PP
+\fBReturn values:\fP
+.RS 4
+\fI0\fP : timestamp matches the expected timestamp 
+.br
+\fI<>0\fP : return value of the strcmp function 
+.RE
+.PP
+< timestamp in the target timezone
+.PP
+< timestamp back in the original timezone 
+.PP
+Definition at line 93 of file libdatetimetz_converter_timestampverifier\&.c\&.
+.PP
+References compareTimestampsNoTZ(), and condcheckConvertTimestampTZByFmtStr2TZ()\&.
+.PP
+Referenced by checkTimestampConsistency(), and compareISOTimestampTZBackToSameTZ()\&.
+.SS "int compareTimestampsNoTZ (char *timestamp, char *expectedtimestamp)"
+
+.PP
+Definition at line 35 of file libdatetimetz_converter_timestampverifier\&.c\&.
+.PP
+Referenced by compareTimestampBackToSameTZ(), and compareTimestampToSameTZ()\&.
+.SS "int compareTimestampToSameTZ (char *inTimestampStr, char *inTimestampFmtStr, char *inTZ)"
+
+.PP
+compares a timestamp (in a custom format) after conversion to the same timezone 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinTimestampStr\fP The timestamp string 
+.br
+\fIinTimestampFmtStr\fP The format (string) of the timestamp 
+.br
+\fIinTZ\fP The timezone
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+return value of strcmp comparing the timestamp with the expected timestamp 
+.RE
+.PP
+\fBReturn values:\fP
+.RS 4
+\fI0\fP : timestamp matches the expected timestamp 
+.br
+\fI<>0\fP : return value of the strcmp function 
+.RE
+.PP
+
+.PP
+Definition at line 51 of file libdatetimetz_converter_timestampverifier\&.c\&.
+.PP
+References compareTimestampsNoTZ(), and condcheckConvertTimestampTZByFmtStr2TZ()\&.
+.PP
+Referenced by checkTimestampConsistency(), and compareISOTimestampTZToSameTZ()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for datetimetz-converter-lib-0\&.5\&.2 from the source code\&.
