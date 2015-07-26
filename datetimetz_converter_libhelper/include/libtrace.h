@@ -21,6 +21,8 @@
 /**
  * @file libtrace.h
  * @author Laurent Cossin
+ * @copyright GNU Lesser General Public License
+
  * @date   July 2015
  *
  * @ingroup datetimetz_converter_helper
@@ -85,42 +87,42 @@ extern int TRACE_LEVEL;
 /// Writes a 'critical' level message + aborts the program
 
 int
-log_exit_critical(char* msg);
+log_exit_critical(const char *module, char* msg);
 
 /// Writes a 'critical' level message
 
 int
-log_critical(char* msg);
+log_critical(const char *module, char* msg);
 
 /// Writes a 'warning' level message
 
 int
-log_warning(char* msg);
+log_warning(const char *module, char* msg);
 
 /// Writes a 'info' level message
 
 int 
-log_info(char* msg); 
+log_info(const char *module, char* msg); 
 
 /// Writes a 'fine' level message
 
 int
-log_fine(char* msg);
+log_fine(const char *module, char* msg);
 
 /// Writes a 'fine' level message
 
 int
-log_finer(char* msg);
+log_finer(const char *module, char* msg);
 
 /// Writes a 'finest' level message
 
 int
-log_finest(char* msg);
+log_finest(const char *module, char* msg);
 
 /// Writes a 'debug' level message
 
 int
-log_debug(char* msg);
+log_debug(const char *module, char* msg);
 
 #endif
 

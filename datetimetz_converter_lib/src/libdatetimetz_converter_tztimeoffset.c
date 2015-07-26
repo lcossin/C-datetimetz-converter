@@ -37,10 +37,11 @@ isUTCTimeOffsetTZ(char *TZval)
 {
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
-	char traceprog[TRACE_MESSAGE_MAXLENGTH] = "isUTCTimeOffsetTZ";
+	char traceprog[TRACE_MESSAGE_MAXLENGTH];
+	strcpy(traceprog,__FUNCTION__);
 
-	sprintf(msg,"[%s] entering %s - TZval=%s", traceprog, traceprog,TZval);
-	log_debug(msg);
+	sprintf(msg,"entering TZval=%s", TZval);
+	log_debug(__FUNCTION__, msg);
 
 	int res;
 
@@ -56,17 +57,17 @@ isUTCTimeOffsetTZ(char *TZval)
 
 	if ( res )
 	{
-		sprintf(msg, "[%s] %s is a valid UTC time offset",traceprog, TZval); log_finest(msg);
+		sprintf(msg, "%s is a valid UTC time offset", TZval); log_finest(__FUNCTION__, msg);
 		res = EXIT_SUCCESS;
 	}
 	else
 	{
-		sprintf(msg, "[%s] %s is a NOT valid UTC time offset",traceprog,TZval); log_critical(msg);
+		sprintf(msg, "%s is a NOT valid UTC time offset",TZval); log_critical(__FUNCTION__, msg);
 		res = EXIT_FAILURE;
 	}
 
-	sprintf(msg,"[%s] leaving %s - TZval=%s", traceprog, traceprog, TZval);
-	log_debug(msg);
+	sprintf(msg,"leaving TZval=%s", TZval);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 
@@ -78,10 +79,11 @@ isTimeOffsetTZ(char *TZval)
 {
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
-	char traceprog[TRACE_MESSAGE_MAXLENGTH] = "isTimeOffsetTZ";
+	char traceprog[TRACE_MESSAGE_MAXLENGTH];
+	strcpy(traceprog,__FUNCTION__);
 
-	sprintf(msg,"[%s] entering %s - TZval=%s", traceprog, traceprog,TZval);
-	log_debug(msg);
+	sprintf(msg,"entering TZval=%s", TZval);
+	log_debug(__FUNCTION__, msg);
 
 	int res;
 
@@ -98,17 +100,17 @@ isTimeOffsetTZ(char *TZval)
 
 	if ( res )
 	{
-		sprintf(msg, "[%s] %s is a valid time offset",traceprog, TZval); log_finest(msg);
+		sprintf(msg, "%s is a valid time offset",TZval); log_finest(__FUNCTION__, msg);
 		res = EXIT_SUCCESS;
 	}
 	else
 	{
-		sprintf(msg, "[%s] %s is a NOT valid time offset",traceprog,TZval); log_critical(msg);
+		sprintf(msg, "%s is a NOT valid time offset",TZval); log_critical(__FUNCTION__, msg);
 		res = EXIT_FAILURE;
 	}
 
-	sprintf(msg,"[%s] leaving %s - TZval=%s", traceprog, traceprog, TZval);
-	log_debug(msg);
+	sprintf(msg,"leaving TZval=%s", TZval);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 
@@ -121,12 +123,13 @@ convertTimeOffsetToSeconds(char *TZval,int *offsetSeconds)
 {
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
-	char traceprog[TRACE_MESSAGE_MAXLENGTH] = "convertTimeOffsetToSeconds";
+	char traceprog[TRACE_MESSAGE_MAXLENGTH];
+	strcpy(traceprog,__FUNCTION__);
 
 	int res;
 
-	sprintf(msg,"[%s] entering %s - TZval=%s", traceprog, traceprog,TZval);
-	log_debug(msg);
+	sprintf(msg,"entering TZval=%s", TZval);
+	log_debug(__FUNCTION__, msg);
 
 	if ( isUTCTimeOffsetTZ(TZval) == EXIT_SUCCESS ) 
 	{
@@ -146,8 +149,8 @@ convertTimeOffsetToSeconds(char *TZval,int *offsetSeconds)
 		}
 	}
 
-	sprintf(msg,"[%s] leaving %s - TZval=%s", traceprog, traceprog,TZval);
-	log_debug(msg);
+	sprintf(msg,"leaving TZval=%s", TZval);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 
@@ -158,7 +161,8 @@ splitTimeOffsetStrToValues(char *timeoffsetstr, int *signfactor, int *hours, int
 {
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
-	char traceprog[TRACE_MESSAGE_MAXLENGTH] = "splitTimeOffsetStrToValues";
+	char traceprog[TRACE_MESSAGE_MAXLENGTH];
+	strcpy(traceprog,__FUNCTION__);
 
 	int res;
 
@@ -166,8 +170,8 @@ splitTimeOffsetStrToValues(char *timeoffsetstr, int *signfactor, int *hours, int
 
 	int minutespos;
 
-	sprintf(msg,"[%s] entering %s - TZval=%s hours=%d minutes=%d sign=%d", traceprog, traceprog, timeoffsetstr, *hours, *minutes, *signfactor);
-	log_debug(msg);
+	sprintf(msg,"entering TZval=%s hours=%d minutes=%d sign=%d", timeoffsetstr, *hours, *minutes, *signfactor);
+	log_debug(__FUNCTION__, msg);
 
 	/// timeoffsetstr can be [sign][hh][mm] or [sign][hh]:[mm]
 	/// hours are the 2 first digits (after the leading sign)
@@ -185,16 +189,16 @@ splitTimeOffsetStrToValues(char *timeoffsetstr, int *signfactor, int *hours, int
 
 	memset(timepart,'\0',sizeof(timepart)); strncpy(timepart, timeoffsetstr+1, 2); *hours = atoi(timepart);
 
-	sprintf(msg,"[%s] TZval=%s timepart=%s hours=%d", traceprog, timeoffsetstr, timepart, *hours);
-	log_debug(msg);
+	sprintf(msg,"TZval=%s timepart=%s hours=%d", timeoffsetstr, timepart, *hours);
+	log_debug(__FUNCTION__, msg);
 
 	memset(timepart,'\0',sizeof(timepart)); strncpy(timepart, timeoffsetstr+minutespos, 2); *minutes = atoi(timepart);
 
-	sprintf(msg,"[%s] TZval=%s timepart=%s minutes=%d", traceprog, timeoffsetstr, timepart, *minutes);
-	log_debug(msg);
+	sprintf(msg,"TZval=%s timepart=%s minutes=%d", timeoffsetstr, timepart, *minutes);
+	log_debug(__FUNCTION__, msg);
 
-	sprintf(msg,"[%s] leaving %s - TZval=%s hours=%d minutes=%d sign=%d", traceprog, traceprog, timeoffsetstr, *hours, *minutes, *signfactor);
-	log_debug(msg);
+	sprintf(msg,"leaving TZval=%s hours=%d minutes=%d sign=%d", timeoffsetstr, *hours, *minutes, *signfactor);
+	log_debug(__FUNCTION__, msg);
 
 
 	res = EXIT_SUCCESS;
@@ -208,7 +212,8 @@ splitconvertTimeOffsetStrToValues(char *timeoffsetstr, int *timeoffsetseconds)
 {
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
-	char traceprog[TRACE_MESSAGE_MAXLENGTH] = "splitconvertTimeOffsetStrToValues";
+	char traceprog[TRACE_MESSAGE_MAXLENGTH];
+	strcpy(traceprog,__FUNCTION__);
 
 	int res;
 
@@ -222,8 +227,8 @@ splitconvertTimeOffsetStrToValues(char *timeoffsetstr, int *timeoffsetseconds)
 
 	res = EXIT_SUCCESS;
 
-	sprintf(msg,"[%s] leaving %s - TZval=%s timeoffsetseconds=%d hours=%d minutes=%d sign=%d", traceprog, traceprog,timeoffsetstr, *timeoffsetseconds, hours, minutes, signfactor);
-	log_debug(msg);
+	sprintf(msg,"leaving TZval=%s timeoffsetseconds=%d hours=%d minutes=%d sign=%d", timeoffsetstr, *timeoffsetseconds, hours, minutes, signfactor);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 

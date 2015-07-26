@@ -7,6 +7,12 @@ libdatetimetz-converter - History of user-visible changes	-*- outline -*(
     with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
     A copy of the license is included in the section entitled "GNU Free Documentation License"
 
+Version 0.5.3 - July 2015, by Laurent Cossin
+
+* minor (not functional) changes
+* the calls to the 'log' routines rewritten to use the new argument 'module'
+* refer the ChangeLog for more details
+
 Version 0.5.2 - July 2015, by Laurent Cossin
 
 * third public beta release

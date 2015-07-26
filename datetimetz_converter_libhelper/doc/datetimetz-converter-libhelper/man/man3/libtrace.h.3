@@ -1,4 +1,4 @@
-.TH "include/libtrace.h" 3 "Fri Jul 24 2015" "datetimetz-converter-libhelper-0.5" \" -*- nroff -*-
+.TH "include/libtrace.h" 3 "Sun Jul 26 2015" "datetimetz-converter-libhelper-0.5.1" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -77,35 +77,35 @@ Provides some helper functions to handle trace messages\&.
 
 .in +1c
 .ti -1c
-.RI "int \fBlog_exit_critical\fP (char *msg)"
+.RI "int \fBlog_exit_critical\fP (const char *module, char *msg)"
 .br
 .RI "\fIwrites the given message depending on TRACE_LEVEL \fP"
 .ti -1c
-.RI "int \fBlog_critical\fP (char *msg)"
+.RI "int \fBlog_critical\fP (const char *module, char *msg)"
 .br
 .RI "\fIWrites a 'critical' level message\&. \fP"
 .ti -1c
-.RI "int \fBlog_warning\fP (char *msg)"
+.RI "int \fBlog_warning\fP (const char *module, char *msg)"
 .br
 .RI "\fIWrites a 'warning' level message\&. \fP"
 .ti -1c
-.RI "int \fBlog_info\fP (char *msg)"
+.RI "int \fBlog_info\fP (const char *module, char *msg)"
 .br
 .RI "\fIWrites a 'info' level message\&. \fP"
 .ti -1c
-.RI "int \fBlog_fine\fP (char *msg)"
+.RI "int \fBlog_fine\fP (const char *module, char *msg)"
 .br
 .RI "\fIWrites a 'fine' level message\&. \fP"
 .ti -1c
-.RI "int \fBlog_finer\fP (char *msg)"
+.RI "int \fBlog_finer\fP (const char *module, char *msg)"
 .br
 .RI "\fIWrites a 'fine' level message\&. \fP"
 .ti -1c
-.RI "int \fBlog_finest\fP (char *msg)"
+.RI "int \fBlog_finest\fP (const char *module, char *msg)"
 .br
 .RI "\fIWrites a 'finest' level message\&. \fP"
 .ti -1c
-.RI "int \fBlog_debug\fP (char *msg)"
+.RI "int \fBlog_debug\fP (const char *module, char *msg)"
 .br
 .RI "\fIWrites a 'debug' level message\&. \fP"
 .in -1c
@@ -128,6 +128,11 @@ Provides some helper functions to handle trace messages\&.
 Laurent Cossin 
 .RE
 .PP
+\fBCopyright:\fP
+.RS 4
+GNU Lesser General Public License
+.RE
+.PP
 \fBDate:\fP
 .RS 4
 July 2015 
@@ -143,13 +148,13 @@ Definition in file \fBlibtrace\&.h\fP\&.
 .PP
 TRACE_LEVEL_CRITICAL (constant) 
 .PP
-Definition at line 44 of file libtrace\&.h\&.
+Definition at line 46 of file libtrace\&.h\&.
 .PP
 Referenced by log_critical()\&.
 .SS "#define TRACE_LEVEL_CRITICAL_HEADER"
 
 .PP
-Definition at line 45 of file libtrace\&.h\&.
+Definition at line 47 of file libtrace\&.h\&.
 .PP
 Referenced by log_critical()\&.
 .SS "#define TRACE_LEVEL_DEBUG"
@@ -157,13 +162,13 @@ Referenced by log_critical()\&.
 .PP
 TRACE_LEVEL_DEBUG (constant) 
 .PP
-Definition at line 68 of file libtrace\&.h\&.
+Definition at line 70 of file libtrace\&.h\&.
 .PP
 Referenced by log_debug()\&.
 .SS "#define TRACE_LEVEL_DEBUG_HEADER"
 
 .PP
-Definition at line 69 of file libtrace\&.h\&.
+Definition at line 71 of file libtrace\&.h\&.
 .PP
 Referenced by log_debug()\&.
 .SS "#define TRACE_LEVEL_FINE"
@@ -171,13 +176,13 @@ Referenced by log_debug()\&.
 .PP
 TRACE_LEVEL_FINE (constant) 
 .PP
-Definition at line 56 of file libtrace\&.h\&.
+Definition at line 58 of file libtrace\&.h\&.
 .PP
 Referenced by log_fine()\&.
 .SS "#define TRACE_LEVEL_FINE_HEADER"
 
 .PP
-Definition at line 57 of file libtrace\&.h\&.
+Definition at line 59 of file libtrace\&.h\&.
 .PP
 Referenced by log_fine()\&.
 .SS "#define TRACE_LEVEL_FINER"
@@ -185,13 +190,13 @@ Referenced by log_fine()\&.
 .PP
 TRACE_LEVEL_FINER (constant) 
 .PP
-Definition at line 60 of file libtrace\&.h\&.
+Definition at line 62 of file libtrace\&.h\&.
 .PP
 Referenced by log_finer()\&.
 .SS "#define TRACE_LEVEL_FINER_HEADER"
 
 .PP
-Definition at line 61 of file libtrace\&.h\&.
+Definition at line 63 of file libtrace\&.h\&.
 .PP
 Referenced by log_finer()\&.
 .SS "#define TRACE_LEVEL_FINEST"
@@ -199,13 +204,13 @@ Referenced by log_finer()\&.
 .PP
 TRACE_LEVEL_FINEST (constant) 
 .PP
-Definition at line 64 of file libtrace\&.h\&.
+Definition at line 66 of file libtrace\&.h\&.
 .PP
 Referenced by log_finest()\&.
 .SS "#define TRACE_LEVEL_FINEST_HEADER"
 
 .PP
-Definition at line 65 of file libtrace\&.h\&.
+Definition at line 67 of file libtrace\&.h\&.
 .PP
 Referenced by log_finest()\&.
 .SS "#define TRACE_LEVEL_INFO"
@@ -213,13 +218,13 @@ Referenced by log_finest()\&.
 .PP
 TRACE_LEVEL_INFO (constant) 
 .PP
-Definition at line 52 of file libtrace\&.h\&.
+Definition at line 54 of file libtrace\&.h\&.
 .PP
 Referenced by log_info()\&.
 .SS "#define TRACE_LEVEL_INFO_HEADER"
 
 .PP
-Definition at line 53 of file libtrace\&.h\&.
+Definition at line 55 of file libtrace\&.h\&.
 .PP
 Referenced by log_info()\&.
 .SS "#define TRACE_LEVEL_NONE"
@@ -227,23 +232,23 @@ Referenced by log_info()\&.
 .PP
 TRACE_LEVEL_NONE (constant) 
 .PP
-Definition at line 40 of file libtrace\&.h\&.
+Definition at line 42 of file libtrace\&.h\&.
 .SS "#define TRACE_LEVEL_NONE_HEADER"
 
 .PP
-Definition at line 41 of file libtrace\&.h\&.
+Definition at line 43 of file libtrace\&.h\&.
 .SS "#define TRACE_LEVEL_WARNING"
 
 .PP
 TRACE_LEVEL_WARNING (constant) 
 .PP
-Definition at line 48 of file libtrace\&.h\&.
+Definition at line 50 of file libtrace\&.h\&.
 .PP
 Referenced by log_warning()\&.
 .SS "#define TRACE_LEVEL_WARNING_HEADER"
 
 .PP
-Definition at line 49 of file libtrace\&.h\&.
+Definition at line 51 of file libtrace\&.h\&.
 .PP
 Referenced by log_warning()\&.
 .SS "#define TRACE_MESSAGE_MAXLENGTH"
@@ -251,12 +256,12 @@ Referenced by log_warning()\&.
 .PP
 TRACE MESSAGE maxlength\&. 
 .PP
-Definition at line 37 of file libtrace\&.h\&.
+Definition at line 39 of file libtrace\&.h\&.
 .PP
 Referenced by assert_pointer_is_not_null(), assert_string_is_not_null(), and regexp_verify()\&.
 .SH "Function Documentation"
 .PP 
-.SS "int log_critical (char *msg)"
+.SS "int log_critical (const char *module, char *msg)"
 
 .PP
 Writes a 'critical' level message\&. 
@@ -266,7 +271,7 @@ Definition at line 81 of file libtrace\&.c\&.
 References log_message(), TRACE_LEVEL_CRITICAL, and TRACE_LEVEL_CRITICAL_HEADER\&.
 .PP
 Referenced by log_exit_critical()\&.
-.SS "int log_debug (char *msg)"
+.SS "int log_debug (const char *module, char *msg)"
 
 .PP
 Writes a 'debug' level message\&. 
@@ -276,7 +281,7 @@ Definition at line 132 of file libtrace\&.c\&.
 References log_message(), TRACE_LEVEL_DEBUG, and TRACE_LEVEL_DEBUG_HEADER\&.
 .PP
 Referenced by assert_pointer_is_not_null(), assert_string_is_not_null(), parseRawString(), and regexp_verify()\&.
-.SS "int log_exit_critical (char *msg)"
+.SS "int log_exit_critical (const char *module, char *msg)"
 
 .PP
 writes the given message depending on TRACE_LEVEL Writes messages according to TRACE_LEVEL
@@ -290,7 +295,7 @@ Definition at line 70 of file libtrace\&.c\&.
 References actionOnFailureOpts, and log_critical()\&.
 .PP
 Referenced by assert_pointer_is_not_null(), and assert_string_is_not_null()\&.
-.SS "int log_fine (char *msg)"
+.SS "int log_fine (const char *module, char *msg)"
 
 .PP
 Writes a 'fine' level message\&. 
@@ -298,7 +303,7 @@ Writes a 'fine' level message\&.
 Definition at line 105 of file libtrace\&.c\&.
 .PP
 References log_message(), TRACE_LEVEL_FINE, and TRACE_LEVEL_FINE_HEADER\&.
-.SS "int log_finer (char *msg)"
+.SS "int log_finer (const char *module, char *msg)"
 
 .PP
 Writes a 'fine' level message\&. 
@@ -306,7 +311,7 @@ Writes a 'fine' level message\&.
 Definition at line 114 of file libtrace\&.c\&.
 .PP
 References log_message(), TRACE_LEVEL_FINER, and TRACE_LEVEL_FINER_HEADER\&.
-.SS "int log_finest (char *msg)"
+.SS "int log_finest (const char *module, char *msg)"
 
 .PP
 Writes a 'finest' level message\&. 
@@ -316,7 +321,7 @@ Definition at line 123 of file libtrace\&.c\&.
 References log_message(), TRACE_LEVEL_FINEST, and TRACE_LEVEL_FINEST_HEADER\&.
 .PP
 Referenced by regexp_verify()\&.
-.SS "int log_info (char *msg)"
+.SS "int log_info (const char *module, char *msg)"
 
 .PP
 Writes a 'info' level message\&. 
@@ -324,7 +329,7 @@ Writes a 'info' level message\&.
 Definition at line 97 of file libtrace\&.c\&.
 .PP
 References log_message(), TRACE_LEVEL_INFO, and TRACE_LEVEL_INFO_HEADER\&.
-.SS "int log_warning (char *msg)"
+.SS "int log_warning (const char *module, char *msg)"
 
 .PP
 Writes a 'warning' level message\&. 
@@ -344,4 +349,4 @@ Definition at line 29 of file libtrace\&.c\&.
 Referenced by log_message()\&.
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for datetimetz-converter-libhelper-0\&.5 from the source code\&.
+Generated automatically by Doxygen for datetimetz-converter-libhelper-0\&.5\&.1 from the source code\&.

@@ -30,7 +30,7 @@ int
 regexp_verify(char *string, char *regexpstr) 
 {
 
-	log_debug("entering regexp_verify");
+	log_debug(__FUNCTION__, "regexp_verify");
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
 
@@ -57,7 +57,7 @@ int res;
 	regfree(ptr_regex_compiled);
 
 	sprintf(msg,"[regexp_pattern] regcomp_res=%d regexp_res=%d %zu %s", regcomp_res, regexp_res, regexp_nmatch, string);
-	log_finest(msg);
+	log_finest(__FUNCTION__, msg);
 
 	if ( ! regexp_res ) {
 
@@ -67,7 +67,7 @@ int res;
 		sprintf(msg,"[regexp_pattern] matching #%d #%d %s", pmatch[0].rm_so, pmatch[0].rm_eo, string+pmatch[0].rm_so);
 	#endif
 
-		log_finest(msg);
+		log_finest(__FUNCTION__, msg);
 
 		res = pmatch[0].rm_eo;
 
@@ -75,7 +75,7 @@ int res;
 	else
 		res = 0;
 
-	log_debug("leaving regexp_verify");
+	log_debug(__FUNCTION__, "leaving");
 
 	//return EXIT_SUCCESS;
 	return res;

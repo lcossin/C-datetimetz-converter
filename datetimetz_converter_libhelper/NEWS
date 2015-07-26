@@ -7,6 +7,11 @@ libdatetimetz-converter-libhelper - History of user-visible changes	-*- outline 
     with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
     A copy of the license is included in the section entitled "GNU Free Documentation License"
 
+Version 0.5.1 - July 2015, by Laurent Cossin
+
+* some minor changes in the logging routines
+* refer to ChangeLog for more details
+
 Version 0.5 - July 2015, by Laurent Cossin
 
 * first release

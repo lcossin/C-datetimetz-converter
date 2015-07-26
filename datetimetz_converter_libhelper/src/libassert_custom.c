@@ -33,12 +33,12 @@ assert_pointer_is_not_null(void *ptr, char *ptrname)
 	if ( ptr )
 	{
 		sprintf(msg,"[assert_pointer_is_not_null] pointer %s is initialized",ptrname);
-		return log_debug(msg);
+		return log_debug(__FUNCTION__, msg);
 	}
 	else
 	{
 		sprintf(msg,"[assert_pointer_is_not_null] pointer %s is NULL uninitialized",ptrname);
-		return log_exit_critical(msg);
+		return log_exit_critical(__FUNCTION__, msg);
 	}
 
 } // assert_pointer_is_not_null
@@ -52,12 +52,12 @@ assert_string_is_not_null(char *string, char *stringname)
 	if ( string && strlen(string) )
 	{
 		sprintf(msg,"[assert_string_is_not_null] %s is not an empty string",stringname);
-		return log_debug(msg);
+		return log_debug(__FUNCTION__, msg);
 	}
 	else
 	{
 		sprintf(msg,"[assert_string_is_not_null] pointer %s is NULL or empty",stringname);
-		return log_exit_critical(msg);
+		return log_exit_critical(__FUNCTION__, msg);
 	}
 
 } // assert_string_is_not_null

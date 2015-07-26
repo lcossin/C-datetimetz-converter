@@ -2,10 +2,10 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([datetimetz-converter-libhelper], [0.5], [https://github.com/lcossin/C-datetimetz-converter])
+AC_INIT([datetimetz-converter-libhelper], [0.5.1], [https://github.com/lcossin/C-datetimetz-converter])
 
 AC_COPYRIGHT([Copyright (C) 2015 Laurent Cossin])
-AC_REVISION([$Revision: 0.5$])
+AC_REVISION([$Revision: 0.5.1$])
 
 AC_CONFIG_MACRO_DIR([m4])
 

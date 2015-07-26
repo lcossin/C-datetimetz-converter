@@ -1,4 +1,4 @@
-.TH "include/libdatetimetz_converter_timestamptzformat.h" 3 "Fri Jul 24 2015" "datetimetz-converter-libhelper-0.5" \" -*- nroff -*-
+.TH "include/libdatetimetz_converter_timestamptzformat.h" 3 "Sun Jul 26 2015" "datetimetz-converter-libhelper-0.5.1" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -114,6 +114,11 @@ Provides some constants and some functions to manage the timestamp formats\&.
 Laurent Cossin 
 .RE
 .PP
+\fBCopyright:\fP
+.RS 4
+GNU Lesser General Public License
+.RE
+.PP
 \fBDate:\fP
 .RS 4
 July 2015 
@@ -127,7 +132,7 @@ Definition in file \fBlibdatetimetz_converter_timestamptzformat\&.h\fP\&.
 .SS "#define TIMESTAMPFORMATMAXLENGTH"
 
 .PP
-Definition at line 65 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 67 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .SH "Function Documentation"
 .PP 
 .SS "int buildFmtStr (intFmtFlags, char *FmtStr)"
@@ -205,7 +210,7 @@ References setOlsonOpts()\&.
 .PP
 ISO8601 format option\&. 
 .PP
-Definition at line 47 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 49 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .PP
 Referenced by isISO8601(), setDefaultOutputFmtOpts(), and setISO8601Opts()\&.
 .SS "const char iso8601noTZFmt[]"
@@ -213,7 +218,7 @@ Referenced by isISO8601(), setDefaultOutputFmtOpts(), and setISO8601Opts()\&.
 .PP
 strptime - ISO8601 without timezone 
 .PP
-Definition at line 78 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 80 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .PP
 Referenced by appendISO8601noTZ()\&.
 .SS "const char iso8601TZAbbrev[]"
@@ -221,19 +226,19 @@ Referenced by appendISO8601noTZ()\&.
 .PP
 strptime - ISO8601 + timezone abbreviation 
 .PP
-Definition at line 84 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 86 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .SS "const char iso8601TZCombined[]"
 
 .PP
 strptime - ISO8601 + timezone offset + timezone abbreviation 
 .PP
-Definition at line 87 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 89 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .SS "const char iso8601TZOffset[]"
 
 .PP
 strptime - ISO8601 + timezone offset 
 .PP
-Definition at line 81 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 83 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .PP
 Referenced by formatted_now()\&.
 .SS "const int PosixFlag"
@@ -241,13 +246,13 @@ Referenced by formatted_now()\&.
 .PP
 Posix format option\&. 
 .PP
-Definition at line 56 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 58 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .SS "const int TZAbbrevFlag"
 
 .PP
 Timezone abbreviation option\&. 
 .PP
-Definition at line 50 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 52 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .PP
 Referenced by isTZAbbrev(), and setDefaultOutputFmtOpts()\&.
 .SS "const char TZAbbrevFmt[]"
@@ -255,7 +260,7 @@ Referenced by isTZAbbrev(), and setDefaultOutputFmtOpts()\&.
 .PP
 strptime - timezone abbreviation 
 .PP
-Definition at line 71 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 73 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .PP
 Referenced by appendTZAbbrev()\&.
 .SS "const int TZOffsetFlag"
@@ -263,21 +268,21 @@ Referenced by appendTZAbbrev()\&.
 .PP
 Timezone offset option\&. 
 .PP
-Definition at line 53 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 55 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .SS "const char TZOffsetFmt[]"
 
 .PP
 strptime - timezone offset 
 .PP
-Definition at line 68 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 70 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .SS "const int TZOlsonFlag"
 
 .PP
 Olson timezone option\&. 
 .PP
-Definition at line 59 of file libdatetimetz_converter_timestamptzformat\&.h\&.
+Definition at line 61 of file libdatetimetz_converter_timestamptzformat\&.h\&.
 .PP
 Referenced by isTZOlson(), and setOlsonOpts()\&.
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for datetimetz-converter-libhelper-0\&.5 from the source code\&.
+Generated automatically by Doxygen for datetimetz-converter-libhelper-0\&.5\&.1 from the source code\&.

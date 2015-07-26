@@ -37,7 +37,7 @@ convertTimestampStr2Epochtimet(
 	struct tm		inTM;
 	struct tm		*ptrinTM = &inTM;
 
-	log_debug("entering convertTimestampStr2Epoch");
+	log_debug(__FUNCTION__,"entering");
 
 	// initialize the tm structure for the input timestamp
 	// ptrinTM = pointer to the inTM structure object
@@ -65,11 +65,11 @@ convertTimestampStr2Epochtimet(
 
 	strftime(c_time_string,40,"%Y-%m-%d %T %4Z %z", ptrinTM);
 	sprintf(msg,"{%s - DST %d} \t",c_time_string,ptrinTM->tm_isdst);
-	log_debug(msg);
+	log_debug(__FUNCTION__, msg);
 
 	*/
 
-	log_debug("leaving convertTimestampStr2Epoch");
+	log_debug(__FUNCTION__,"leaving");
 	
 	return EXIT_SUCCESS;
 

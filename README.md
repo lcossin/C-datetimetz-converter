@@ -40,11 +40,13 @@ Refer to the README file in the project folders.
 
 Before running 'make' and 'make install'.
 
-./configure --prefix
+./configure --prefix=[target directory]
+
+Refer to configure help
 
 ## How to use the C routines in programs ?
 
-Refer to the C applications for the test units.
+Refer to the C source code for the test units.
 
 folder : datetimetz_converter_lib/tests
 

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>datetimetz-converter-libhelper-0.5: src/libassert_custom.c Source File</title>
+<title>datetimetz-converter-libhelper-0.5.1: src/libassert_custom.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -24,7 +24,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">datetimetz-converter-libhelper-0.5
+   <div id="projectname">datetimetz-converter-libhelper-0.5.1
    </div>
   </td>
  </tr>
@@ -101,12 +101,12 @@ $(document).ready(function(){initNavTree('libassert__custom_8c_source.html','');
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">if</span> ( ptr )</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        sprintf(msg,<span class="stringliteral">&quot;[assert_pointer_is_not_null] pointer %s is initialized&quot;</span>,ptrname);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="libtrace_8h.html#a808d3c737c3a2ff9f9d885fa3583d7cb">log_debug</a>(msg);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="libtrace_8h.html#a48c102254e98a122039b8714a2e764db">log_debug</a>(__FUNCTION__, msg);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        sprintf(msg,<span class="stringliteral">&quot;[assert_pointer_is_not_null] pointer %s is NULL uninitialized&quot;</span>,ptrname);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="libtrace_8h.html#a802e90ffe748edc58b98784355bf39f2">log_exit_critical</a>(msg);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="libtrace_8h.html#a281eea194115adf826dc77e18b5ce8b8">log_exit_critical</a>(__FUNCTION__, msg);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;} <span class="comment">// assert_pointer_is_not_null</span></div>
@@ -120,23 +120,23 @@ $(document).ready(function(){initNavTree('libassert__custom_8c_source.html','');
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">if</span> ( <span class="keywordtype">string</span> &amp;&amp; strlen(<span class="keywordtype">string</span>) )</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        sprintf(msg,<span class="stringliteral">&quot;[assert_string_is_not_null] %s is not an empty string&quot;</span>,stringname);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="libtrace_8h.html#a808d3c737c3a2ff9f9d885fa3583d7cb">log_debug</a>(msg);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="libtrace_8h.html#a48c102254e98a122039b8714a2e764db">log_debug</a>(__FUNCTION__, msg);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        sprintf(msg,<span class="stringliteral">&quot;[assert_string_is_not_null] pointer %s is NULL or empty&quot;</span>,stringname);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="libtrace_8h.html#a802e90ffe748edc58b98784355bf39f2">log_exit_critical</a>(msg);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="libtrace_8h.html#a281eea194115adf826dc77e18b5ce8b8">log_exit_critical</a>(__FUNCTION__, msg);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;} <span class="comment">// assert_string_is_not_null</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="ttc" id="libtrace_8h_html_a281eea194115adf826dc77e18b5ce8b8"><div class="ttname"><a href="libtrace_8h.html#a281eea194115adf826dc77e18b5ce8b8">log_exit_critical</a></div><div class="ttdeci">int log_exit_critical(const char *module, char *msg)</div><div class="ttdoc">writes the given message depending on TRACE_LEVEL </div><div class="ttdef"><b>Definition:</b> <a href="libtrace_8c_source.html#l00070">libtrace.c:70</a></div></div>
+<div class="ttc" id="libtrace_8h_html_a48c102254e98a122039b8714a2e764db"><div class="ttname"><a href="libtrace_8h.html#a48c102254e98a122039b8714a2e764db">log_debug</a></div><div class="ttdeci">int log_debug(const char *module, char *msg)</div><div class="ttdoc">Writes a &amp;#39;debug&amp;#39; level message. </div><div class="ttdef"><b>Definition:</b> <a href="libtrace_8c_source.html#l00132">libtrace.c:132</a></div></div>
 <div class="ttc" id="libtrace_8h_html"><div class="ttname"><a href="libtrace_8h.html">libtrace.h</a></div><div class="ttdoc">Provides some helper functions to handle trace messages. </div></div>
 <div class="ttc" id="libassert__custom_8h_html"><div class="ttname"><a href="libassert__custom_8h.html">libassert_custom.h</a></div><div class="ttdoc">Provides some custom &amp;#39;assert&amp;#39; routines. </div></div>
 <div class="ttc" id="libassert__custom_8h_html_a0adf3b6bb2803ecff211f3ace613a775"><div class="ttname"><a href="libassert__custom_8h.html#a0adf3b6bb2803ecff211f3ace613a775">assert_pointer_is_not_null</a></div><div class="ttdeci">int assert_pointer_is_not_null(void *ptr, char *ptrname)</div><div class="ttdef"><b>Definition:</b> <a href="libassert__custom_8c_source.html#l00028">libassert_custom.c:28</a></div></div>
-<div class="ttc" id="libtrace_8h_html_a808d3c737c3a2ff9f9d885fa3583d7cb"><div class="ttname"><a href="libtrace_8h.html#a808d3c737c3a2ff9f9d885fa3583d7cb">log_debug</a></div><div class="ttdeci">int log_debug(char *msg)</div><div class="ttdoc">Writes a &amp;#39;debug&amp;#39; level message. </div><div class="ttdef"><b>Definition:</b> <a href="libtrace_8c_source.html#l00132">libtrace.c:132</a></div></div>
-<div class="ttc" id="libtrace_8h_html_a802e90ffe748edc58b98784355bf39f2"><div class="ttname"><a href="libtrace_8h.html#a802e90ffe748edc58b98784355bf39f2">log_exit_critical</a></div><div class="ttdeci">int log_exit_critical(char *msg)</div><div class="ttdoc">writes the given message depending on TRACE_LEVEL </div><div class="ttdef"><b>Definition:</b> <a href="libtrace_8c_source.html#l00070">libtrace.c:70</a></div></div>
 <div class="ttc" id="libassert__custom_8h_html_ae4d8d57d704e6ba319351d6603eecb11"><div class="ttname"><a href="libassert__custom_8h.html#ae4d8d57d704e6ba319351d6603eecb11">assert_string_is_not_null</a></div><div class="ttdeci">int assert_string_is_not_null(char *string, char *stringname)</div><div class="ttdef"><b>Definition:</b> <a href="libassert__custom_8c_source.html#l00047">libassert_custom.c:47</a></div></div>
-<div class="ttc" id="libtrace_8h_html_aea309df800de9fb254dc3a66e197d3dd"><div class="ttname"><a href="libtrace_8h.html#aea309df800de9fb254dc3a66e197d3dd">TRACE_MESSAGE_MAXLENGTH</a></div><div class="ttdeci">#define TRACE_MESSAGE_MAXLENGTH</div><div class="ttdoc">TRACE MESSAGE maxlength. </div><div class="ttdef"><b>Definition:</b> <a href="libtrace_8h_source.html#l00037">libtrace.h:37</a></div></div>
+<div class="ttc" id="libtrace_8h_html_aea309df800de9fb254dc3a66e197d3dd"><div class="ttname"><a href="libtrace_8h.html#aea309df800de9fb254dc3a66e197d3dd">TRACE_MESSAGE_MAXLENGTH</a></div><div class="ttdeci">#define TRACE_MESSAGE_MAXLENGTH</div><div class="ttdoc">TRACE MESSAGE maxlength. </div><div class="ttdef"><b>Definition:</b> <a href="libtrace_8h_source.html#l00039">libtrace.h:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

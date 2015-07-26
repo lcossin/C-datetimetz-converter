@@ -43,7 +43,7 @@ formatted_now(char **nowstr)
 } // formatted_now
 
 int 
-log_message(char* msg, int msglevel, char* msgheader)
+log_message(const char* module, char* msg, int msglevel, char* msgheader)
 {
 	if ( TRACE_LEVEL >= msglevel )
 	{
@@ -55,7 +55,7 @@ log_message(char* msg, int msglevel, char* msgheader)
 
 		formatted_now(&msg_timestamp);
 
-		fprintf(stderr, "[%s] %-8s [%2d/%2d] %s\n",msg_timestamp, fmt_msgheader,msglevel,TRACE_LEVEL,msg);
+		fprintf(stderr, "[%s] %-8s [%2d/%2d] [%s] %s\n",msg_timestamp, fmt_msgheader, msglevel, TRACE_LEVEL, module, msg);
 
 		free(msg_timestamp);
 		free(fmt_msgheader);
@@ -67,9 +67,9 @@ log_message(char* msg, int msglevel, char* msgheader)
 } // log_message
 
 int 
-log_exit_critical(char* msg)
+log_exit_critical(const char* module, char* msg)
 {
-	log_critical(msg);
+	log_critical(module, msg);
 	if ( actionOnFailureOpts )
 		abort();
 	
@@ -78,60 +78,60 @@ log_exit_critical(char* msg)
 } // log_exit_critical
 
 int 
-log_critical(char* msg) {
+log_critical(const char* module, char* msg) {
 
-  log_message(msg, TRACE_LEVEL_CRITICAL, TRACE_LEVEL_CRITICAL_HEADER );
+  log_message(module, msg, TRACE_LEVEL_CRITICAL, TRACE_LEVEL_CRITICAL_HEADER );
   return EXIT_SUCCESS;
 
 } // log_critical
 
 int 
-log_warning(char* msg) {
+log_warning(const char* module, char* msg) {
 
-  log_message(msg, TRACE_LEVEL_WARNING, TRACE_LEVEL_WARNING_HEADER );
+  log_message(module, msg, TRACE_LEVEL_WARNING, TRACE_LEVEL_WARNING_HEADER );
   return EXIT_SUCCESS;
 
 } // log_warning
 
 int 
-log_info(char* msg) {
+log_info(const char* module, char* msg) {
 
-  log_message(msg, TRACE_LEVEL_INFO, TRACE_LEVEL_INFO_HEADER );
+  log_message(module, msg, TRACE_LEVEL_INFO, TRACE_LEVEL_INFO_HEADER );
   return EXIT_SUCCESS;
 
 } // log_info
 
 int 
-log_fine(char* msg) {
+log_fine(const char* module, char* msg) {
 
-  log_message(msg, TRACE_LEVEL_FINE, TRACE_LEVEL_FINE_HEADER );
+  log_message(module, msg, TRACE_LEVEL_FINE, TRACE_LEVEL_FINE_HEADER );
   return EXIT_SUCCESS;
 
 } // log_fine
 
 
 int 
-log_finer(char* msg) {
+log_finer(const char* module, char* msg) {
 
-  log_message(msg, TRACE_LEVEL_FINER, TRACE_LEVEL_FINER_HEADER );
+  log_message(module, msg, TRACE_LEVEL_FINER, TRACE_LEVEL_FINER_HEADER );
   return EXIT_SUCCESS;
 
 } // log_finer
 
 
 int 
-log_finest(char* msg) {
+log_finest(const char* module, char* msg) {
 
-  log_message(msg, TRACE_LEVEL_FINEST, TRACE_LEVEL_FINEST_HEADER );
+  log_message(module, msg, TRACE_LEVEL_FINEST, TRACE_LEVEL_FINEST_HEADER );
   return EXIT_SUCCESS;
 
 } // log_finest
 
 
 int 
-log_debug(char* msg) {
+log_debug(const char* module, char* msg) {
 
-	log_message(msg, TRACE_LEVEL_DEBUG, TRACE_LEVEL_DEBUG_HEADER );
+	log_message(module, msg, TRACE_LEVEL_DEBUG, TRACE_LEVEL_DEBUG_HEADER );
 	return EXIT_SUCCESS;
 
 } // log_debug

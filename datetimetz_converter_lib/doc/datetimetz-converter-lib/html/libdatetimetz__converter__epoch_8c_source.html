@@ -105,7 +105,7 @@ $(document).ready(function(){initNavTree('libdatetimetz__converter__epoch_8c_sou
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">struct </span>tm       inTM;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">struct </span>tm       *ptrinTM = &amp;inTM;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    log_debug(<span class="stringliteral">&quot;entering convertTimestampStr2Epoch&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    log_debug(__FUNCTION__,<span class="stringliteral">&quot;entering&quot;</span>);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// initialize the tm structure for the input timestamp</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// ptrinTM = pointer to the inTM structure object</span></div>
@@ -133,11 +133,11 @@ $(document).ready(function(){initNavTree('libdatetimetz__converter__epoch_8c_sou
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    strftime(c_time_string,40,&quot;%Y-%m-%d %T %4Z %z&quot;, ptrinTM);</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    sprintf(msg,&quot;{%s - DST %d} \t&quot;,c_time_string,ptrinTM-&gt;tm_isdst);</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    log_debug(msg);</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">    log_debug(__FUNCTION__, msg);</span></div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment">    */</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    log_debug(<span class="stringliteral">&quot;leaving convertTimestampStr2Epoch&quot;</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    log_debug(__FUNCTION__,<span class="stringliteral">&quot;leaving&quot;</span>);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>

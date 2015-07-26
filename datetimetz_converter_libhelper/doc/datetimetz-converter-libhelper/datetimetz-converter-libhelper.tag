@@ -745,57 +745,57 @@
       <type>int</type>
       <name>log_exit_critical</name>
       <anchorfile>libtrace_8h.html</anchorfile>
-      <anchor>a802e90ffe748edc58b98784355bf39f2</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a281eea194115adf826dc77e18b5ce8b8</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_critical</name>
       <anchorfile>libtrace_8h.html</anchorfile>
-      <anchor>a404772c1fe2591e0df846e9f770771ff</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a26c79487f424f748c9033ae36ba4fe48</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_warning</name>
       <anchorfile>libtrace_8h.html</anchorfile>
-      <anchor>a9531f27edc613d2714c04950e4501ca1</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a5c4c6b90b4add0ccaf7006f2de77e5b8</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_info</name>
       <anchorfile>libtrace_8h.html</anchorfile>
-      <anchor>a5e35de83293d46f71795bdec8967bcc7</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a3856a67c2859b298358c230f8d1b9c67</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_fine</name>
       <anchorfile>libtrace_8h.html</anchorfile>
-      <anchor>a4e01b4c7ae0df0fe40c8c59c33fb4eac</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>ab7c5d4f1e45c7fa3a6dafcab7ed54b1c</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_finer</name>
       <anchorfile>libtrace_8h.html</anchorfile>
-      <anchor>ae9d41a1642f7ebb9ffd8569bc38964f7</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a35a9d3cb6b422affcefae1e987337333</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_finest</name>
       <anchorfile>libtrace_8h.html</anchorfile>
-      <anchor>ae1f48ea6677f81e1f280e0e9ea868267</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a21b823996eb42f94cd5719fb6494d0fc</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_debug</name>
       <anchorfile>libtrace_8h.html</anchorfile>
-      <anchor>a808d3c737c3a2ff9f9d885fa3583d7cb</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a48c102254e98a122039b8714a2e764db</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="variable">
       <type>int</type>
@@ -836,8 +836,8 @@
       <type>int</type>
       <name>parseRawString</name>
       <anchorfile>libdatetimetz__converter__dataparsetimestamps_8c.html</anchorfile>
-      <anchor>a57ce18d2fda8169a7d2d33b9765583ee</anchor>
-      <arglist>(char *rawTimestampTZStr, char *outTimestampStrNoTZ, char *outOlsonTZ)</arglist>
+      <anchor>a91680d7f7cd93bec8147c4f02b47ce58</anchor>
+      <arglist>(char *rawTimestampTZStr, char *outTimestampStrNoTZ, char *outTZ)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -986,64 +986,64 @@
       <type>int</type>
       <name>log_message</name>
       <anchorfile>libtrace_8c.html</anchorfile>
-      <anchor>a6f0d948b44f365ded65ef7b440bf0008</anchor>
-      <arglist>(char *msg, int msglevel, char *msgheader)</arglist>
+      <anchor>a322c1aeaa8c85a45fd0d04f40298628c</anchor>
+      <arglist>(const char *module, char *msg, int msglevel, char *msgheader)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_exit_critical</name>
       <anchorfile>libtrace_8c.html</anchorfile>
-      <anchor>a802e90ffe748edc58b98784355bf39f2</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a281eea194115adf826dc77e18b5ce8b8</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_critical</name>
       <anchorfile>libtrace_8c.html</anchorfile>
-      <anchor>a404772c1fe2591e0df846e9f770771ff</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a26c79487f424f748c9033ae36ba4fe48</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_warning</name>
       <anchorfile>libtrace_8c.html</anchorfile>
-      <anchor>a9531f27edc613d2714c04950e4501ca1</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a5c4c6b90b4add0ccaf7006f2de77e5b8</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_info</name>
       <anchorfile>libtrace_8c.html</anchorfile>
-      <anchor>a5e35de83293d46f71795bdec8967bcc7</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a3856a67c2859b298358c230f8d1b9c67</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_fine</name>
       <anchorfile>libtrace_8c.html</anchorfile>
-      <anchor>a4e01b4c7ae0df0fe40c8c59c33fb4eac</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>ab7c5d4f1e45c7fa3a6dafcab7ed54b1c</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_finer</name>
       <anchorfile>libtrace_8c.html</anchorfile>
-      <anchor>ae9d41a1642f7ebb9ffd8569bc38964f7</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a35a9d3cb6b422affcefae1e987337333</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_finest</name>
       <anchorfile>libtrace_8c.html</anchorfile>
-      <anchor>ae1f48ea6677f81e1f280e0e9ea868267</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a21b823996eb42f94cd5719fb6494d0fc</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>log_debug</name>
       <anchorfile>libtrace_8c.html</anchorfile>
-      <anchor>a808d3c737c3a2ff9f9d885fa3583d7cb</anchor>
-      <arglist>(char *msg)</arglist>
+      <anchor>a48c102254e98a122039b8714a2e764db</anchor>
+      <arglist>(const char *module, char *msg)</arglist>
     </member>
     <member kind="variable">
       <type>int</type>

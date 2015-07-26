@@ -41,7 +41,7 @@ compareTimestampsNoTZ(char *timestamp, char *expectedtimestamp)
 
 	compareres = strcmp(timestamp, expectedtimestamp);
 
-	sprintf(msg,"[compareTimestampsNoTZ] compare '%s' with '%s' res=%d", timestamp, expectedtimestamp, compareres); log_debug(msg);
+	sprintf(msg,"[compareTimestampsNoTZ] compare '%s' with '%s' res=%d", timestamp, expectedtimestamp, compareres); log_debug(__FUNCTION__, msg);
 
 	return compareres;
 
@@ -81,9 +81,9 @@ compareTimestampToSameTZ(
 	}
 
 	if ( ! res) 
-		log_fine(msg);
+		log_fine(__FUNCTION__, msg);
 	else
-		log_critical(msg);
+		log_critical(__FUNCTION__, msg);
 
 	return res;
 
@@ -144,9 +144,9 @@ compareTimestampBackToSameTZ(
 	}
 
 	if ( ! res) 
-		log_fine(msg);
+		log_fine(__FUNCTION__, msg);
 	else
-		log_critical(msg);
+		log_critical(__FUNCTION__, msg);
 
 	return res;
 
@@ -179,12 +179,12 @@ checkTimestampConsistency(
 	if ( res == expectedres )
 	{
 		sprintf(msg,"[checkTimestampConsistency] '%s' '%s' is globally consistent res=%d",inTimestampNoTZStr, inTZ,res);
-		log_finest(msg);
+		log_finest(__FUNCTION__, msg);
 	}
 	else
 	{
 		sprintf(msg,"[checkTimestampConsistency] '%s' '%s' is NOT consistent res=%d",inTimestampNoTZStr, inTZ,res);
-		log_finest(msg);
+		log_finest(__FUNCTION__, msg);
 	}
 
 	return res;

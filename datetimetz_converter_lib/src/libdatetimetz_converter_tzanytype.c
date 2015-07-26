@@ -51,7 +51,7 @@ convertTimestampTZByFmtStr2Epochtimet(
 	char msg[TRACE_MESSAGE_MAXLENGTH];
 	char envTZbackup[TIMESTAMPMAXLENGTH];
 
-	log_debug("entering convertTimestampTZByFmtStr2Epochtimet");
+	log_debug(__FUNCTION__,"entering");
 
 	int timeoffsetres;
 	int timeoffsetseconds;
@@ -66,8 +66,8 @@ convertTimestampTZByFmtStr2Epochtimet(
 	else
 		strcpy(envTZbackup,DEFAULT_TIMEZONE);
 
-	sprintf(msg,"[convertTimestampTZByFmtStr2Epoch] TZ=%s inTimestampStr=%s inTZ=%s",envTZbackup,inTimestampStr,inTZ);
-	log_debug(msg);
+	sprintf(msg,"TZ=%s inTimestampStr=%s inTZ=%s",envTZbackup,inTimestampStr,inTZ);
+	log_debug(__FUNCTION__, msg);
 
 	// set TZ environment variable according to the input timestamp 
   //	if inTZ=UTC then set TZ to empty value
@@ -91,8 +91,8 @@ convertTimestampTZByFmtStr2Epochtimet(
 
 	setenv(TZ_ENV_VARNAME,inTZeff,1);
 
-	sprintf(msg,"[convertTimestampTZByFmtStr2Epoch] inTimestampStr=%s inTZ=%s effTZ=%s",inTimestampStr,inTZ,inTZeff);
-	log_debug(msg);
+	sprintf(msg,"inTimestampStr=%s inTZ=%s effTZ=%s",inTimestampStr,inTZ,inTZeff);
+	log_debug(__FUNCTION__, msg);
 
 
 	// set the Epoch value for the given timestamp
@@ -106,8 +106,8 @@ convertTimestampTZByFmtStr2Epochtimet(
 	// restore the initial value of the  TZ environment variable 
 	setenv(TZ_ENV_VARNAME,envTZbackup,1);
 
-	sprintf(msg,"leaving convertTimestampTZByFmtStr2Epoch TZ=%s res=%d",envTZbackup,res);
-	log_debug(msg);
+	sprintf(msg,"leaving TZ=%s res=%d",envTZbackup,res);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 
@@ -146,10 +146,10 @@ condcheckConvertTimestampTZByFmtStr2TZ(
 	// stores the epoch for the input timestamp
 	time_t epoch_time;
 
-	log_debug("entering condcheckconvertTimestampTZByFmtStr2TZ");
+	log_debug(__FUNCTION__,"entering");
 
 	sprintf(msg,"[condcheckconvertTimestampTZByFmtStr2TZ] inTimestampStr=%s inTZ=%s targetTZ=%s",inTimestampStr, inTZ, targetTZ);
-	log_debug(msg);
+	log_debug(__FUNCTION__, msg);
 
 	if ( DoCheck )
 		res = assert_TimestampTZIsValid(inTimestampStr, inTimestampFmtStr, inTZ, actionOnFailureOpts);
@@ -174,7 +174,7 @@ condcheckConvertTimestampTZByFmtStr2TZ(
 	if ( timeoffsetres != EXIT_SUCCESS ) // not a TZ time offset
 	{
 		sprintf(msg,"[condcheckconvertTimestampTZByFmtStr2TZ] [ZONEINFO] epoch_time=%zu inTimestampStr=%s inTZ=%s targetTZ=%s", epoch_time,inTimestampStr, inTZ, targetTZ);
-	log_debug(msg);
+	log_debug(__FUNCTION__, msg);
 
 		strcpy(targetTZeff,targetTZ);
 
@@ -182,7 +182,7 @@ condcheckConvertTimestampTZByFmtStr2TZ(
 	else
 	{
 		sprintf(msg,"[condcheckconvertTimestampTZByFmtStr2TZ] [TIMEOFFSET] epoch_time=%zu timeoffsetseconds=%d inTimestampStr=%s inTZ=%s targetTZ=%s", epoch_time,timeoffsetseconds, inTimestampStr, inTZ, targetTZ);
-		log_debug(msg);
+		log_debug(__FUNCTION__, msg);
 
 		strcpy(targetTZeff,"");
 
@@ -191,7 +191,7 @@ condcheckConvertTimestampTZByFmtStr2TZ(
 	}
 
 	sprintf(msg,"[condcheckconvertTimestampTZByFmtStr2TZ] [MAIN] epoch_time=%zu requested targetTZ=%s effectiv targetTZ=%s ",epoch_time, targetTZ, targetTZeff);
-	log_debug(msg);
+	log_debug(__FUNCTION__, msg);
 
 	// set TZ settings to the target TZ (effectiv targetTZ)
 	setenv(TZ_ENV_VARNAME,targetTZeff,1);
@@ -224,8 +224,8 @@ condcheckConvertTimestampTZByFmtStr2TZ(
 
 	} // if after assert_TimestampTZIsValid
 
-	sprintf(msg,"leaving condcheckconvertTimestampTZByFmtStr2TZ res=%d", res);
-	log_debug(msg);
+	sprintf(msg,"leaving res=%d", res);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 
@@ -252,14 +252,14 @@ convertTimestampTZByFmtStr2TZ(
 	char msg[TRACE_MESSAGE_MAXLENGTH];
 	int res;
 
-	log_debug("[convertTimestampTZByFmtStr2TZ] entering convertTimestampTZByFmtStr2TZ");
+	log_debug(__FUNCTION__,"entering");
 
 	res = condcheckConvertTimestampTZByFmtStr2TZ(
 		inTimestampStr, inTimestampFmtStr,
 		targetTimestampStr, targetTimestampFmtStr,
 		inTZ, targetTZ, 1);
 
-	sprintf(msg,"[convertTimestampTZByFmtStr2TZ] [CALL] convertTimestampTZByFmtStr2TZ("
+	sprintf(msg,"[CALL] convertTimestampTZByFmtStr2TZ("
 		"\"%s\","
 		"\"%s\","
 		"%s,"
@@ -280,10 +280,10 @@ convertTimestampTZByFmtStr2TZ(
 		sprintf(msg,"%s && ! strcmp(resValue,\"%s\")", msg_part1,targetTimestampStr);
 	}
 
-	log_debug(msg);
+	log_debug(__FUNCTION__, msg);
 
-	sprintf(msg,"[convertTimestampTZByFmtStr2TZ] leaving convertTimestampTZByFmtStr2TZ res=%d",res);
-	log_debug(msg);
+	sprintf(msg,"leaving res=%d",res);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 
@@ -314,16 +314,16 @@ convertTimestampTZByFmt2TZ(
 	if ( assert_res )
 		return EXIT_FAILURE;
 
-	log_debug("[convertTimestampTZ2TZ] entering convertTimestampByFmtTZ2TZ");
+	log_debug(__FUNCTION__,"entering");
 
   buildFmtStr(inTimestampFmt,		fmtin);
   buildFmtStr(targetTimestampFmt,	fmtout);
 
-  sprintf(msg, "[convertTimestampByFmtTZ2TZ] in=%d fmtin=%s\n",	inTimestampFmt,	fmtin);
-	log_debug(msg);
+  sprintf(msg, "in=%d fmtin=%s\n",	inTimestampFmt,	fmtin);
+	log_debug(__FUNCTION__, msg);
 
-  sprintf(msg, "[convertTimestampByFmtTZ2TZ] out=%d fmtout=%s\n",targetTimestampFmt,fmtout);
-	log_debug(msg);
+  sprintf(msg, "out=%d fmtout=%s\n",targetTimestampFmt,fmtout);
+	log_debug(__FUNCTION__, msg);
 
 	res = convertTimestampTZByFmtStr2TZ(
 		inTimestampStr, fmtin,
@@ -331,7 +331,7 @@ convertTimestampTZByFmt2TZ(
 		inTZ, targetTZ
 	);
 
-	sprintf(msg,"[convertTimestampTZ2ByFmtTZ] [CALL] convertTimestampTZ2TZ("
+	sprintf(msg,"[CALL] convertTimestampTZ2TZ("
 		"\"%s\","
 		"%d,"
 		"\"%s\","
@@ -344,14 +344,14 @@ convertTimestampTZByFmt2TZ(
 		targetTimestampStr, targetTimestampFmt,
 		inTZ, targetTZ,
 		res
-	); log_debug(msg);
+	); log_debug(__FUNCTION__, msg);
 
 	// release the memory for the local temporary strings (malloc is this function)
 	free(fmtin);
 	free(fmtout);
 
-	sprintf(msg,"[convertTimestampByFmtTZ2TZ] leaving convertTimestampByFmtTZ2TZ res=%d",res);
-	log_debug(msg);
+	sprintf(msg,"leaving res=%d",res);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 
@@ -371,7 +371,7 @@ convertISOTimestampTZ2TZ(
   int optsin;
   int optsout;
 
-	log_debug("entering convertISOTimestampTZ2TZ");
+	log_debug(__FUNCTION__,"entering");
 
 	res = assert_isISO8601TZ(inTimestampStr, inTZ);
 
@@ -389,8 +389,8 @@ convertISOTimestampTZ2TZ(
 
 	}
 
-	sprintf(msg,"leaving convertISOTimestampTZ2TZ res=%d",res);
-	log_debug(msg);
+	sprintf(msg,"leaving res=%d",res);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 

@@ -29,7 +29,7 @@
 int 
 parseRawString(
 	char* rawTimestampTZStr, 
-	char* outTimestampStrNoTZ, char* outOlsonTZ)
+	char* outTimestampStrNoTZ, char* outTZ)
 {
 
 	// stores the parsed string using strtok
@@ -38,8 +38,8 @@ parseRawString(
 	char* inDatenoTZ;
 	char* inTimenoTZ;
 
-	log_debug("starting parseInputString");
-	log_debug(rawTimestampTZStr);
+	log_debug(__FUNCTION__, "starting");
+	log_debug(__FUNCTION__, rawTimestampTZStr);
 
 	// duplicates the input string to the temporary string
 
@@ -51,25 +51,25 @@ parseRawString(
 
   inDatenoTZ = strtok(tmpStr," ");	
 
-	log_debug(inDatenoTZ);
+	log_debug(__FUNCTION__, inDatenoTZ);
 
 	// next : time
 
   inTimenoTZ = strtok(NULL," ");	
 
-	log_debug(inTimenoTZ);
+	log_debug(__FUNCTION__, inTimenoTZ);
 
 	// next : timezone
 
-  strcpy(outOlsonTZ,strtok(NULL," "));	
+  strcpy(outTZ,strtok(NULL," "));	
 
-	log_debug(outOlsonTZ);
+	log_debug(__FUNCTION__, outTZ);
 
 	// concatenate date + time to outTimestampStrNoTZ - output argument
 
 	sprintf(outTimestampStrNoTZ,"%sT%s",inDatenoTZ,inTimenoTZ);
 
-	log_debug("leaving parseInputString");
+	log_debug(__FUNCTION__, "leaving"); 
 
 	return EXIT_SUCCESS;
 

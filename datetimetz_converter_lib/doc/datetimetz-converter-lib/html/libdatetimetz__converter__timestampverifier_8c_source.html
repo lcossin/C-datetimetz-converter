@@ -109,7 +109,7 @@ $(document).ready(function(){initNavTree('libdatetimetz__converter__timestampver
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    compareres = strcmp(timestamp, expectedtimestamp);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    sprintf(msg,<span class="stringliteral">&quot;[compareTimestampsNoTZ] compare &#39;%s&#39; with &#39;%s&#39; res=%d&quot;</span>, timestamp, expectedtimestamp, compareres); log_debug(msg);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    sprintf(msg,<span class="stringliteral">&quot;[compareTimestampsNoTZ] compare &#39;%s&#39; with &#39;%s&#39; res=%d&quot;</span>, timestamp, expectedtimestamp, compareres); log_debug(__FUNCTION__, msg);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> compareres;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
@@ -149,9 +149,9 @@ $(document).ready(function(){initNavTree('libdatetimetz__converter__timestampver
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> ( ! res) </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        log_fine(msg);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        log_fine(__FUNCTION__, msg);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        log_critical(msg);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        log_critical(__FUNCTION__, msg);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">return</span> res;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
@@ -211,9 +211,9 @@ $(document).ready(function(){initNavTree('libdatetimetz__converter__timestampver
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
 <div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">if</span> ( ! res) </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        log_fine(msg);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        log_fine(__FUNCTION__, msg);</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        log_critical(msg);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        log_critical(__FUNCTION__, msg);</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">return</span> res;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
@@ -246,12 +246,12 @@ $(document).ready(function(){initNavTree('libdatetimetz__converter__timestampver
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">if</span> ( res == expectedres )</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    {</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        sprintf(msg,<span class="stringliteral">&quot;[checkTimestampConsistency] &#39;%s&#39; &#39;%s&#39; is globally consistent res=%d&quot;</span>,inTimestampNoTZStr, inTZ,res);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        log_finest(msg);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        log_finest(__FUNCTION__, msg);</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    }</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    {</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        sprintf(msg,<span class="stringliteral">&quot;[checkTimestampConsistency] &#39;%s&#39; &#39;%s&#39; is NOT consistent res=%d&quot;</span>,inTimestampNoTZStr, inTZ,res);</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        log_finest(msg);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        log_finest(__FUNCTION__, msg);</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">return</span> res;</div>
@@ -263,7 +263,7 @@ $(document).ready(function(){initNavTree('libdatetimetz__converter__timestampver
 <div class="ttc" id="libdatetimetz__converter__timestampverifier_8h_html"><div class="ttname"><a href="libdatetimetz__converter__timestampverifier_8h.html">libdatetimetz_converter_timestampverifier.h</a></div></div>
 <div class="ttc" id="libdatetimetz__converter__tzanytype_8h_html"><div class="ttname"><a href="libdatetimetz__converter__tzanytype_8h.html">libdatetimetz_converter_tzanytype.h</a></div><div class="ttdoc">Provides some functions to handle timestamps defined with any type of timezone. </div></div>
 <div class="ttc" id="libdatetimetz__converter__timestampverifier_8h_html_a3a141fa4fe44367ac7591bd59660eccb"><div class="ttname"><a href="libdatetimetz__converter__timestampverifier_8h.html#a3a141fa4fe44367ac7591bd59660eccb">compareTimestampToSameTZ</a></div><div class="ttdeci">int compareTimestampToSameTZ(char *inTimestampStr, char *inTimestampFmtStr, char *inTZ)</div><div class="ttdoc">compares a timestamp (in a custom format) after conversion to the same timezone </div><div class="ttdef"><b>Definition:</b> <a href="libdatetimetz__converter__timestampverifier_8c_source.html#l00051">libdatetimetz_converter_timestampverifier.c:51</a></div></div>
-<div class="ttc" id="libdatetimetz__converter__tztimeoffset_8h_html_a02ef2b1d2b272f0976d42ae4a1b3bf95"><div class="ttname"><a href="libdatetimetz__converter__tztimeoffset_8h.html#a02ef2b1d2b272f0976d42ae4a1b3bf95">isTimeOffsetTZ</a></div><div class="ttdeci">int isTimeOffsetTZ(char *TZval)</div><div class="ttdoc">Verifies if a given TZ value is a valid time offset. </div><div class="ttdef"><b>Definition:</b> <a href="libdatetimetz__converter__tztimeoffset_8c_source.html#l00077">libdatetimetz_converter_tztimeoffset.c:77</a></div></div>
+<div class="ttc" id="libdatetimetz__converter__tztimeoffset_8h_html_a02ef2b1d2b272f0976d42ae4a1b3bf95"><div class="ttname"><a href="libdatetimetz__converter__tztimeoffset_8h.html#a02ef2b1d2b272f0976d42ae4a1b3bf95">isTimeOffsetTZ</a></div><div class="ttdeci">int isTimeOffsetTZ(char *TZval)</div><div class="ttdoc">Verifies if a given TZ value is a valid time offset. </div><div class="ttdef"><b>Definition:</b> <a href="libdatetimetz__converter__tztimeoffset_8c_source.html#l00078">libdatetimetz_converter_tztimeoffset.c:78</a></div></div>
 <div class="ttc" id="libdatetimetz__converter__tztimeoffset_8h_html"><div class="ttname"><a href="libdatetimetz__converter__tztimeoffset_8h.html">libdatetimetz_converter_tztimeoffset.h</a></div><div class="ttdoc">Provides some functions to handle a timezone given as a time offset. </div></div>
 <div class="ttc" id="libdatetimetz__converter__timestampverifier_8h_html_a82dab177d9e14ad55b00f0f7d4a7c1a3"><div class="ttname"><a href="libdatetimetz__converter__timestampverifier_8h.html#a82dab177d9e14ad55b00f0f7d4a7c1a3">compareTimestampBackToSameTZ</a></div><div class="ttdeci">int compareTimestampBackToSameTZ(char *inTimestampStr, char *inTimestampFmtStr, char *inTZ, char *targetTZ)</div><div class="ttdoc">compares a timestamp (in a custom format) after conversion to another timezone and back to the origin...</div><div class="ttdef"><b>Definition:</b> <a href="libdatetimetz__converter__timestampverifier_8c_source.html#l00093">libdatetimetz_converter_timestampverifier.c:93</a></div></div>
 <div class="ttc" id="libdatetimetz__converter__timestampverifier_8c_html_a3ba4dd793a34f9625b8cdfdc3a8c83d1"><div class="ttname"><a href="libdatetimetz__converter__timestampverifier_8c.html#a3ba4dd793a34f9625b8cdfdc3a8c83d1">compareTimestampsNoTZ</a></div><div class="ttdeci">int compareTimestampsNoTZ(char *timestamp, char *expectedtimestamp)</div><div class="ttdef"><b>Definition:</b> <a href="libdatetimetz__converter__timestampverifier_8c_source.html#l00035">libdatetimetz_converter_timestampverifier.c:35</a></div></div>

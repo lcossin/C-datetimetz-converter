@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "datetimetz-converter-libhelper-0.5", "index.html", [
+  [ "datetimetz-converter-libhelper-0.5.1", "index.html", [
     [ "Data Structures", null, [
       [ "Data Structures", "annotated.html", "annotated" ],
       [ "Data Structure Index", "classes.html", null ],

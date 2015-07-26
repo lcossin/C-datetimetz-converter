@@ -39,26 +39,26 @@ assert_TimestampTZIsValid(
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
 
-	sprintf(msg,"entering assert_TimestampTZIsValid abortOnFailure=%d",abortOnFailure);
-	log_debug(msg);
+	sprintf(msg,"entering abortOnFailure=%d",abortOnFailure);
+	log_debug(__FUNCTION__, msg);
 
 	res = checkTimestampConsistency(timestamp, timestampformat, timezone);
 
 	if ( ! res )
 	{
 		sprintf(msg, "[assert_TimestampTZIsValid] %s %s is a valid timestamp",timestamp,timezone);
-		log_finest(msg);
+		log_finest(__FUNCTION__, msg);
 	}
 	else
 	{
 		sprintf(msg, "[assert_TimestampTZIsValid] %s %s is a wrong timestamp",timestamp,timezone);
-		log_critical(msg);
+		log_critical(__FUNCTION__, msg);
 		if ( abortOnFailure )
 			abort();
 	}
 
-	sprintf(msg,"leaving assert_TimestampTZIsValid abortOnFailure=%d",abortOnFailure);
-	log_debug(msg);
+	sprintf(msg,"leaving abortOnFailure=%d",abortOnFailure);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 

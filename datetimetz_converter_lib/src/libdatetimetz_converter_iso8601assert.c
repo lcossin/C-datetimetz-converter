@@ -33,7 +33,7 @@ int
 assert_isISO8601noTZ(char *strval)
 {
 
-	log_debug("entering assert_isISO8601noTZ");
+	log_debug(__FUNCTION__,"entering");
 
 	int res;
 
@@ -44,17 +44,17 @@ assert_isISO8601noTZ(char *strval)
 	if ( ! res )
 	{
 		sprintf(msg, "[assert_isISO8601noTZ] %s is a valid ISO8601 timestamp",strval);
-		log_finest(msg);
+		log_finest(__FUNCTION__, msg);
 	}
 	else
 	{
 		sprintf(msg, "[assert_isISO8601noTZ] %s is NOT a valid ISO8601 timestamp",strval);
-		log_critical(msg);
+		log_critical(__FUNCTION__, msg);
 		if (actionOnFailureOpts)
 			abort();
 	}
 
-	log_debug("leaving assert_isISO8601noTZ");
+	log_debug(__FUNCTION__,"leaving");
 
 	return res;
 
@@ -68,7 +68,7 @@ assert_isISO8601TZ(char *timestamp, char *timezone)
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
 
-	log_debug("entering assert_isISO8601TZ");
+	log_debug(__FUNCTION__,"entering");
 
 	res = assert_isISO8601noTZ(timestamp);
 
@@ -80,19 +80,19 @@ assert_isISO8601TZ(char *timestamp, char *timezone)
 		if ( ! res )
 		{
 			sprintf(msg, "[assert_isISO8601TZ] %s %s is a valid ISO8601 timestamp",timestamp,timezone);
-			log_finest(msg);
+			log_finest(__FUNCTION__, msg);
 		}
 		else
 		{
 			sprintf(msg, "[assert_isISO8601TZ] %s %s is a wrong ISO8601 timestamp",timestamp,timezone);
-			log_critical(msg);
+			log_critical(__FUNCTION__, msg);
 			if ( actionOnFailureOpts )
 				abort();
 		}
 
 	}
 
-	log_debug("leaving assert_isISO8601TZ");
+	log_debug(__FUNCTION__,"leaving");
 
 	return res;
 

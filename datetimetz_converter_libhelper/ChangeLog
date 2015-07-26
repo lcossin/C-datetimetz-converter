@@ -1,0 +1,10 @@
+
+2015-07-26 - Laurent Cossin
+
+	in lib_trace.h, lib_trace.c
+		new signature for the 'log' routines (new argument :  module)
+
+	in others .c files
+		hardcoded name of functions replaced by '__FUNCTION__' in calls to the 'log' routines
+		messages for logging : new definition without the name of the function
+

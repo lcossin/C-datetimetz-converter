@@ -37,7 +37,7 @@ int
 isISO8601noTZ(char *strval)
 {
 
-	log_debug("entering assert_isISO8601noTZ");
+	log_debug(__FUNCTION__,"entering");
 
 	char msg[TRACE_MESSAGE_MAXLENGTH];
 
@@ -45,16 +45,16 @@ isISO8601noTZ(char *strval)
 
 	if ( regexp_verify(strval, ISO8601NOTZREGEXP) == ISO8601NOTZREGEXPEXPECTEDMATCHES )
 	{
-		sprintf(msg, "[assert_isISO8601noTZ] %s is a valid ISO8601 timestamp",strval); log_finest(msg);
+		sprintf(msg, "[assert_isISO8601noTZ] %s is a valid ISO8601 timestamp",strval); log_finest(__FUNCTION__, msg);
 		res = 0;
 	}
 	else
 	{
-		sprintf(msg, "[assert_isISO8601noTZ] %s is a NOT valid ISO8601 timestamp",strval); log_critical(msg);
+		sprintf(msg, "[assert_isISO8601noTZ] %s is a NOT valid ISO8601 timestamp",strval); log_critical(__FUNCTION__, msg);
 		res = 1;
 	}
 
-	log_debug("leaving assert_isISO8601noTZ");
+	log_debug(__FUNCTION__,"leaving");
 
 	return res;
 
@@ -78,7 +78,7 @@ compareISOTimestampTZToSameTZ(
 	//strcpy(inTimestampFmt, iso8601TZOffset);
 	//strcpy(inTimestampFmt, iso8601TZAbbrev);
 
-	log_debug("starting compareISOTimestampTZToSameTZ");
+	log_debug(__FUNCTION__,"starting compareISOTimestampTZToSameTZ");
 
 	res = assert_isISO8601noTZ(inTimestampNoTZStr);
 
@@ -91,19 +91,19 @@ compareISOTimestampTZToSameTZ(
 			inTimestampNoTZStr, inTimestampFmt,
 		inTZ);
 
-		sprintf(msg,"[compareISOTimestampTZToSameTZ] compare %s %s res=%d",inTimestampNoTZStr, inTZ, compareres); 
+		sprintf(msg,"compare %s %s res=%d",inTimestampNoTZStr, inTZ, compareres); 
 
 		if ( ! compareres)
-			log_fine(msg);
+			log_fine(__FUNCTION__, msg);
 		else
-			log_critical(msg);
+			log_critical(__FUNCTION__, msg);
 
 		res = compareres;
 
 	}
 
-	sprintf(msg,"leaving compareISOTimestampTZToSameTZ res=%d",res);
-	log_debug(msg);
+	sprintf(msg,"leaving res=%d",res);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 
@@ -127,7 +127,7 @@ compareISOTimestampTZBackToSameTZ(
 	//strcpy(inTimestampFmt, iso8601TZOffset);
 	//strcpy(inTimestampFmt, iso8601TZAbbrev);
 
-	log_debug("starting compareISOTimestampTZBackToSameTZ");
+	log_debug(__FUNCTION__,"starting");
 
 	res = assert_isISO8601noTZ(inTimestampNoTZStr);
 
@@ -140,19 +140,19 @@ compareISOTimestampTZBackToSameTZ(
 			inTimestampNoTZStr, inTimestampFmt,
 		inTZ, targetTZ);
 
-		sprintf(msg,"[compareISOTimestampTZBackToSameTZ] compare %s %s -> %s -> %s res=%d",inTimestampNoTZStr, inTZ, targetTZ, inTZ, compareres); 
+		sprintf(msg,"compare %s %s -> %s -> %s res=%d",inTimestampNoTZStr, inTZ, targetTZ, inTZ, compareres); 
 
 		if ( ! compareres)
-			log_fine(msg);
+			log_fine(__FUNCTION__, msg);
 		else
-			log_critical(msg);
+			log_critical(__FUNCTION__, msg);
 
 		res = compareres;
 
 	}
 
-	sprintf(msg,"leaving compareISOTimestampTZBackToSameTZ res=%d",res);
-	log_debug(msg);
+	sprintf(msg,"leaving res=%d",res);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 
@@ -175,16 +175,16 @@ checkISOTimestampTZConsistency(
 	if ( res == expectedres )
 	{
 		sprintf(msg,"[checkISOTimestampTZConsistency] %s %s is globally consistent res=%d",inTimestampNoTZStr, inTZ,res);
-		log_finest(msg);
+		log_finest(__FUNCTION__, msg);
 	}
 	else
 	{
 		sprintf(msg,"[checkISOTimestampTZConsistency] %s %s is NOT consistent res=%d",inTimestampNoTZStr, inTZ,res);
-		log_finest(msg);
+		log_finest(__FUNCTION__, msg);
 	}
 
-	sprintf(msg,"leaving checkISOTimestampTZConsistency res=%d",res);
-	log_debug(msg);
+	sprintf(msg,"leaving res=%d",res);
+	log_debug(__FUNCTION__, msg);
 
 	return res;
 

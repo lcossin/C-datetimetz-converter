@@ -21,6 +21,8 @@
 /** 
  * @file libdatetimetz_converter_timestamptzformat.h
  * @author Laurent Cossin
+ * @copyright GNU Lesser General Public License
+
  * @date   July 2015
  *
  * @ingroup datetimetz_converter_helper
