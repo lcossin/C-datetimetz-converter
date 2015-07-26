@@ -141,13 +141,6 @@ $ lynx doc/*datetimetz-converter*/html/index.html
 Known limitations
 ==================
 
-Does not handle timezones as offset '[+-]HHMM'
------------------------------------------------
-
-The convert routines cannot take a timezone given as an offset '[+-]HHMM'.
-
-Feature not yet available.
-
 Enforcing the timezone names
 -----------------------------
 

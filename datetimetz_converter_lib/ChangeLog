@@ -1,9 +1,27 @@
 
-2015-07-26 - Laurent Cossin
+0.5.3 - 2015-07-26 - Laurent Cossin
 
-		required changes after the new signature for 'log' routines (in lib_trace.h)
+	required changes after the new signature for 'log' routines (in lib_trace.h)
 
-		in the .c files
-			hardcoded name of functions replaced by '__FUNCTION__' in calls to the 'log' routines
-			messages for logging : new definition without the name of the function
+	in the .c files
+		hardcoded name of functions replaced by '__FUNCTION__' in calls to the 'log' routines
+		messages for logging : new definition without the name of the function
+
+0.5.2 - 2015-07-23 - Laurent Cossin
+
+Minor changes in the test units.
+
+Add some missing documentation files
+
+0.5.1 - 2015-07-22 - Laurent Cossin
+
+	New version that provides some enhancements and some minor changes.
+
+	Added : new tests to verify the new features
+
+	Modified : Valgrind tests are run only if 'valgrind' executable is found (from PATH), otherwise the script returns a warning
+
+	Renamed: some source files renamed as "_verifier", 'memleaks' renamed as 'nomemleaks'
+
+
 
